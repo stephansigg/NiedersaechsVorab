@@ -1,0 +1,828 @@
+\documentclass[12pt]{article}
+\usepackage{setspace}
+
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+%\usepackage{ngerman}
+\usepackage{a4wide}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{color}
+\definecolor{light}{gray}{0.85}
+\definecolor{heavy}{gray}{0.30}
+\usepackage{amsfonts}
+\usepackage{dsfont}
+\usepackage{amssymb}
+\usepackage{setspace}% used for table notes
+\usepackage{makeidx}
+\usepackage[pdftex]{graphicx}
+\usepackage{multibib}
+% \usepackage{subfigure}
+\usepackage{subfig}
+\usepackage{eurosym}
+\newcites{all,own,related}%
+         {\normalsize{References (other authors)},%
+          \normalsize{References (applicant)},
+          \normalsize{ }\vspace{-.8cm}}
+          
+\newcommand{\todoBase}{\hfill \notiz{TODO} $\square$}
+\newcommand{\projektname}{\texttt{Sense box}}
+
+\newcommand{\notiz}[1]{\marginpar{\tiny \framebox{\begin{minipage}{2.1cm} #1 \end{minipage}}}}
+\newcommand{\niklas}[1]{\marginpar{\footnotesize\notiz{Niklas:}\\\tiny \framebox{\begin{minipage}{2.1cm} #1 \end{minipage}}}}
+\newcommand{\dawud}[1]{\marginpar{\footnotesize\notiz{Dawud:}\\\tiny \framebox{\begin{minipage}{2.1cm} #1 \end{minipage}}}}
+\newcommand{\stephan}[1]{\marginpar{\footnotesize\notiz{Stephan:}\\\tiny \framebox{\begin{minipage}{2.1cm} #1 \end{minipage}}}}
+\newcommand{\todo}{\marginpar{\todoBase}}
+
+\author{\begin{minipage}[t]{7.1cm}\centering \small \VornameAntragstellerA\ \NachnameAntragstellerA\\ \small Lehrstuhl für Kommunikationstechnik\\ \small ComTec\\ \small Universität Kassel\end{minipage}
+\begin{minipage}[t]{7.1cm}\centering \small \VornameAntragstellerB\ \NachnameAntragstellerB\\ \small Gruppe Verteilte und Ubiquitäre Systeme \\ \small Institut für Betriebssysteme und Rechnerverbund\\ \small TU Braunschweig\end{minipage}}
+
+\title{\projektname:\\\notiz{Social and sentiment sensing using on-body sensors}}
+
+\date{\small \today}
+% \usepackage[T1]{fontenc}
+% \newcommand{\changefont}[3]{
+% \fontfamily{#1} \fontseries{#2} \fontshape{#3} \selectfont}
+%\changefont{cmss}{m}{n}
+\fontfamily{cmss}
+\fontseries{m}
+\fontshape{n}
+\selectfont
+%%serifenlose Schrift:
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{helvet}
+
+%% Use header as in DFG template
+ \usepackage{fancyhdr}
+
+%% Redefine plain page style
+\fancypagestyle{plain}{
+ \fancyhf{}
+ \renewcommand{\headrulewidth}{0pt}
+ \fancyfoot[LE,RO]{\thepage}
+ }
+ \pagestyle{plain}
+% \lhead{\tiny \Name, \Strasse, \Plz\ \Ort, Germany. Phone: \Telefon, Email: \Email}
+\rhead{}
+% \rhead{\small page \arabic{page} of \pageref{maxSeitenzahl}}
+\rfoot{}
+%% Linebreak after paragraph
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+  {-3.25ex\@plus -1ex \@minus -.2ex}%
+  {1.5ex \@plus .2ex}%
+  {\normalfont\normalsize\bfseries}}
+\makeatother
+\begin{document}
+\onehalfspacing %1.5 spacing
+%% enable numbering for paragraphs also:
+\setcounter{secnumdepth}{5}
+% \maketitle
+\pagebreak
+\begin{center}
+\section*{Social and sentiment sensing using on-body sensors}
+\begin{tabular}{cc}
+  Stephan Sigg, & Koby Crammer\\
+  University of Goettingen, Germany & Department of Electrical Engineering, Technion \\
+ stephan.sigg@cs.uni-goettingen.de & koby@ee.technion.ac.il
+\end{tabular}
+\end{center}
+\begin{itemize}
+ \item[\color{blue}tbd] keywords
+\end{itemize}
+
+\subsection*{Topic, objectives and justification of the project}
+Emotional states are closely linked to Physical health~\cite{SentimentSensing_Salovey_2000}, such as anger, which increases the danger of heart disease~\cite{SentimentSensing_Smith_2004} or mood which impacts health-relevant behaviour, ageing and can also act as a predictor of mortality~\cite{SentimentSensing_Todaro_2003}.
+In addition, mental health is linked to emotion regulation~\cite{SentimentSensing_Gross_1995}, whereas stress, especially when pertaining, has significant impact on the brain, cognition and work performance~\cite{SentimentSensing_Lupien_2009}.
+On the other hand, positive affect benefits the immune system~\cite{SentimentSensing_Smith_2004} while happyness and satisfaction are good indicators for and even foster work performance, health, and also success in private life~\cite{SentimentSensing_Lyubomirsky_2005}.
+
+Sentiment and emotion can be detected from Physiological signals with sensors such as Electromyograms (EMG, muscle activity), Electrodermal Activity (EDA, electrical conductivity of the skin surface), Electrocardiogram (EKG or ECG, heart activity), Electrooculogram (EOG, eye movement) or Electroencephalography (EEG, brain activity)~\cite{SentimentSensing_Calvo_2010}.
+These kind of sensors, however, are accessible only to a small share of people and have drawbacks such as high cost, weight or non-portability. 
+Furthermore, for a human utilising these tools, they constitute additional devices to carry around.
+
+Recent work shows that it is also possible to detect sentiment from gesture and pose~\cite{Emotion_DeMeijer_1989}. 
+With the verge of the Internet of Things and increasing amount of mobile and body worn devices and sensors in everyday life, a multitude of sensors is available nowadays which has the potential to capture body movement and pose. 
+
+The focus and contribution of this project is to (1) recognise emotion from medical sensors, (2) exploit the potential of cheaper smartphone and on-body IoT sensors for sentiment sensing by identifying correlations in sensor data traces with medical sensors, (3a) exploit environmental signals such as RSSI or RF-signal strength for sentiment sensing and, (3b) predict the evolution of sentiment from the time series of past observations. 
+
+The outcome of the project will be a sentiment sensing framework comprising medical, body, smartphone and environmental sensors together with a prototype implementation
+
+\subsection*{Current state of the art in an international perspective}
+Emotion research or affective science investigates affect expression and detection~\cite{SentimentSensing_Calvo_2010}.
+In this context, the recognition of emotion has been considered from facial expressions~\cite{SentimentSensing_Ekman_2003}, voice~\cite{SentimentSensing_Juslin_2005} as well as body language and posture~\cite{SentimentSensing_Mota_2003,SentimentSesing_Mello_2009}.
+Especially the latter is of greater interest for this project and is discussed below. 
+There is also some body of work on utilising text mining for sentiment sensing as briefly discussed in the next section.
+
+\subsubsection*{Sensing of sentiment from textual corpus}
+Sentiment mining is an active research topic in recent years~\cite{SentimentSensing_Kramer_2014, SentimentSensing_Cambria_2013}. 
+Also referred to as opinion mining, it considers indirect sources and requires actual active involvement of subjects~\cite{SentimentSensing_Pang_2008, SentimentSensing_Zhai_2011}. 
+In particular, there is an active body of work in the direction of mining textual input (via sentiment-expressing words or phrases) in online social networks with the help of natural language processing and computational linguistics~\cite{SentimentSensing_Liu_2012}.
+We will, however, not consider the mining of text in the scope of this project but rather focus on sentiment sensing from physical sensors.
+
+\subsubsection*{Sentiment sensing from body movement and pose}
+Emotion can be inferred from body gesture and pose~\cite{Pervasive_Jaggarwal_2012} at least as accurately as from face~\cite{Emotion_Nguyen_2012,Emotion_Castellano_2008,Emotion_Meeren_2005}.
+The role of human body in emotion expression has received support through evidences from psychology~\cite{Emotion_Walters_1986} and nonverbal communication \cite{Emotion_Dittmann_1978}. 
+The importance of  bodily expression has also been confirmed for emotion detection \cite{Emotion_Wallbott_1998, Emotion_VanHeijnsbergen_2007,Emotion_Atkinson_2007}. 
+%Detection of Fear: Emotion_VanHeijnsbergen_2007
+Walter and Walk~\cite{Emotion_Walters_1986} revealed that emotion recognition from photos of postural expression, in which faces and hands were covered, was as accurate as recognition from facial expression alone.
+% In another study, Meeren et al.~\cite{Emotion_Meeren_2005} indicated that observers were strongly influenced by body posture when judging a facial expression. 
+Dynamic configurations of human body even hold greater amount of information as indicated by Bull in \cite{Emotion_Bull_1987}. 
+He proved that body positions and motions could be recognised in terms of states including interest/boredom and agreement/disagreement. 
+Some other studies went further by looking for the contribution of separated body parts to particular emotional states~\cite{Emotion_DeMeijer_1989,Emotion_Montepare_1999}.
+Emotion can be recognised from non-trivial scenarios, such as simple daily-life actions \cite{Emotion_Crane_2007,Emotion_Bernhardt_2007} or recognition ability of infants \cite{Emotion_Lagerlof_2009}. 
+% In~\cite{Emotion_Crane_2007}, Crane and Gross tested the ability of  recognizing 5 emotions from gait actions. 
+
+% It will be interesting to see how well RF information can be exploited in order to identify body gesture and pose and to classify this for human emotion classes.
+
+In~\cite{SentimentSensing_Mota_2003,SentimentSesing_Mello_2009}, the authors detected boredom, confusion, delight and frustration utilising pressure mats. 
+Such mats, however, are not portable and are therefore not applicable in our setting. 
+Instead, we aim to detect sentiment from body or environmental sensors. 
+
+% \paragraph*{Sensing attention from environmental sensors}
+Also, the sensing of attention has been investigated previously. 
+Attention is an important measure in Computer-Human interaction. 
+It determines for an interactive system the potential to impact the actions and decisions taken by an individual~\cite{AttentionMonitoring_Xu_2012}.
+In the literature, we find various definitions that classify attention as well as its determining characteristics~\cite{AttentionMonitoring_Wu_2007, AttentionMonitoring_Wickens_1984}.
+While the tracking of gaze is a commonly utilised measure of attention~\cite{AttentionMonitoring_Yonezawa_2007}, also other observable features may indicate attention. 
+In general, aspects such as saliency, effort, expectancy and value are important indicators of attention~\cite{AttentionMonitoring_Wickens_2008, AttentionMonitoring_Wickens_1984,AttentionMonitoring_Xu_2012,AttentionMonitoring_Gollan_2011}.
+This model was later extended to put a greater stress on the effort a person takes towards an object~\cite{AttentionMonitoring_Ferscha_2012}.
+The authors also discuss various aspects of attention and identify as most distinguishing factors changes in walking speed, direction or orientation.
+
+In~\cite{Pervasive_Shi_2014} it was investigated, how these properties, in particular location of a person, walking direction and walking speed or changes therein can be utilised for the monitoring and detection of attention from fluctuation in received signal strength. 
+%% TODO: Add work of Kai Kunze? -> Fatigue, eye movement,...
+
+\subsubsection*{Sensing activity, motion and pose from inertial and environmental sensors}
+Activity recognition comprises the challenge to recognise human activities from the input of sensor data.
+Traditionally, acceleration has evolved as the standard modality for activity recognition both for high diffusion and convincing recognition rates~\cite{Pervasive_Ravi_2005,Pervasive_Cao_2012}.
+General research challenges for activity recognition regard the accurate classification of noisy data captured under real world conditions~\cite{Pervasive_Bao_2004} or the automation of recognition systems~\cite{Pervasive_Ploetz_2012}.
+The classification accuracy is highly dependent on the accurate sensor location.
+The integration of sensors in clothing as well as the recent remarkable progress in the robustness to rotation or displacement have improved this situation greatly~\cite{Pevasive_Chavarriaga_2011}.
+However, a subject is still required to cooperate and at least wear the sensors~\cite{Pervasive_Cohn_2012}.
+This requirement can not be assured generally in real-world applications. 
+In particular, even devices as private as mobile phones, which are frequently assumed to be constantly in the same context as its owner~\cite{Pervasive_Patridge_2008, Pervasive_Varshavsky_2008, Pervasive_Lane_2010}, can not serve as a sensor platform suitable for continuous monitoring of an individual's context.   
+Dey et al. investigated in~\cite{Pervasive_Dey_2011} that users have their mobile phone within arms reach only 54\% of the time.
+This confirms a similar investigation of Patel et al.~\cite{Pervasive_Patel_2006} which reported a share of 58\% for the same measure.
+
+We will therefore also consider environmental sources, in particular signal strength information from WiFi or 2-3G systems for their ubiquitous availability. 
+In particular, good accuracy has been achieved recently with systems exploiting fluctuation in received radio signals. 
+Pu and others showed that simultaneous detection of gestures from multiple individuals is possible by utilising multi-antenna nodes and micro Doppler fluctuations~\cite{RFsensing_Pu_2013,RFsensing_Kim_2009}.
+They utilise a USRP SDR multi antenna receiver and one or more single antenna transmitters distributed in the environment to distinguish between a set of 9 gestures with an average accuracy of 0.94. 
+Their active device-free system exploits a MIMO receiver in order to recognise gestures from different persons present at the same time. 
+By leveraging a preamble gesture pattern, the receiver estimates the MIMO channel that maximises the reflections of the desired user.
+
+A main challenge was for them that the Doppler shift from human movement was several magnitudes smaller than the bandwidth of the signal employed.
+The authors therefore proposed to transform the received signal into several narrowband pulses which are then analysed for possible Doppler fluctuation.
+The group discussed application possibilities of their system in~\cite{RFSensing_Kellog_2014}.
+
+In a related system, Adib and Katabi employ MIMO interference nulling and combine samples taken over time to achieve a similar result while compensating for the missing spatial diversity in a single-antenna receiver system~\cite{Pervasive_Adib_2013}.
+In their system, they leverage standard WiFi hardware at 2.4GHz.
+
+Later, this work was extended to 3D motion tracking by utlising three or more directional receive antennas in exactly defined relative orientation~\cite{RFSensing_Adib_2014}. 
+In particular, the system is able to track the center of a human body with an error below 21cm in any direction and can also detect movement of body parts and directions of a pointing body part, such as a hand. 
+This localisation is possible through time-of-flight estimation and triangulisation.
+Higher accuracy of this estimation is granted by utilising frequency modulated carrier waves (sending a signal that changes linearly in frequency with time) over a bandwidth of 1.69GHz.
+Impact of static objects could be mitigated by subtracting successive sample means whereas noise was filtered by its speed of changes in energy over frequency bands. 
+
+\subsection*{Research approach, methods and hypotheses}
+\begin{itemize}
+ \item[\color{blue}tbd]
+\end{itemize}
+\subsection*{Detailed work programme including time schedule}
+The expected time schedule is depicted in table~\ref{tableGesamtueberblick}. 
+A detailed description of the distribution of work packages to personnel is given in the following.
+The figures represent three person months (equal to one person quarter).
+The notation '40' represents an allocation of 40 percent of one person quarter. 
+
+\begin{table}
+\centering
+\begin{small}
+\begin{tabular}{|l||c|c|c|c|c|c|c|c||c|}
+\hline
+Workpackages&&&&&&&&&\\
+	& Q1	&Q2	&Q3	&Q4	&Q5	&Q6	&Q7	&Q8	&\\\hline\hline
+Recent advances& &	&	&	&	&	&	&	 &\\
+WP-1	&20	&20	&20	&15	&10	&10	&5	&	 & 100\\\hline
+Sensing system& &	&	&	&	&	&	&	 &\\
+WP-2.1	&100	&	&	&	&	&	&	&	 & 100\\
+WP-2.2	&50	&50	&	&	&	&	&	&	 & 100\\
+WP-2.3	&30	&70	&	&	&	&	&	&	 & 100\\
+WP-2.4	&	&60	&40	&	&	&	&	&	 & 100\\\hline
+Experiments& &	&	&	&	&	&	&	&	\\
+WP-3.1	&	&	&140	&60	&	&	&	&	 & 200\\
+WP-3.2	&	&	&	&100	&100	&	&	&	 & 200\\\hline
+Sentiment analysis& &	&	&	&	&	&	&	 &\\
+WP-4.1	&	&	&	&25	&75	&	&	&	 & 100\\
+WP-4.2	&	&	&	&	&15	&95	&90	&	 & 200\\
+WP-4.3	&	&	&	&	&	&50	&50	&100	 & 200\\\hline
+Sentiment prediction& &	&	&	&	&	&	&	 &\\
+WP-5	&	&	&	&	&	&45	&55	&100	 & 200\\\hline
+Sum	& 200	&200	&200	&200	&200	&200	&200	&200	 & 1600\\\hline
+\end{tabular}
+\end{small}
+\caption{Work schedule. The table specifies the occupation (1PM) subject to the quarterly period and project task. 
+The figures specify the percentage by which the workload is divided between the work packages.}
+\label{tableGesamtueberblick}
+\end{table}
+
+
+\paragraph*{WP-1: Review of recent advances in sentiment recognition}
+\begin{tabular}{rl}
+ Estimated effort& 3 PM\\
+ Precondition & --\\
+ Milestone & \begin{minipage}[t]{12.2cm}
+\textit{Follow-up related work and recent developments}\vspace{.2cm}
+             \end{minipage}
+\end{tabular}
+
+\noindent
+In this workpackage we will follow up recent developments focusing sentiment sensing and opinion mining.
+This is an ongoing task which is distributed over the whole project duration.
+
+\paragraph*{WP-2: Development of a sentiment sensing system}
+
+\paragraph*{WP-2.1: Development of the basic recognition system}
+\begin{tabular}{rl}
+ Estimated effort& 3 PMs\\
+ Precondition & --\\
+ Milestone & \begin{minipage}[t]{12.2cm}
+\textit{Sentiment sensing system with interfaces for various sensor types}\vspace{.2cm}
+             \end{minipage}
+\end{tabular}
+
+\noindent
+In this workpackage we develop a sensing system to attach medical, body, smartphone and environmental sensors.
+The system will comprise interfaces for various sensing sources and cover of mobile clients to collect data samples and a server backend where the data is collected and processed. 
+
+\paragraph*{WP-2.2: Integration of medical sensing equipment}
+\begin{tabular}{rl}
+ Estimated effort& 3 PMs\\
+ Precondition & WP-2.1\\
+ Milestone & \begin{minipage}[t]{12.2cm}
+\textit{Integration of medical sensor equipment to the sentiment sensing system}\vspace{.2cm}
+             \end{minipage}
+\end{tabular}
+
+\noindent
+In this workpackage we integrate medical sensors (EMG and EOG) with the developed framework. 
+We will have access to the medical sensors via a cooperation with the medical center at Georg-August University Goettingen, in particular with the Neurohabilitation Engineering Group of Professor Dario Farina\footnote{http://www.nre.bccn.uni-goettingen.de/index.php?id=82}. 
+
+\paragraph*{WP-2.3: Integration of smartphone and body sensors}
+\begin{tabular}{rl}
+ Estimated effort& 3 PMs\\
+ Precondition & WP-2.1\\
+ Milestone & \begin{minipage}[t]{12.2cm}
+\textit{Integration of smartphone and body sensors to the sentiment sensing system}\vspace{.2cm}
+             \end{minipage}
+\end{tabular}
+
+\noindent
+In this workpackage we integrate smartphone and body sensors with the developed framework. 
+Our focus will be on the integration of acceleration data from smartphones and sensor nodes. 
+In particular, we will utilise INGA\footnote{https://www.ibr.cs.tu-bs.de/projects/inga/} sensor nodes to which we have access through a cooperation with TU Braunschweig, Germany.
+
+\paragraph*{WP-2.4: Integration of environmental sensors}
+\begin{tabular}{rl}
+ Estimated effort& 3 PMs\\
+ Precondition & WP-2.1\\
+ Milestone & \begin{minipage}[t]{12.2cm}
+\textit{Integration of USRP software radio nodes to the sentiment sensing system}\vspace{.2cm}
+             \end{minipage}
+\end{tabular}
+
+\noindent
+In this workpackage we integrate USRP\footnote{http://www.ettus.com} devices with the developed framework. 
+For this, we can utilise 8 fully equipped USRP-1 devices and transceivers for the 800 MHz range available at the chair for Computer networks at Georg-August University Goettingen.
+
+\paragraph*{WP-3: Experiments}
+\paragraph*{WP-3.1: Generation of experimental data samples}
+\begin{tabular}{rl}
+ Estimated effort& 6 PMs\\
+ Precondition & WP-2\\
+ Milestone & \begin{minipage}[t]{12.2cm}
+\textit{Generation of a data set for sentiment analysis}\vspace{.2cm}
+             \end{minipage}
+\end{tabular}
+
+\noindent
+Utilising the sentiment sensing system developed in WP-2, we will collect data from medical, smartphone, body and environmental sensors for our sentiment analysis in WP-4. 
+We will consider two classes of medical sensors, for instance, EMG and EOG, acceleration data from the INGA and smartphone sensors as well as RF-signal information captured by USRP devices. 
+We aim at collecting a body of data from 30-50 subjects in laboratory settings in which a series of standard tasks will be conducted by the subjects while the sentiment classes are induced by the experiement design. 
+The subjects will be recruited from students and University staff as well as from patients or medical test persons in cooperation with the medical center at University of Goettingen.
+% We will conduct two separate data sets over the course of the project in two separate three-month periods. 
+At least three sentiment classes will be considered, such as happyness, stress, and tiredness. 
+The experimental setting will be designed to induce these sentiment classes in role-play and interactive games.
+In the test design and execution we will receive support from the Institute of Psychology at TU Braunschweig, let by Professor Simone Kauffeld\footnote{https://www.tu-braunschweig.de/psychologie/abt/aos/mitarbeiterinnen/kauffeld/index.html}.
+
+\paragraph*{WP-3.2: Generation of experimental data samples}
+\begin{tabular}{rl}
+ Estimated effort& 6 PMs\\
+ Precondition & WP-2\\
+ Milestone & \begin{minipage}[t]{12.2cm}
+\textit{Generation of a data set for the prediction of sentiment}\vspace{.2cm}
+             \end{minipage}
+\end{tabular}
+
+\noindent
+We will collect acceleration data from smartphone and body sensors for our sentiment prediction considered in WP-5. 
+In this experiment, the accelerometer data from 10-20 persons will be collected over a period of 6 months. 
+These individuals, recruited from students and University staff, will be equipped with body sensors measuring acceleration data as well as with portable medical sensors. 
+In order to reach dense sampling, we will consider the use of fitness trackers\footnote{for instance https://www.fitbit.com/de/chargehr} and monetary reward systems. 
+
+\paragraph*{WP-4: Sentiment analysis}
+\paragraph*{WP-4.1: Sentiment analysis from medical sensors}
+\begin{tabular}{rl}
+ Estimated effort& 3 PMs\\
+ Precondition & WP-3\\
+ Milestone & \begin{minipage}[t]{12.2cm}
+\textit{Suitable features and a classifier for sentiment from at least two types of medical sensors}\vspace{.2cm}
+             \end{minipage}
+\end{tabular}
+
+\noindent
+In this workpackage we investigate the identification of sentiment from data of medical sensors. 
+Building on previous work, we will design features and classifiers for the detection of sentiment from EMG and EOG data.
+
+\paragraph*{WP-4.2: Sentiment analysis from body and smartphone sensors}
+\begin{tabular}{rl}
+ Estimated effort& 6 PMs\\
+ Precondition & WP-3, WP-4.1\\
+ Milestone & \begin{minipage}[t]{12.2cm}
+\textit{Correlations between features from medical ans smartphone sensors and a classifier for sentiment from these sensors}\vspace{.2cm}
+             \end{minipage}
+\end{tabular}
+
+\noindent
+We will in this workpackage indentify suitable features for the prediction of sentiment from body and smartphone sensors. 
+In particular, building on previous work regarding movement, gestures and pose as indicators of emotion, classifiers for the detection of such classes will be developed and linked to the classification of sentiment. 
+In addition, building on the results from WP-4.1 we will investigate correlations between sensor readings of medical and acceleration sensors in order to give an estimation to which extent medical sensors can be substituted by cheaper acceleration sensors for the application in large scale sensing applications.  
+
+\paragraph*{WP-4.3: Sentiment analysis from environmental sensors}
+\begin{tabular}{rl}
+ Estimated effort& 6 PMs\\
+ Precondition & WP-3\\
+ Milestone & \begin{minipage}[t]{12.2cm}
+\textit{Features and a classifier for sentiment from received RF-signals}\vspace{.2cm}
+             \end{minipage}
+\end{tabular}
+
+\noindent
+We will in this workpackage indentify features for the prediction of sentiment from received RF signals. 
+Building on our and other previous work detecting movement and gestures from received RF-signals, we will detect gestures, movement and pose of individuals. 
+Then, building on previous work regarding movement, gestures and pose as indicators of emotion, classifiers for the detection of such classes will be developed and linked to the classification of sentiment. 
+
+\paragraph*{WP-5: Prediction of sentiment from historical and correlated data}
+\begin{tabular}{rl}
+ Estimated effort& 6 PMs\\
+ Precondition & WP-3, WP-4\\
+ Milestone & \begin{minipage}[t]{12.2cm}
+\textit{A document describing the potential of sentiment prediction from historical sensor traces}\vspace{.2cm}
+             \end{minipage}
+\end{tabular}
+
+\noindent
+In this workpackage, we consider the prediction of sentiment from historical data. 
+In particular, we investigate whether typical sentiment patterns can be observed in the data and use these for the prediction of sentiment evolution.
+In particular, similar to our work in~\cite{4026,4027}, we consider the use of alignment matching approaches to identify approximately similar sub-patterns in sentiment time series and to predict probable continuation of these patterns.
+
+% \todo
+% \textbf{TODO: More details here!!}
+
+
+\subsection*{Type and extent of the cooperation and division of tasks between the partners}
+\begin{itemize}
+ \item[\color{blue}tbd]
+\end{itemize}
+\subsection*{Anticipated results}
+\begin{itemize}
+ \item[\color{blue}tbd]
+\end{itemize}
+\subsection*{Relevant preceding work of the applicants}
+\begin{itemize}
+ \item[\color{blue}tbd]
+\end{itemize}
+\subsubsection*{Prediction of sensor readings}
+Stephan Sigg has been working on the prediction/continuation of time series from sensor readings from 2005 through 2009. 
+In this analytic work he showed that the order in which processing operations are applied to sensor readings impacts the overall error probability for the prediction algorithm, regardless of the actual prediction approach utilised.
+A stochastic model to estimate this impact has been presented which was evaluated in simulations and case studies~\cite{4027}. 
+In addition, a novel class of context-prediction methods based on alignment approaches~\cite{4026} was derived which was shown to outperform traditional approaches on nominal data sequences. 
+This approach has been re-used by various groups for the prediction of contextual information.
+Its complexity has been derived analytically and was compared to alternative context prediction methods~\cite{4027}. 
+The method was applied to readings of inertial sensors, GPS readings and long-time weather data. 
+
+\subsubsection*{Recognition of human activities from on-body and RF sensors}
+Since 2009 Stephan Sigg considers the use of fluctuations measured on the Radio Frequency (RF) channel for the recognition of activities and gestures.
+The derived systems exploit multi-path propagation as well as the reflection and blocking of electromagnetic signals.
+Movement is reflected in the signal strength and fluctuation patterns of a received signal.
+One benefit of such device-free approaches is that it is not necessary for individuals to actually wear a transmit or receive device.
+It was shown that the localisation and recognition of simple activities is possible from continuous signals whereas the accuracy is comparable to recognition systems that rely on body-worn accelerometers~\cite{Pervasive_Sigg_2012}. 
+These considerations have been extended to passive systems which utilise ambient signals~\cite{Pervasive_Sigg_2013}.
+Recent results show, that it is further possible to detect directed attention from fluctuations on the RF-channel by interpreting body movement captured from RF-readings~\cite{Pervasive_Shi_2014}.
+Such gestures can be detected based on WiFi RSSI using only time-domain features on an off-the-shelf mobile phone~\cite{RFSensing_Sigg_2014}.
+
+
+\subsection*{Brief details of the type and the extent of previous cooperation between applicants}
+\begin{itemize}
+ \item[\color{blue}tbd]
+\end{itemize}
+\subsection*{Perspectives with respect to possible follow-up projects between the partners with funding from other sources}
+\begin{itemize}
+ \item[\color{blue}tbd]
+\end{itemize}
+\subsection*{Funding of the project including own contribution}
+The project teams consists of the project researchers Dr. Koby Crammer and Dr. Stephan Sigg as well as two PhD students (to be appointed for this project) and two student assistants.
+\begin{description}
+	\item[UGOE] Dr. Stephan Sigg (externally funded), 2 years
+	\item[UGOE] 1 research staff member, TV-L 13, 75\% project + 25\% external, 2 years
+	\item[UGOE] 1 student assistant, 40 hours/week, 2 years
+	\item[Technion] Dr. Koby Crammer (externally funded), 2 years 
+	\item[Technion] 1 research staff member, TV-L 13, 75\% project + 25\% external, 2 years 
+	\item[Technion] 1 student assistant, 40 hours/week, 2 years 
+\end{description}
+
+\bibliographystyle{plain}
+% argument is your BibTeX string definitions and bibliography database(s)
+%\bibliography{IEEEabrv,../bib/paper}
+%
+% <OR> manually copy in the resultant .bbl file
+% set second argument of \begin to the number of references
+% (used to reserve space for the reference number labels box)
+% \begin{thebibliography}{1}
+% 
+% \bibitem{IEEEhowto:kopka}
+% H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
+%   0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+% 
+% \end{thebibliography}
+
+\begin{thebibliography}{10}
+
+\bibitem{RFSensing_Kellog_2014}
+Bringing gesture recognition to all devices.
+\newblock In {\em Presented as part of the 11th USENIX Symposium on Networked
+  Systems Design and Implementation}, Berkeley, CA, 2014. USENIX.
+
+\bibitem{RFSensing_Adib_2014}
+F.~Adib, Z.~Kabelac, D.~Katabi, and R.~C. Miller.
+\newblock 3d tracking via body radio reflections.
+\newblock available online: http://witrack.csail.mit.edu/witrack-paper.pdf,
+  2014.
+\newblock Usenix NSDI’14 - to appear.
+
+\bibitem{Pervasive_Adib_2013}
+Fadel Adib and Dina Katabi.
+\newblock See through walls with wi-fi.
+\newblock In {\em ACM SIGCOMM'13}, 2013.
+
+\bibitem{Emotion_Nguyen_2012}
+Matthias~Rauterberg Anh-Tuan~Nguyen, Wei~Chen.
+\newblock The role of human body expression in affect detection: A review.
+\newblock In {\em 10th Asia Pacific Conference on Computer Human Interaction
+  (APCHI 2012)}, 2012.
+
+\bibitem{Emotion_Atkinson_2007}
+Anthony~P Atkinson, Mary~L Tunstall, and Winand~H Dittrich.
+\newblock Evidence for distinct contributions of form and motion information to
+  the recognition of emotions from body gestures.
+\newblock {\em Cognition}, 104(1):59--72, 2007.
+
+\bibitem{Pervasive_Bao_2004}
+L.~Bao and S.~S. Intille.
+\newblock Activity recognition from user-annotated acceleration data.
+\newblock In {\em Proceedings of PERVASIVE 2004}, volume LNCS 3001, 2004.
+
+\bibitem{Emotion_Bernhardt_2007}
+Daniel Bernhardt and Peter Robinson.
+\newblock Detecting affect from non-stylised body motions.
+\newblock In {\em Affective Computing and Intelligent Interaction}, pages
+  59--70. Springer, 2007.
+
+\bibitem{Emotion_Bull_1987}
+Peter~E Bull.
+\newblock {\em Posture and gesture.}
+\newblock Pergamon press, 1987.
+
+\bibitem{SentimentSensing_Calvo_2010}
+Rafael~A Calvo and Sidney D'Mello.
+\newblock Affect detection: An interdisciplinary review of models, methods, and
+  their applications.
+\newblock {\em Affective Computing, IEEE Transactions on}, 1(1):18--37, 2010.
+
+\bibitem{SentimentSensing_Cambria_2013}
+Erik Cambria, Bjorn Schuller, Yunqing Xia, and Catherine Havasi.
+\newblock New avenues in opinion mining and sentiment analysis.
+\newblock {\em IEEE Intelligent Systems}, page~1, 2013.
+
+\bibitem{Pervasive_Cao_2012}
+Hong Cao, Minh~Nhut Nguyen, Clifton Chun~Wei Phua, Shonali Krishnaswamy, and
+  Xiaoli Li.
+\newblock An integrated framework for human activity classification.
+\newblock In {\em Proceedings of the 14th ACM International Conference on
+  Ubiquitous Computing (UbiComp 2012)}, 2012.
+
+\bibitem{Emotion_Castellano_2008}
+Ginevra Castellano, Loic Kessous, and George Caridakis.
+\newblock Emotion recognition through multiple modalities: face, body gesture,
+  speech.
+\newblock In {\em Affect and emotion in human-computer interaction}, pages
+  92--103. Springer, 2008.
+
+\bibitem{Pevasive_Chavarriaga_2011}
+Ricardo Chavarriaga, Hamidreza Bayati, and Jose del R.~Millan.
+\newblock Unsupervised adaptation for acceleration-based activity recognition:
+  robustness to sensor displacement and rotation.
+\newblock {\em Personal and Ubiquitous Computing}, 2011.
+
+\bibitem{Pervasive_Cohn_2012}
+Gabe Cohn, Dan Morris, Shwetak~N. Patel, and Desney~S. Tan.
+\newblock Humantenna: Using the body as an antenna for real-time whole-body
+  interaction.
+\newblock In {\em Proceedings of ACM CHI 2012}, 2012.
+
+\bibitem{Emotion_Crane_2007}
+Elizabeth Crane and Melissa Gross.
+\newblock Motion capture and emotion: Affect detection in whole body movement.
+\newblock In {\em Affective computing and intelligent interaction}, pages
+  95--101. Springer, 2007.
+
+\bibitem{Emotion_DeMeijer_1989}
+Marco De~Meijer.
+\newblock The contribution of general features of body movement to the
+  attribution of emotions.
+\newblock {\em Journal of Nonverbal behavior}, 13(4):247--268, 1989.
+
+\bibitem{Pervasive_Dey_2011}
+Anind~Kumar Dey, K.~Wac, D.~Ferreira, K.~Tassini, J.-H. Hong, and J.~Ramos.
+\newblock Getting closer: An empirical investigation of the proximity of user
+  to their smart phones.
+\newblock In {\em Proceedings of the 13th international conference on
+  Ubiquitous computing}, 2011.
+
+\bibitem{Emotion_Dittmann_1978}
+Allen~T Dittmann.
+\newblock The role of body movement in communication.
+\newblock {\em Nonverbal behavior and communication}, pages 69--95, 1978.
+
+\bibitem{SentimentSesing_Mello_2009}
+Sidney D'Mello and Art Graesser.
+\newblock Automatic detection of learner's affect from gross body language.
+\newblock {\em Applied Artificial Intelligence}, 23(2):123--150, 2009.
+
+\bibitem{SentimentSensing_Ekman_2003}
+Paul Ekman and Wallace~V Friesen.
+\newblock {\em Unmasking the face: A guide to recognizing emotions from facial
+  clues}.
+\newblock Ishk, 2003.
+
+\bibitem{AttentionMonitoring_Ferscha_2012}
+Alois Ferscha, Kashif Zia, and Benedikt Gollan.
+\newblock Collective attention through public displays.
+\newblock In {\em 2012 IEEE Sixth International Conference on Self-Adaptive and
+  Self-Organizing Systems (SASO)}, pages 211 --216, 2012.
+
+\bibitem{AttentionMonitoring_Gollan_2011}
+Benedikt Gollan, B.~Wally, and Alois Ferscha.
+\newblock Automatic attention estimation in an interactive system based on
+  behaviour analysis.
+\newblock In {\em Proceedings of the 15th Portuguese Conference on Artificial
+  Intelligence (EPIA2011)}, 2011.
+
+\bibitem{SentimentSensing_Gross_1995}
+James~J Gross and Ricardo~F Mu{\~n}oz.
+\newblock Emotion regulation and mental health.
+\newblock {\em Clinical psychology: Science and practice}, 2(2):151--164, 1995.
+
+\bibitem{Pervasive_Jaggarwal_2012}
+Akhil Jaggarwal and Roxanne~L Canosa.
+\newblock Emotion recognition using body gesture and pose.
+\newblock Technical report, 2012.
+\newblock available online:
+  http://www.cs.rit.edu/$\sim$axj4159/papers\_march/report\_1.pdf.
+
+\bibitem{SentimentSensing_Juslin_2005}
+Patrik~N Juslin and Klaus~R Scherer.
+\newblock {\em Vocal expression of affect.}
+\newblock Oxford University Press, 2005.
+
+\bibitem{RFsensing_Kim_2009}
+Youngwook Kim and Hao Ling.
+\newblock Human activity classification based on micro-doppler signatures using
+  a support vector machine.
+\newblock {\em IEEE Transactions on Geoscience and Remote Sensing},
+  47(5):1328--1337, 2009.
+
+\bibitem{SentimentSensing_Kramer_2014}
+Adam~DI Kramer, Jamie~E Guillory, and Jeffrey~T Hancock.
+\newblock Experimental evidence of massive-scale emotional contagion through
+  social networks.
+\newblock {\em Proceedings of the National Academy of Sciences}, page
+  201320040, 2014.
+
+\bibitem{Emotion_Lagerlof_2009}
+Ingrid Lagerl{\"o}f and Marie Djerf.
+\newblock Children's understanding of emotion in dance.
+\newblock {\em European Journal of Developmental Psychology}, 6(4):409--431,
+  2009.
+
+\bibitem{Pervasive_Lane_2010}
+Nicholas~D. Lane, Emiliano Miluzzo, Hong Lu, Daniel Peebles, Tanzeem Choudhury,
+  and Andrew~T. Campbell.
+\newblock A survey of mobile phone sensing.
+\newblock {\em IEEE Communications magazine}, 48(9):140--150, September 2010.
+
+\bibitem{SentimentSensing_Liu_2012}
+Bing Liu and Lei Zhang.
+\newblock A survey of opinion mining and sentiment analysis.
+\newblock In {\em Mining text data}, pages 415--463. Springer, 2012.
+
+\bibitem{SentimentSensing_Lupien_2009}
+Sonia~J Lupien, Bruce~S McEwen, Megan~R Gunnar, and Christine Heim.
+\newblock Effects of stress throughout the lifespan on the brain, behaviour and
+  cognition.
+\newblock {\em Nature Reviews Neuroscience}, 10(6):434--445, 2009.
+
+\bibitem{SentimentSensing_Lyubomirsky_2005}
+Sonja Lyubomirsky, Laura King, and Ed~Diener.
+\newblock The benefits of frequent positive affect: does happiness lead to
+  success?
+\newblock {\em Psychological bulletin}, 131(6):803, 2005.
+
+\bibitem{Emotion_Meeren_2005}
+Hanneke~KM Meeren, Corn{\'e}~CRJ van Heijnsbergen, and Beatrice de~Gelder.
+\newblock Rapid perceptual integration of facial expression and emotional body
+  language.
+\newblock {\em Proceedings of the National Academy of Sciences of the United
+  States of America}, 102(45):16518--16523, 2005.
+
+\bibitem{Emotion_Montepare_1999}
+Joann Montepare, Elissa Koff, Deborah Zaitchik, and Marilyn Albert.
+\newblock The use of body movements and gestures as cues to emotions in younger
+  and older adults.
+\newblock {\em Journal of Nonverbal Behavior}, 23(2):133--152, 1999.
+
+\bibitem{SentimentSensing_Mota_2003}
+Selene Mota and Rosalind~W Picard.
+\newblock Automated posture analysis for detecting learner's interest level.
+\newblock In {\em Computer Vision and Pattern Recognition Workshop, 2003.
+  CVPRW'03. Conference on}, volume~5, pages 49--49. IEEE, 2003.
+
+\bibitem{SentimentSensing_Pang_2008}
+Bo~Pang and Lillian Lee.
+\newblock Opinion mining and sentiment analysis.
+\newblock {\em Foundations and trends in information retrieval}, 2(1-2):1--135,
+  2008.
+
+\bibitem{Pervasive_Patel_2006}
+Shwetak~N. Patel, J.~A. Kientz, G.~R. Hayes, S.~Bhat, and Gregory~D. Abowd.
+\newblock Farther than you may think: An empirical investigation of the
+  proximity of users to their mobile phones.
+\newblock In {\em Proceedings of the 8th international conference on Ubiquitous
+  computing}, pages 123--140, 2006.
+
+\bibitem{Pervasive_Patridge_2008}
+K.~Patridge and P.~Golle.
+\newblock On using existing time-use study data for ubiquitous computing
+  applications.
+\newblock In {\em Proceedings of the 10th International Conference on
+  Ubiquitous Computing}, pages 144--153, 2008.
+
+\bibitem{Pervasive_Ploetz_2012}
+Thomas Ploetz, Nils~Y. Hammerla, Agata Rozga, Andrea Reavis, Nathan Call, and
+  Gregory~D. Abowd.
+\newblock Automatic assessment of problem behavior in individuals with
+  developmental disabilities.
+\newblock In {\em Proceedings of the 14th ACM International Conference on
+  Ubiquitous Computing (Ubicomp 2012)}, 2012.
+
+\bibitem{RFsensing_Pu_2013}
+Qifan Pu, Sidhant Gupta, Shyam Gollakota, and Shwetak Patel.
+\newblock Whole-home gesture recognition using wireless signals.
+\newblock In {\em The 19th Annual International Conference on Mobile Computing
+  and Networking (Mobicom'13)}, 2013.
+
+\bibitem{Pervasive_Ravi_2005}
+Nishkam Ravi, Nikhil Dandekar, Preetham Mysore, and Michael~L. Littman.
+\newblock Activity recognition from accelerometer data.
+\newblock In {\em Proceedings of the 17th conference on Innovative applications
+  of artificial intelligence - Volume 3}, IAAI'05, pages 1541--1546, 2005.
+
+\bibitem{SentimentSensing_Salovey_2000}
+Peter Salovey, Alexander~J Rothman, Jerusha~B Detweiler, and Wayne~T Steward.
+\newblock Emotional states and physical health.
+\newblock {\em American psychologist}, 55(1):110, 2000.
+
+\bibitem{Pervasive_Shi_2014}
+Shuyu Shi, Stephan Sigg, Wei Zhao, and Yusheng Ji.
+\newblock Monitoring of attention from ambient fm-radio signals.
+\newblock {\em IEEE Pervasive Computing, Special Issue - Managing Attention in
+  Pervasive Environments}, Jan-March 2014.
+
+\bibitem{RFSensing_Sigg_2014}
+Stephan Sigg, Ulf Blanke, and Gerhard Troester.
+\newblock The telepathic phone: Frictionless activity recognition from
+  wifi-rssi.
+\newblock In {\em IEEE International Conference on Pervasive Computing and
+  Communications (PerCom)}, PerCom '14, 2014.
+
+\bibitem{4027}
+Stephan Sigg, Dawud Gordon, Georg~von Zengen, Michael Beigl, Sandra Haseloff,
+  and Klaus David.
+\newblock Investigation of context prediction accuracy for different context
+  abstraction levels.
+\newblock {\em IEEE Transactions on Mobile Computing}, 11(6):1047 --1059, june
+  2012.
+
+\bibitem{4026}
+Stephan Sigg, Sandra Haseloff, and Klaus David.
+\newblock An alignment approach for context prediction tasks in ubicomp
+  environments.
+\newblock {\em IEEE Pervasive Computing}, Oct-Dec 2010, 2010.
+
+\bibitem{Pervasive_Sigg_2012}
+Stephan Sigg, Markus Scholz, Shuyu Shi, Yusheng Ji, and Michael Beigl.
+\newblock Rf-sensing of activities from non-cooperative subjects in device-free
+  recognition systems using ambient and local signals.
+\newblock {\em IEEE Transactions on Mobile Computing}, 13(4), 2013.
+
+\bibitem{Pervasive_Sigg_2013}
+Stephan Sigg, Shuyu Shi, Felix Buesching, Yusheng Ji, and Lars Wolf.
+\newblock Leveraging rf-channel fluctuation for activity recognition.
+\newblock In {\em Proceedings of the 11th International Conference on Advances
+  in Mobile Computing and Multimedia (MoMM2013)}, 2013.
+
+\bibitem{SentimentSensing_Smith_2004}
+Timothy~W Smith, Kelly Glazer, John~M Ruiz, and Linda~C Gallo.
+\newblock Hostility, anger, aggressiveness, and coronary heart disease: An
+  interpersonal perspective on personality, emotion, and health.
+\newblock {\em Journal of personality}, 72(6):1217--1270, 2004.
+
+\bibitem{SentimentSensing_Todaro_2003}
+John~F Todaro, Biing-Jiun Shen, Raymond Niaura, Avron Spiro, and Kenneth~D
+  Ward.
+\newblock Effect of negative emotions on frequency of coronary heart disease
+  (the normative aging study).
+\newblock {\em The American journal of cardiology}, 92(8):901--906, 2003.
+
+\bibitem{Emotion_VanHeijnsbergen_2007}
+CCRJ Van~Heijnsbergen, HKM Meeren, J~Grezes, and B~de~Gelder.
+\newblock Rapid detection of fear in body expressions, an erp study.
+\newblock {\em Brain research}, 1186:233--241, 2007.
+
+\bibitem{Pervasive_Varshavsky_2008}
+Alexander Varshavsky and Shwetak~N. Patel.
+\newblock {\em Location in Ubiquitous Computing}, pages 285--319.
+\newblock Ubiquitous Computing Fundamentals. Taylor and Francis Group, 2008.
+
+\bibitem{Emotion_Wallbott_1998}
+Harald~G Wallbott.
+\newblock Bodily expression of emotion.
+\newblock {\em European journal of social psychology}, 28(6):879--896, 1998.
+
+\bibitem{Emotion_Walters_1986}
+K.~Walters and R.~Walk.
+\newblock Perception of emotion from body posture.
+\newblock {\em Bulletin of the Psychonomic Society}, 24(5), 1986.
+
+\bibitem{AttentionMonitoring_Wickens_1984}
+C.D. Wickens.
+\newblock {\em Processing resources in attention}.
+\newblock Academic Press, 1984.
+
+\bibitem{AttentionMonitoring_Wickens_2008}
+C.D. Wickens and J.S. McCarley.
+\newblock {\em Applied attention theory}.
+\newblock CRC Press, 2008.
+
+\bibitem{AttentionMonitoring_Wu_2007}
+F.~Wu and B.A. Hubermann.
+\newblock Novelty and collective attention.
+\newblock In {\em Proceedings of the National Academics of Sciences}, volume
+  104, pages 17599--17601, 2007.
+
+\bibitem{AttentionMonitoring_Xu_2012}
+Yongchun Xu, Nenad Stojanovic, Ljiljana Stojanovic, and Tobias Schuchert.
+\newblock Efficient human attention detection based on intelligent complex
+  event processing.
+\newblock In {\em Proceedings of the 6th ACM International Conference on
+  Distributed Event-Based Systems}, DEBS '12, pages 379--380, 2012.
+
+\bibitem{AttentionMonitoring_Yonezawa_2007}
+Tomoko Yonezawa, Hirotake Yamazoe, Akira Utsumi, and Shinji Abe.
+\newblock Gaze-communicative behavior of stuffed-toy robot with joint attention
+  and eye contact based on ambient gaze-tracking.
+\newblock In {\em ICMI}, pages 140--145, 2007.
+
+\bibitem{SentimentSensing_Zhai_2011}
+Zhongwu Zhai, Hua Xu, Bada Kang, and Peifa Jia.
+\newblock Exploiting effective features for chinese sentiment classification.
+\newblock {\em Expert Systems with Applications}, 38(8):9139--9146, 2011.
+
+\end{thebibliography}
+
+
+% \bibliography{/home/stephan/Daten/Arbeit/Veroeffentlichungen/Literatur/Literatur_080128_v2_STS}
+
+
+\label{maxSeitenzahl}
+
+
+\end{document}
