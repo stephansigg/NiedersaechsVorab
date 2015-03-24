@@ -25,6 +25,8 @@
           \normalsize{References (applicant)},
           \normalsize{ }\vspace{-.8cm}}
           
+\usepackage{color}
+          
 \newcommand{\todoBase}{\hfill \notiz{TODO} $\square$}
 \newcommand{\projektname}{\texttt{Sense box}}
 
@@ -33,6 +35,10 @@
 \newcommand{\dawud}[1]{\marginpar{\footnotesize\notiz{Dawud:}\\\tiny \framebox{\begin{minipage}{2.1cm} #1 \end{minipage}}}}
 \newcommand{\stephan}[1]{\marginpar{\footnotesize\notiz{Stephan:}\\\tiny \framebox{\begin{minipage}{2.1cm} #1 \end{minipage}}}}
 \newcommand{\todo}{\marginpar{\todoBase}}
+
+\newcommand{\kobyc}[1]{\begin{center}\fbox{\parbox{3in}{{\textcolor{green}{K: #1}}}}\end{center}}
+\newcommand{\stephans}[1]{\begin{center}\fbox{\parbox{3in}{{\textcolor{magenta}{S: #1}}}}\end{center}}
+
 
 \author{\begin{minipage}[t]{7.1cm}\centering \small \VornameAntragstellerA\ \NachnameAntragstellerA\\ \small Lehrstuhl für Kommunikationstechnik\\ \small ComTec\\ \small Universität Kassel\end{minipage}
 \begin{minipage}[t]{7.1cm}\centering \small \VornameAntragstellerB\ \NachnameAntragstellerB\\ \small Gruppe Verteilte und Ubiquitäre Systeme \\ \small Institut für Betriebssysteme und Rechnerverbund\\ \small TU Braunschweig\end{minipage}}
@@ -97,27 +103,27 @@ In addition, mental health is linked to emotion regulation~\cite{SentimentSensin
 On the other hand, positive affect benefits the immune system~\cite{SentimentSensing_Smith_2004} while happyness and satisfaction are good indicators for and even foster work performance, health, and also success in private life~\cite{SentimentSensing_Lyubomirsky_2005}.
 
 Sentiment and emotion can be detected from Physiological signals with sensors such as Electromyograms (EMG, muscle activity), Electrodermal Activity (EDA, electrical conductivity of the skin surface), Electrocardiogram (EKG or ECG, heart activity), Electrooculogram (EOG, eye movement) or Electroencephalography (EEG, brain activity)~\cite{SentimentSensing_Calvo_2010}.
-These kind of sensors, however, are accessible only to a small share of people and have drawbacks such as high cost, weight or non-portability. 
+These kind of sensors, however, are accessible only to a small amount of people and have drawbacks such as high cost, weight, non-portability, and sometimes involve invasive implantation.
 Furthermore, for a human utilising these tools, they constitute additional devices to carry around.
 
 Recent work shows that it is also possible to detect sentiment from gesture and pose~\cite{Emotion_DeMeijer_1989}. 
 With the verge of the Internet of Things and increasing amount of mobile and body worn devices and sensors in everyday life, a multitude of sensors is available nowadays which has the potential to capture body movement and pose. 
 
-The focus and contribution of this project is to (1) recognise emotion from medical sensors, (2) exploit the potential of cheaper smartphone and on-body IoT sensors for sentiment sensing by identifying correlations in sensor data traces with medical sensors, (3a) exploit environmental signals such as RSSI or RF-signal strength for sentiment sensing and, (3b) predict the evolution of sentiment from the time series of past observations. 
+The focus and contribution of this project is to (1) recognise emotion from medical sensors, (2) exploit the potential of cheaper smartphone and on-body IoT sensors for sentiment sensing by identifying correlations in sensor data traces with medical sensors, (3a) exploit environmental signals such as RSSI or RF-signal strength for sentiment sensing and, (3b) predict the evolution of sentiment from the time series of past observations. (4) develop memory, time, and computation efficient methods to perform such analysis on a smartphone.
 
 The outcome of the project will be a sentiment sensing framework comprising medical, body, smartphone and environmental sensors together with a prototype implementation
 
-\subsection*{Current state of the art in an international perspective}
+\subsection*{Current state-of-the-art in an international perspective}
 Emotion research or affective science investigates affect expression and detection~\cite{SentimentSensing_Calvo_2010}.
 In this context, the recognition of emotion has been considered from facial expressions~\cite{SentimentSensing_Ekman_2003}, voice~\cite{SentimentSensing_Juslin_2005} as well as body language and posture~\cite{SentimentSensing_Mota_2003,SentimentSesing_Mello_2009}.
 Especially the latter is of greater interest for this project and is discussed below. 
-There is also some body of work on utilising text mining for sentiment sensing as briefly discussed in the next section.
+There is also some body of work on utilising text mining for sentiment sensing as briefly discussed in the next section. 
 
 \subsubsection*{Sensing of sentiment from textual corpus}
 Sentiment mining is an active research topic in recent years~\cite{SentimentSensing_Kramer_2014, SentimentSensing_Cambria_2013}. 
 Also referred to as opinion mining, it considers indirect sources and requires actual active involvement of subjects~\cite{SentimentSensing_Pang_2008, SentimentSensing_Zhai_2011}. 
 In particular, there is an active body of work in the direction of mining textual input (via sentiment-expressing words or phrases) in online social networks with the help of natural language processing and computational linguistics~\cite{SentimentSensing_Liu_2012}.
-We will, however, not consider the mining of text in the scope of this project but rather focus on sentiment sensing from physical sensors.
+We will, however, not consider the mining of text in the scope of this project but rather focus on sentiment sensing from physical sensors. Nevertheless, we may use text analysis to provide a supervision independent signal to build such a system. That is, if necessary, we will exploit textual input to better tune the parameters of our sensor-based sentiment analyzer. 
 
 \subsubsection*{Sentiment sensing from body movement and pose}
 Emotion can be inferred from body gesture and pose~\cite{Pervasive_Jaggarwal_2012} at least as accurately as from face~\cite{Emotion_Nguyen_2012,Emotion_Castellano_2008,Emotion_Meeren_2005}.
@@ -134,7 +140,7 @@ Emotion can be recognised from non-trivial scenarios, such as simple daily-life 
 
 % It will be interesting to see how well RF information can be exploited in order to identify body gesture and pose and to classify this for human emotion classes.
 
-In~\cite{SentimentSensing_Mota_2003,SentimentSesing_Mello_2009}, the authors detected boredom, confusion, delight and frustration utilising pressure mats. 
+Some researchers~\cite{SentimentSensing_Mota_2003,SentimentSesing_Mello_2009}, were able to detect boredom, confusion, delight and frustration utilising pressure mats. 
 Such mats, however, are not portable and are therefore not applicable in our setting. 
 Instead, we aim to detect sentiment from body or environmental sensors. 
 
@@ -148,7 +154,7 @@ In general, aspects such as saliency, effort, expectancy and value are important
 This model was later extended to put a greater stress on the effort a person takes towards an object~\cite{AttentionMonitoring_Ferscha_2012}.
 The authors also discuss various aspects of attention and identify as most distinguishing factors changes in walking speed, direction or orientation.
 
-In~\cite{Pervasive_Shi_2014} it was investigated, how these properties, in particular location of a person, walking direction and walking speed or changes therein can be utilised for the monitoring and detection of attention from fluctuation in received signal strength. 
+Shi et al~\cite{Pervasive_Shi_2014} investigated, how these properties, in particular location of a person, walking direction and walking speed or changes therein can be utilised for the monitoring and detection of attention from fluctuation in received signal strength. 
 %% TODO: Add work of Kai Kunze? -> Fatigue, eye movement,...
 
 \subsubsection*{Sensing activity, motion and pose from inertial and environmental sensors}
@@ -160,21 +166,21 @@ The integration of sensors in clothing as well as the recent remarkable progress
 However, a subject is still required to cooperate and at least wear the sensors~\cite{Pervasive_Cohn_2012}.
 This requirement can not be assured generally in real-world applications. 
 In particular, even devices as private as mobile phones, which are frequently assumed to be constantly in the same context as its owner~\cite{Pervasive_Patridge_2008, Pervasive_Varshavsky_2008, Pervasive_Lane_2010}, can not serve as a sensor platform suitable for continuous monitoring of an individual's context.   
-Dey et al. investigated in~\cite{Pervasive_Dey_2011} that users have their mobile phone within arms reach only 54\% of the time.
+Dey et al.~\cite{Pervasive_Dey_2011} showed that users have their mobile phone within arms reach only 54\% of the time.
 This confirms a similar investigation of Patel et al.~\cite{Pervasive_Patel_2006} which reported a share of 58\% for the same measure.
 
 We will therefore also consider environmental sources, in particular signal strength information from WiFi or 2-3G systems for their ubiquitous availability. 
 In particular, good accuracy has been achieved recently with systems exploiting fluctuation in received radio signals. 
-Pu and others showed that simultaneous detection of gestures from multiple individuals is possible by utilising multi-antenna nodes and micro Doppler fluctuations~\cite{RFsensing_Pu_2013,RFsensing_Kim_2009}.
+Pu and others \kobyc{cite?}showed that simultaneous detection of gestures from multiple individuals is possible by utilising multi-antenna nodes and micro Doppler fluctuations~\cite{RFsensing_Pu_2013,RFsensing_Kim_2009}.
 They utilise a USRP SDR multi antenna receiver and one or more single antenna transmitters distributed in the environment to distinguish between a set of 9 gestures with an average accuracy of 0.94. 
 Their active device-free system exploits a MIMO receiver in order to recognise gestures from different persons present at the same time. 
 By leveraging a preamble gesture pattern, the receiver estimates the MIMO channel that maximises the reflections of the desired user.
 
 A main challenge was for them that the Doppler shift from human movement was several magnitudes smaller than the bandwidth of the signal employed.
 The authors therefore proposed to transform the received signal into several narrowband pulses which are then analysed for possible Doppler fluctuation.
-The group discussed application possibilities of their system in~\cite{RFSensing_Kellog_2014}.
+The group recently discussed application possibilities of their system~\cite{RFSensing_Kellog_2014}.
 
-In a related system, Adib and Katabi employ MIMO interference nulling and combine samples taken over time to achieve a similar result while compensating for the missing spatial diversity in a single-antenna receiver system~\cite{Pervasive_Adib_2013}.
+In a related system, Adib and Katabi \kobyc{cite?}employ MIMO interference nulling and combine samples taken over time to achieve a similar result while compensating for the missing spatial diversity in a single-antenna receiver system~\cite{Pervasive_Adib_2013}.
 In their system, they leverage standard WiFi hardware at 2.4GHz.
 
 Later, this work was extended to 3D motion tracking by utlising three or more directional receive antennas in exactly defined relative orientation~\cite{RFSensing_Adib_2014}. 
@@ -192,6 +198,7 @@ The expected time schedule is depicted in table~\ref{tableGesamtueberblick}.
 A detailed description of the distribution of work packages to personnel is given in the following.
 The figures represent three person months (equal to one person quarter).
 The notation '40' represents an allocation of 40 percent of one person quarter. 
+\kobyc{where we should add detecting and removing sensor outliers? develop efficient algorithms? usage of text for developing models? }
 
 \begin{table}
 \centering
@@ -215,7 +222,9 @@ WP-4.1	&	&	&	&25	&75	&	&	&	 & 100\\
 WP-4.2	&	&	&	&	&15	&95	&90	&	 & 200\\
 WP-4.3	&	&	&	&	&	&50	&50	&100	 & 200\\\hline
 Sentiment prediction& &	&	&	&	&	&	&	 &\\
-WP-5	&	&	&	&	&	&45	&55	&100	 & 200\\\hline
+%WP-5	&	&	&	&	&	&45	&55	&100	 & 200\\\hline
+WP-5.1	&	&	&	&	&	&45	&45	&10	 & 100\\%\hline
+WP-5.2	&	&	&	&	&	&	&10	&90	 & 100\\\hline
 Sum	& 200	&200	&200	&200	&200	&200	&200	&200	 & 1600\\\hline
 \end{tabular}
 \end{small}
@@ -251,7 +260,7 @@ This is an ongoing task which is distributed over the whole project duration.
 
 \noindent
 In this workpackage we develop a sensing system to attach medical, body, smartphone and environmental sensors.
-The system will comprise interfaces for various sensing sources and cover of mobile clients to collect data samples and a server backend where the data is collected and processed. 
+The system will comprise interfaces for various sensing sources and cover of mobile clients to collect data samples and a server backend where the data is collected and processed. We perform preliminary analysis of the data collected from various sources to evaluate various aspects of them, such as, robustness, noise, and redundancy.
 
 \paragraph*{WP-2.2: Integration of medical sensing equipment}
 \begin{tabular}{rl}
@@ -264,7 +273,7 @@ The system will comprise interfaces for various sensing sources and cover of mob
 
 \noindent
 In this workpackage we integrate medical sensors (EMG and EOG) with the developed framework. 
-We will have access to the medical sensors via a cooperation with the medical center at Georg-August University Goettingen, in particular with the Neurohabilitation Engineering Group of Professor Dario Farina\footnote{http://www.nre.bccn.uni-goettingen.de/index.php?id=82}. 
+We will have access to the medical sensors via a cooperation with the medical center at Georg-August University Goettingen, in particular with the Neurohabilitation Engineering Group of Professor Dario Farina\footnote{http://www.nre.bccn.uni-goettingen.de/index.php?id=82}. We will develop methods to predict the output of the medical sensors from the other sensors. This output will later used in our sentiment prediction system.
 
 \paragraph*{WP-2.3: Integration of smartphone and body sensors}
 \begin{tabular}{rl}
@@ -278,7 +287,7 @@ We will have access to the medical sensors via a cooperation with the medical ce
 \noindent
 In this workpackage we integrate smartphone and body sensors with the developed framework. 
 Our focus will be on the integration of acceleration data from smartphones and sensor nodes. 
-In particular, we will utilise INGA\footnote{https://www.ibr.cs.tu-bs.de/projects/inga/} sensor nodes to which we have access through a cooperation with TU Braunschweig, Germany.
+In particular, we will utilise INGA\footnote{https://www.ibr.cs.tu-bs.de/projects/inga/} sensor nodes to which we have access through a cooperation with TU Braunschweig, Germany. We will evaluate the amount of sensor information such that we will be able to minimize usage of the phone's resource, and extend battery life.
 
 \paragraph*{WP-2.4: Integration of environmental sensors}
 \begin{tabular}{rl}
@@ -325,7 +334,7 @@ In the test design and execution we will receive support from the Institute of P
 \noindent
 We will collect acceleration data from smartphone and body sensors for our sentiment prediction considered in WP-5. 
 In this experiment, the accelerometer data from 10-20 persons will be collected over a period of 6 months. 
-These individuals, recruited from students and University staff, will be equipped with body sensors measuring acceleration data as well as with portable medical sensors. 
+These individuals, recruited from students and staff of both universities, will be equipped with body sensors measuring acceleration data as well as with portable medical sensors. 
 In order to reach dense sampling, we will consider the use of fitness trackers\footnote{for instance https://www.fitbit.com/de/chargehr} and monetary reward systems. 
 
 \paragraph*{WP-4: Sentiment analysis}
@@ -340,7 +349,7 @@ In order to reach dense sampling, we will consider the use of fitness trackers\f
 
 \noindent
 In this workpackage we investigate the identification of sentiment from data of medical sensors. 
-Building on previous work, we will design features and classifiers for the detection of sentiment from EMG and EOG data.
+We will develop new learning methods for detecting sentiment from EMG and EOG data. These methods will take into consideration the special nature of these signals.
 
 \paragraph*{WP-4.2: Sentiment analysis from body and smartphone sensors}
 \begin{tabular}{rl}
@@ -352,9 +361,9 @@ Building on previous work, we will design features and classifiers for the detec
 \end{tabular}
 
 \noindent
-We will in this workpackage indentify suitable features for the prediction of sentiment from body and smartphone sensors. 
-In particular, building on previous work regarding movement, gestures and pose as indicators of emotion, classifiers for the detection of such classes will be developed and linked to the classification of sentiment. 
-In addition, building on the results from WP-4.1 we will investigate correlations between sensor readings of medical and acceleration sensors in order to give an estimation to which extent medical sensors can be substituted by cheaper acceleration sensors for the application in large scale sensing applications.  
+We will in this workpackage develop suitable features for the prediction of sentiment from body and smartphone sensors. Our goal is to have a small number of predictive features. 
+In particular, similarly to previous work regarding movement, gestures and pose as indicators of emotion, classifiers for the detection of such classes will be developed and linked to the classification of sentiment. 
+In addition, building on the results from WP-4.1 we will further investigate correlations between sensor readings of medical and acceleration sensors in order to give an estimation to which extent medical sensors can be substituted by cheaper acceleration sensors for the application in large scale on-phone sensing applications.
 
 \paragraph*{WP-4.3: Sentiment analysis from environmental sensors}
 \begin{tabular}{rl}
@@ -366,29 +375,48 @@ In addition, building on the results from WP-4.1 we will investigate correlation
 \end{tabular}
 
 \noindent
-We will in this workpackage indentify features for the prediction of sentiment from received RF signals. 
+We will in this workpackage develop features for the prediction of sentiment from received RF signals. 
 Building on our and other previous work detecting movement and gestures from received RF-signals, we will detect gestures, movement and pose of individuals. 
-Then, building on previous work regarding movement, gestures and pose as indicators of emotion, classifiers for the detection of such classes will be developed and linked to the classification of sentiment. 
+Then, we will devise new methods to predict from the output of these prediction regarding physical state (movement, gestures and pose) mental state, such as emotion and sentiment. 
 
-\paragraph*{WP-5: Prediction of sentiment from historical and correlated data}
+\paragraph*{WP-5: Prediction of sentiment based on historical data}
+\paragraph*{WP-5.1: Analysis of sentiment on long time periods}
 \begin{tabular}{rl}
- Estimated effort& 6 PMs\\
+ Estimated effort& 3 PMs\\
  Precondition & WP-3, WP-4\\
  Milestone & \begin{minipage}[t]{12.2cm}
-\textit{A document describing the potential of sentiment prediction from historical sensor traces}\vspace{.2cm}
+\textit{A document describing the potential of sentiment analysis of long sensor traces}\vspace{.2cm}
              \end{minipage}
 \end{tabular}
 
 \noindent
-In this workpackage, we consider the prediction of sentiment from historical data. 
-In particular, we investigate whether typical sentiment patterns can be observed in the data and use these for the prediction of sentiment evolution.
-In particular, similar to our work in~\cite{4026,4027}, we consider the use of alignment matching approaches to identify approximately similar sub-patterns in sentiment time series and to predict probable continuation of these patterns.
+In this workpackage, we focus the analysis of sentiment over a long period of time. 
+In particular, we investigate the identification of typical sentiment patterns from the observed sensor data.
+
+\paragraph*{WP-5.2: Prediction of sentiment on long time periods}
+\begin{tabular}{rl}
+	Estimated effort& 3 PMs\\
+	Precondition & WP-5-1\\
+	Milestone & \begin{minipage}[t]{12.2cm}
+		\textit{A document describing the potential of sentiment prediction from long sensor traces}\vspace{.2cm}
+	\end{minipage}
+\end{tabular}
+
+\noindent
+We focus in this in the prediction of sentiment based, not only on current sensor input, but also on recent prediction and detection. That is, modeling the state-of-mind of a person, and use it to improve prediction of future state-of-mind. In particular, similar to our previous work~\cite{4026,4027}, we consider the use of alignment matching approaches to identify approximately similar sub-patterns in sentiment time series and to predict probable continuation of these patterns.
 
 % \todo
 % \textbf{TODO: More details here!!}
 
 
 \subsection*{Type and extent of the cooperation and division of tasks between the partners}
+Goettingen's expertise lie in sensor (please add), and 
+Technion's expertise lie in the design of new methods for data analysis, building predictive models, and devise highly efficient methods. 
+\kobyc{to add more about who will do what and the interface bewteen the two institutes}
+
+The researchers plan to have periodic phone meetings, and visit each other every 6 months. We hope that our Goettingen's students will be have long visit in Technion in vice-versa. This will not only advance the project, but will also serve, as a way to deepen their network and the connections between the two institutes. 
+
+
 \begin{itemize}
  \item[\color{blue}tbd]
 \end{itemize}
