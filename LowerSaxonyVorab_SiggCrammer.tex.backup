@@ -356,6 +356,7 @@ In addition, users will receive recommendations based on the sensed sentiment pa
 % \kobyc{ask the user for feedback WP-2.2}
 
 \paragraph*{WP-4: Sentiment analysis}
+\kobyc{related sentiment to location or time?}
 
 \paragraph*{WP-4.1: Sentiment analysis from medical sensors}
 \begin{tabular}{rl}
@@ -368,9 +369,7 @@ In addition, users will receive recommendations based on the sensed sentiment pa
 
 \noindent
 In this workpackage we investigate the identification of sentiment from data of medical sensors. 
-We will develop new learning methods for detecting sentiment from EMG and EOG data. 
-These methods will take into consideration the special nature of these signals.
-In addition, 
+We will develop new learning methods for detecting sentiment from EMG and EOG data. These methods will take into consideration the special nature of these signals.
 
 \paragraph*{WP-4.2: Sentiment analysis from body and smartphone sensors}
 \begin{tabular}{rl}
@@ -385,14 +384,6 @@ In addition,
 We will in this workpackage develop suitable features for the prediction of sentiment from body and smartphone sensors. Our goal is to have a small number of predictive features. 
 In particular, similarly to previous work regarding movement, gestures and pose as indicators of emotion, classifiers for the detection of such classes will be developed and linked to the classification of sentiment. 
 In addition, building on the results from WP-4.1 we will further investigate correlations between sensor readings of medical and acceleration sensors in order to give an estimation to which extent medical sensors can be substituted by cheaper acceleration sensors for the application in large scale on-phone sensing applications.
-
-In addition, in this workpackage, we focus the analysis of sentiment over an extended period of time. 
-In particular, we investigate the identification of typical sentiment patterns from the observed sensor data.
-From this, we focus on the prediction of sentiment based not only on current sensor input, but also on recent historical data. 
-That is, modeling the state-of-mind of a person, and use it to improve prediction of future state-of-mind. 
-In particular, similar to our previous work~\cite{4026,4027}, we consider the use of alignment matching approaches to identify approximately similar sub-patterns in sentiment time series and to predict probable continuation of these patterns.
-
-% \kobyc{related sentiment to location or time?}
 
 \paragraph*{WP-4.3: Sentiment analysis from environmental sensors}
 \begin{tabular}{rl}
@@ -409,7 +400,7 @@ Building on our and other previous work detecting movement and gestures from rec
 Then, we will devise new methods to predict from the output of these prediction regarding physical state (movement, gestures and pose) mental state, such as emotion and sentiment. 
 
 \paragraph*{WP-5: Prediction of sentiment based on historical data}
-\paragraph*{WP-5.1: Integrating past sentiment}
+\paragraph*{WP-5.1: Analysis of sentiment on long time periods}
 \begin{tabular}{rl}
  Estimated effort& 3 PMs\\
  Precondition & WP-3, WP-4\\
@@ -417,11 +408,12 @@ Then, we will devise new methods to predict from the output of these prediction 
 \textit{A document describing the potential of sentiment analysis of long sensor traces}\vspace{.2cm}
              \end{minipage}
 \end{tabular}
-\textbf{TODO}
+
 \noindent
+In this workpackage, we focus the analysis of sentiment over a long period of time. 
+In particular, we investigate the identification of typical sentiment patterns from the observed sensor data.
 
-
-\paragraph*{WP-5.2: Generating user feedback}
+\paragraph*{WP-5.2: Prediction of sentiment on long time periods}
 \begin{tabular}{rl}
 	Estimated effort& 3 PMs\\
 	Precondition & WP-5-1\\
@@ -431,6 +423,7 @@ Then, we will devise new methods to predict from the output of these prediction 
 \end{tabular}
 
 \noindent
+We focus in this in the prediction of sentiment based, not only on current sensor input, but also on recent prediction and detection. That is, modeling the state-of-mind of a person, and use it to improve prediction of future state-of-mind. In particular, similar to our previous work~\cite{4026,4027}, we consider the use of alignment matching approaches to identify approximately similar sub-patterns in sentiment time series and to predict probable continuation of these patterns.
 
 % \todo
 % \textbf{TODO: More details here!!}

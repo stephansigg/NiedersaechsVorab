@@ -1,0 +1,107 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: LowerSaxonyVorab_SiggCrammer.aux
+The style file: plain.bst
+I found no \bibdata command---while reading file LowerSaxonyVorab_SiggCrammer.aux
+Warning--I didn't find a database entry for "SentimentSensing_Salovey_2000"
+Warning--I didn't find a database entry for "SentimentSensing_Smith_2004"
+Warning--I didn't find a database entry for "SentimentSensing_Todaro_2003"
+Warning--I didn't find a database entry for "SentimentSensing_Gross_1995"
+Warning--I didn't find a database entry for "SentimentSensing_Lupien_2009"
+Warning--I didn't find a database entry for "SentimentSensing_Lyubomirsky_2005"
+Warning--I didn't find a database entry for "SentimentSensing_Calvo_2010"
+Warning--I didn't find a database entry for "Emotion_DeMeijer_1989"
+Warning--I didn't find a database entry for "SentimentSensing_Ekman_2003"
+Warning--I didn't find a database entry for "SentimentSensing_Juslin_2005"
+Warning--I didn't find a database entry for "SentimentSensing_Mota_2003"
+Warning--I didn't find a database entry for "SentimentSesing_Mello_2009"
+Warning--I didn't find a database entry for "SentimentSensing_Kramer_2014"
+Warning--I didn't find a database entry for "SentimentSensing_Cambria_2013"
+Warning--I didn't find a database entry for "SentimentSensing_Pang_2008"
+Warning--I didn't find a database entry for "SentimentSensing_Zhai_2011"
+Warning--I didn't find a database entry for "SentimentSensing_Liu_2012"
+Warning--I didn't find a database entry for "Pervasive_Jaggarwal_2012"
+Warning--I didn't find a database entry for "Emotion_Nguyen_2012"
+Warning--I didn't find a database entry for "Emotion_Castellano_2008"
+Warning--I didn't find a database entry for "Emotion_Meeren_2005"
+Warning--I didn't find a database entry for "Emotion_Walters_1986"
+Warning--I didn't find a database entry for "Emotion_Dittmann_1978"
+Warning--I didn't find a database entry for "Emotion_Wallbott_1998"
+Warning--I didn't find a database entry for "Emotion_VanHeijnsbergen_2007"
+Warning--I didn't find a database entry for "Emotion_Atkinson_2007"
+Warning--I didn't find a database entry for "Emotion_Bull_1987"
+Warning--I didn't find a database entry for "Emotion_Montepare_1999"
+Warning--I didn't find a database entry for "Emotion_Crane_2007"
+Warning--I didn't find a database entry for "Emotion_Bernhardt_2007"
+Warning--I didn't find a database entry for "Emotion_Lagerlof_2009"
+Warning--I didn't find a database entry for "AttentionMonitoring_Xu_2012"
+Warning--I didn't find a database entry for "AttentionMonitoring_Wu_2007"
+Warning--I didn't find a database entry for "AttentionMonitoring_Wickens_1984"
+Warning--I didn't find a database entry for "AttentionMonitoring_Yonezawa_2007"
+Warning--I didn't find a database entry for "AttentionMonitoring_Wickens_2008"
+Warning--I didn't find a database entry for "AttentionMonitoring_Gollan_2011"
+Warning--I didn't find a database entry for "AttentionMonitoring_Ferscha_2012"
+Warning--I didn't find a database entry for "Pervasive_Shi_2014"
+Warning--I didn't find a database entry for "Pervasive_Ravi_2005"
+Warning--I didn't find a database entry for "Pervasive_Cao_2012"
+Warning--I didn't find a database entry for "Pervasive_Bao_2004"
+Warning--I didn't find a database entry for "Pervasive_Ploetz_2012"
+Warning--I didn't find a database entry for "Pevasive_Chavarriaga_2011"
+Warning--I didn't find a database entry for "Pervasive_Cohn_2012"
+Warning--I didn't find a database entry for "Pervasive_Patridge_2008"
+Warning--I didn't find a database entry for "Pervasive_Varshavsky_2008"
+Warning--I didn't find a database entry for "Pervasive_Lane_2010"
+Warning--I didn't find a database entry for "Pervasive_Dey_2011"
+Warning--I didn't find a database entry for "Pervasive_Patel_2006"
+Warning--I didn't find a database entry for "RFsensing_Pu_2013"
+Warning--I didn't find a database entry for "RFsensing_Kim_2009"
+Warning--I didn't find a database entry for "RFSensing_Kellog_2014"
+Warning--I didn't find a database entry for "Pervasive_Adib_2013"
+Warning--I didn't find a database entry for "RFSensing_Adib_2014"
+Warning--I didn't find a database entry for "4026"
+Warning--I didn't find a database entry for "4027"
+Warning--I didn't find a database entry for "Pervasive_Sigg_2012"
+Warning--I didn't find a database entry for "Pervasive_Sigg_2013"
+Warning--I didn't find a database entry for "RFSensing_Sigg_2014"
+You've used 0 entries,
+            2118 wiz_defined-function locations,
+            614 strings with 6767 characters,
+and the built_in function-call counts, 18 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 2
+:= -- 7
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
+int.to.chr$ -- 0
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 3
+num.names$ -- 0
+pop$ -- 0
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1
+stack$ -- 0
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 0
+width$ -- 0
+write$ -- 2
+(There was 1 error message)
