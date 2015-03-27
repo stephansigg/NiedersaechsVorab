@@ -43,7 +43,7 @@
 \author{\begin{minipage}[t]{7.1cm}\centering \small \VornameAntragstellerA\ \NachnameAntragstellerA\\ \small Lehrstuhl für Kommunikationstechnik\\ \small ComTec\\ \small Universität Kassel\end{minipage}
 \begin{minipage}[t]{7.1cm}\centering \small \VornameAntragstellerB\ \NachnameAntragstellerB\\ \small Gruppe Verteilte und Ubiquitäre Systeme \\ \small Institut für Betriebssysteme und Rechnerverbund\\ \small TU Braunschweig\end{minipage}}
 
-\title{\projektname:\\\notiz{Social and sentiment sensing using on-body sensors}}
+\title{\projektname:\\\notiz{Social and sentiment sensing and assisting using on-body sensors}}
 
 \date{\small \today}
 % \usepackage[T1]{fontenc}
@@ -86,7 +86,7 @@
 % \maketitle
 \pagebreak
 \begin{center}
-\section*{Social and sentiment sensing using on-body sensors}
+\section*{Social and sentiment sensing and assisting using on-body sensors}
 \begin{tabular}{cc}
   Stephan Sigg, & Koby Crammer\\
   University of Goettingen, Germany & Department of Electrical Engineering, Technion \\
@@ -109,9 +109,9 @@ Furthermore, for a human utilising these tools, they constitute additional devic
 Recent work shows that it is also possible to detect sentiment from gesture and pose~\cite{Emotion_DeMeijer_1989}. 
 With the verge of the Internet of Things and increasing amount of mobile and body worn devices and sensors in everyday life, a multitude of sensors is available nowadays which has the potential to capture body movement and pose. 
 
-The focus and contribution of this project is to (1) recognise emotion from medical sensors, (2) exploit the potential of cheaper smartphone and on-body IoT sensors for sentiment sensing by identifying correlations in sensor data traces with medical sensors, (3a) exploit environmental signals such as RSSI or RF-signal strength for sentiment sensing and, (3b) predict the evolution of sentiment from the time series of past observations. (4) develop memory, time, and computation efficient methods to perform such analysis on a smartphone.
+The focus and contribution of this project is to (1) recognise emotion from medical sensors, (2) exploit the potential of cheaper smartphone and on-body IoT sensors for sentiment sensing by identifying correlations in sensor data traces with medical sensors, (3a) exploit environmental signals such as RSSI or RF-signal strength for sentiment sensing and, (3b) predict the evolution of sentiment from the time series of past observations. (4) develop memory, time, and computation efficient methods to perform such analysis on a smartphone. (5) develop and experiment with sentiment feedback methods.
 
-The outcome of the project will be a sentiment sensing framework comprising medical, body, smartphone and environmental sensors together with a prototype implementation
+The outcome of the project will be a sentiment sensing and feedback framework comprising medical, body, smartphone and environmental sensors together with a prototype implementation
 
 \subsection*{Current state-of-the-art in an international perspective}
 Emotion research or affective science investigates affect expression and detection~\cite{SentimentSensing_Calvo_2010}.
@@ -190,9 +190,10 @@ Higher accuracy of this estimation is granted by utilising frequency modulated c
 Impact of static objects could be mitigated by subtracting successive sample means whereas noise was filtered by its speed of changes in energy over frequency bands. 
 
 \subsection*{Research approach, methods and hypotheses}
-\begin{itemize}
- \item[\color{blue}tbd]
-\end{itemize}
+We plan to apply the machine learning approach in which prediction and feedback tools are built based on data. Specifically, we plan to install and employ a wide range of sensors, some on-body, some are already installed on everyday smartphones, and some are located in an environmental. We will collect data from these sensors and analyze it, where the goal is to find a small, cheap and efficient subset of sensors which provides a robust and stable signal for prediction. Next, we will build a prediction system of sentiment based on this signal. We will use the collected signals and true sentiment to generate with a predictive model of sentiment from signal. We will test the model on signals coming from participants of our study. We will also develop a feedback algorithm that will provide the user information about current sentimental state, and possibly future predicted one. Hopefully, the user will benefit from such feedback. Additional component we plan to pursue is the development of an efficient prediction and feedback methods, that could be executed on a smartphone.
+
+We hypothesize that we will be able to collect sensor information on users, and their true or approximated sentimental state. We also assume that it is possible to predict sentiment from signals of sensors. 
+
 \subsection*{Detailed work programme including time schedule}
 The expected time schedule is depicted in table~\ref{tableGesamtueberblick}. 
 A detailed description of the distribution of work packages to personnel is given in the following.
