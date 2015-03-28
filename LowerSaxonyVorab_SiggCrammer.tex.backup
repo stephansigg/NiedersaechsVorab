@@ -43,7 +43,7 @@
 \author{\begin{minipage}[t]{7.1cm}\centering \small \VornameAntragstellerA\ \NachnameAntragstellerA\\ \small Lehrstuhl für Kommunikationstechnik\\ \small ComTec\\ \small Universität Kassel\end{minipage}
 \begin{minipage}[t]{7.1cm}\centering \small \VornameAntragstellerB\ \NachnameAntragstellerB\\ \small Gruppe Verteilte und Ubiquitäre Systeme \\ \small Institut für Betriebssysteme und Rechnerverbund\\ \small TU Braunschweig\end{minipage}}
 
-\title{\projektname:\\\notiz{Social and sentiment sensing using on-body sensors}}
+\title{\projektname:\\\notiz{Social and sentiment sensing and assisting using on-body sensors}}
 
 \date{\small \today}
 % \usepackage[T1]{fontenc}
@@ -86,16 +86,17 @@
 % \maketitle
 \pagebreak
 \begin{center}
-\section*{Social and sentiment sensing using on-body sensors}
+\section*{Social and sentiment sensing and assisting using on-body sensors}
 \begin{tabular}{cc}
   Stephan Sigg, & Koby Crammer\\
   University of Goettingen, Germany & Department of Electrical Engineering, Technion \\
  stephan.sigg@cs.uni-goettingen.de & koby@ee.technion.ac.il
 \end{tabular}
+
 \end{center}
-\begin{itemize}
- \item[\color{blue}tbd] keywords
-\end{itemize}
+\begin{description}
+ \item[Keywords] \textit{Sentiment sensing, Mobile sensing, Machine learning, Data analysis}
+\end{description}
 
 \subsection*{Topic, objectives and justification of the project}
 Emotional states are closely linked to Physical health~\cite{SentimentSensing_Salovey_2000}, such as anger, which increases the danger of heart disease~\cite{SentimentSensing_Smith_2004} or mood which impacts health-relevant behaviour, ageing and can also act as a predictor of mortality~\cite{SentimentSensing_Todaro_2003}.
@@ -109,9 +110,9 @@ Furthermore, for a human utilising these tools, they constitute additional devic
 Recent work shows that it is also possible to detect sentiment from gesture and pose~\cite{Emotion_DeMeijer_1989}. 
 With the verge of the Internet of Things and increasing amount of mobile and body worn devices and sensors in everyday life, a multitude of sensors is available nowadays which has the potential to capture body movement and pose. 
 
-The focus and contribution of this project is to (1) recognise emotion from medical sensors, (2) exploit the potential of cheaper smartphone and on-body IoT sensors for sentiment sensing by identifying correlations in sensor data traces with medical sensors, (3a) exploit environmental signals such as RSSI or RF-signal strength for sentiment sensing and, (3b) predict the evolution of sentiment from the time series of past observations. (4) develop memory, time, and computation efficient methods to perform such analysis on a smartphone.
+The focus and contribution of this project is to (1) recognise emotion from medical sensors, (2) exploit the potential of cheaper smartphone and on-body IoT sensors for sentiment sensing by identifying correlations in sensor data traces with medical sensors, (3a) exploit environmental signals such as RSSI or RF-signal strength for sentiment sensing and, (3b) predict the evolution of sentiment from the time series of past observations. (4) develop memory, time, and computation efficient methods to perform such analysis on a smartphone. (5) develop and experiment with sentiment feedback methods.
 
-The outcome of the project will be a sentiment sensing framework comprising medical, body, smartphone and environmental sensors together with a prototype implementation
+The outcome of the project will be a sentiment sensing and feedback framework comprising medical, body, smartphone and environmental sensors together with a prototype implementation
 
 \subsection*{Current state-of-the-art in an international perspective}
 Emotion research or affective science investigates affect expression and detection~\cite{SentimentSensing_Calvo_2010}.
@@ -190,9 +191,10 @@ Higher accuracy of this estimation is granted by utilising frequency modulated c
 Impact of static objects could be mitigated by subtracting successive sample means whereas noise was filtered by its speed of changes in energy over frequency bands. 
 
 \subsection*{Research approach, methods and hypotheses}
-\begin{itemize}
- \item[\color{blue}tbd]
-\end{itemize}
+We plan to apply the machine learning approach in which prediction and feedback tools are built based on data. Specifically, we plan to install and employ a wide range of sensors, some on-body, some are already installed on everyday smartphones, and some are located in an environmental. We will collect data from these sensors and analyze it, where the goal is to find a small, cheap and efficient subset of sensors which provides a robust and stable signal for prediction. Next, we will build a prediction system of sentiment based on this signal. We will use the collected signals and true sentiment to generate with a predictive model of sentiment from signal. We will test the model on signals coming from participants of our study. We will also develop a feedback algorithm that will provide the user information about current sentimental state, and possibly future predicted one. Hopefully, the user will benefit from such feedback. Additional component we plan to pursue is the development of an efficient prediction and feedback methods, that could be executed on a smartphone.
+
+We hypothesize that we will be able to collect sensor information on users, and their true or approximated sentimental state. We also assume that it is possible to predict sentiment from signals of sensors. 
+
 \subsection*{Detailed work programme including time schedule}
 The expected time schedule is depicted in table~\ref{tableGesamtueberblick}. 
 A detailed description of the distribution of work packages to personnel is given in the following.
@@ -356,7 +358,6 @@ In addition, users will receive recommendations based on the sensed sentiment pa
 % \kobyc{ask the user for feedback WP-2.2}
 
 \paragraph*{WP-4: Sentiment analysis}
-\kobyc{related sentiment to location or time?}
 
 \paragraph*{WP-4.1: Sentiment analysis from medical sensors}
 \begin{tabular}{rl}
@@ -369,7 +370,9 @@ In addition, users will receive recommendations based on the sensed sentiment pa
 
 \noindent
 In this workpackage we investigate the identification of sentiment from data of medical sensors. 
-We will develop new learning methods for detecting sentiment from EMG and EOG data. These methods will take into consideration the special nature of these signals.
+We will develop new learning methods for detecting sentiment from EMG and EOG data. 
+These methods will take into consideration the special nature of these signals.
+In addition, 
 
 \paragraph*{WP-4.2: Sentiment analysis from body and smartphone sensors}
 \begin{tabular}{rl}
@@ -384,6 +387,14 @@ We will develop new learning methods for detecting sentiment from EMG and EOG da
 We will in this workpackage develop suitable features for the prediction of sentiment from body and smartphone sensors. Our goal is to have a small number of predictive features. 
 In particular, similarly to previous work regarding movement, gestures and pose as indicators of emotion, classifiers for the detection of such classes will be developed and linked to the classification of sentiment. 
 In addition, building on the results from WP-4.1 we will further investigate correlations between sensor readings of medical and acceleration sensors in order to give an estimation to which extent medical sensors can be substituted by cheaper acceleration sensors for the application in large scale on-phone sensing applications.
+
+In addition, in this workpackage, we focus the analysis of sentiment over an extended period of time. 
+In particular, we investigate the identification of typical sentiment patterns from the observed sensor data.
+From this, we focus on the prediction of sentiment based not only on current sensor input, but also on recent historical data. 
+That is, modeling the state-of-mind of a person, and use it to improve prediction of future state-of-mind. 
+In particular, similar to our previous work~\cite{4026,4027}, we consider the use of alignment matching approaches to identify approximately similar sub-patterns in sentiment time series and to predict probable continuation of these patterns.
+
+% \kobyc{related sentiment to location or time?}
 
 \paragraph*{WP-4.3: Sentiment analysis from environmental sensors}
 \begin{tabular}{rl}
@@ -400,7 +411,7 @@ Building on our and other previous work detecting movement and gestures from rec
 Then, we will devise new methods to predict from the output of these prediction regarding physical state (movement, gestures and pose) mental state, such as emotion and sentiment. 
 
 \paragraph*{WP-5: Prediction of sentiment based on historical data}
-\paragraph*{WP-5.1: Analysis of sentiment on long time periods}
+\paragraph*{WP-5.1: Integrating past sentiment}
 \begin{tabular}{rl}
  Estimated effort& 3 PMs\\
  Precondition & WP-3, WP-4\\
@@ -408,12 +419,11 @@ Then, we will devise new methods to predict from the output of these prediction 
 \textit{A document describing the potential of sentiment analysis of long sensor traces}\vspace{.2cm}
              \end{minipage}
 \end{tabular}
-
+\textbf{TODO}
 \noindent
-In this workpackage, we focus the analysis of sentiment over a long period of time. 
-In particular, we investigate the identification of typical sentiment patterns from the observed sensor data.
 
-\paragraph*{WP-5.2: Prediction of sentiment on long time periods}
+
+\paragraph*{WP-5.2: Generating user feedback}
 \begin{tabular}{rl}
 	Estimated effort& 3 PMs\\
 	Precondition & WP-5-1\\
@@ -423,7 +433,6 @@ In particular, we investigate the identification of typical sentiment patterns f
 \end{tabular}
 
 \noindent
-We focus in this in the prediction of sentiment based, not only on current sensor input, but also on recent prediction and detection. That is, modeling the state-of-mind of a person, and use it to improve prediction of future state-of-mind. In particular, similar to our previous work~\cite{4026,4027}, we consider the use of alignment matching approaches to identify approximately similar sub-patterns in sentiment time series and to predict probable continuation of these patterns.
 
 % \todo
 % \textbf{TODO: More details here!!}
@@ -432,20 +441,25 @@ We focus in this in the prediction of sentiment based, not only on current senso
 
 
 \subsection*{Type and extent of the cooperation and division of tasks between the partners}
-Goettingen's expertise lie in sensor (please add), and 
+Goettingen's expertise lie in mobile pervasive sensing systems, distributed, networked systems and compressive sensing.     
 Technion's expertise lie in the design of new methods for data analysis, building predictive models, and devise highly efficient methods. 
 \kobyc{to add more about who will do what and the interface bewteen the two institutes}
 
 The researchers plan to have periodic phone meetings, and visit each other every 6 months. We hope that our Goettingen's students will be have long visit in Technion in vice-versa. This will not only advance the project, but will also serve, as a way to deepen their network and the connections between the two institutes. 
 
 
-\begin{itemize}
- \item[\color{blue}tbd]
-\end{itemize}
+% \begin{itemize}
+%  \item[\color{blue}tbd]
+% \end{itemize}
 \subsection*{Anticipated results}
-\begin{itemize}
- \item[\color{blue}tbd]
-\end{itemize}
+% \begin{itemize}
+%  \item[\color{blue}tbd]
+% \end{itemize}
+This project will generate an initial body of knowledge on the recognition of sentiment from various sensor types.
+In particular, in the scope of the project, a prototype implementation for a mobile sentiment recognition app is developed and a corpus of sensor readings together with the associated ground truth is provided. 
+The results will provide insight into the potential of sentiment sensing and prediction from medical, smartphone and body sensors.
+
+
 \subsection*{Relevant preceding work of the applicants}
 % \begin{itemize}
 %  \item[\color{blue}tbd]
