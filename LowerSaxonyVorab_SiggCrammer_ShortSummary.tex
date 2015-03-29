@@ -1,0 +1,114 @@
+\documentclass[12pt]{article}
+\usepackage{setspace}
+
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+%\usepackage{ngerman}
+\usepackage{a4wide}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{color}
+\definecolor{light}{gray}{0.85}
+\definecolor{heavy}{gray}{0.30}
+\usepackage{amsfonts}
+\usepackage{dsfont}
+\usepackage{amssymb}
+\usepackage{setspace}% used for table notes
+\usepackage{makeidx}
+\usepackage[pdftex]{graphicx}
+\usepackage{multibib}
+% \usepackage{subfigure}
+\usepackage{subfig}
+\usepackage{eurosym}
+\newcites{all,own,related}%
+         {\normalsize{References (other authors)},%
+          \normalsize{References (applicant)},
+          \normalsize{ }\vspace{-.8cm}}
+          
+\usepackage{color}
+          
+\newcommand{\todoBase}{\hfill \notiz{TODO} $\square$}
+\newcommand{\projektname}{\texttt{Sense box}}
+
+\newcommand{\notiz}[1]{\marginpar{\tiny \framebox{\begin{minipage}{2.1cm} #1 \end{minipage}}}}
+\newcommand{\niklas}[1]{\marginpar{\footnotesize\notiz{Niklas:}\\\tiny \framebox{\begin{minipage}{2.1cm} #1 \end{minipage}}}}
+\newcommand{\dawud}[1]{\marginpar{\footnotesize\notiz{Dawud:}\\\tiny \framebox{\begin{minipage}{2.1cm} #1 \end{minipage}}}}
+\newcommand{\stephan}[1]{\marginpar{\footnotesize\notiz{Stephan:}\\\tiny \framebox{\begin{minipage}{2.1cm} #1 \end{minipage}}}}
+\newcommand{\todo}{\marginpar{\todoBase}}
+
+\newcommand{\kobyc}[1]{\begin{center}\fbox{\parbox{3in}{{\textcolor{green}{K: #1}}}}\end{center}}
+\newcommand{\stephans}[1]{\begin{center}\fbox{\parbox{3in}{{\textcolor{magenta}{S: #1}}}}\end{center}}
+
+
+\author{\begin{minipage}[t]{7.1cm}\centering \small \VornameAntragstellerA\ \NachnameAntragstellerA\\ \small Lehrstuhl für Kommunikationstechnik\\ \small ComTec\\ \small Universität Kassel\end{minipage}
+\begin{minipage}[t]{7.1cm}\centering \small \VornameAntragstellerB\ \NachnameAntragstellerB\\ \small Gruppe Verteilte und Ubiquitäre Systeme \\ \small Institut für Betriebssysteme und Rechnerverbund\\ \small TU Braunschweig\end{minipage}}
+
+\title{\projektname:\\\notiz{Social and sentiment sensing and assisting using on-body sensors}}
+
+\date{\small \today}
+% \usepackage[T1]{fontenc}
+% \newcommand{\changefont}[3]{
+% \fontfamily{#1} \fontseries{#2} \fontshape{#3} \selectfont}
+%\changefont{cmss}{m}{n}
+\fontfamily{cmss}
+\fontseries{m}
+\fontshape{n}
+\selectfont
+%%serifenlose Schrift:
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{helvet}
+
+%% Use header as in DFG template
+ \usepackage{fancyhdr}
+
+%% Redefine plain page style
+\fancypagestyle{plain}{
+ \fancyhf{}
+ \renewcommand{\headrulewidth}{0pt}
+ \fancyfoot[LE,RO]{\thepage}
+ }
+ \pagestyle{plain}
+% \lhead{\tiny \Name, \Strasse, \Plz\ \Ort, Germany. Phone: \Telefon, Email: \Email}
+\rhead{}
+% \rhead{\small page \arabic{page} of \pageref{maxSeitenzahl}}
+\rfoot{}
+%% Linebreak after paragraph
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+  {-3.25ex\@plus -1ex \@minus -.2ex}%
+  {1.5ex \@plus .2ex}%
+  {\normalfont\normalsize\bfseries}}
+\makeatother
+\begin{document}
+\onehalfspacing %1.5 spacing
+%% enable numbering for paragraphs also:
+\setcounter{secnumdepth}{5}
+% \maketitle
+\pagebreak
+\begin{center}
+\section*{Social and sentiment sensing and assisting using on-body sensors}
+\begin{tabular}{cc}
+  Stephan Sigg, & Koby Crammer\\
+  University of Goettingen, Germany & Department of Electrical Engineering, Technion \\
+ stephan.sigg@cs.uni-goettingen.de & koby@ee.technion.ac.il
+\end{tabular}
+
+\end{center}
+
+
+Emotional states are closely linked to Physical health, such as anger, which increases the danger of heart disease, or mood which impacts health-relevant behavior, aging and can also act as a predictor of mortality.
+In addition, mental health is linked to emotion regulation, whereas stress, especially when pertaining, has significant impact on the brain, cognition and work performance.
+On the other hand, positive affect benefits the immune system while happiness and satisfaction are good indicators for and even foster work performance, health, and also success in private life.
+
+Sentiment and emotion can be detected from Physiological signals with sensors such as Electromyograms (EMG, muscle activity), Electrodermal Activity (EDA, electrical conductivity of the skin surface), Electrocardiogram (EKG or ECG, heart activity), Electrooculogram (EOG, eye movement) or Electroencephalography (EEG, brain activity).
+These kind of sensors, however, are accessible only to a small amount of people and have drawbacks such as high cost, weight, non-portability, and sometimes involve invasive implantation.
+Furthermore, for a human utilizing these tools, they constitute additional devices to carry around.
+
+In this project we will develop and implement methods to (1) recognize emotion from smartphone and on-body sensors for sentiment sensing (2) exploit environmental signals such as RSSI or RF-signal strength for sentiment sensing and, (3) develop algorithms to predict the evolution of sentiment from past observations and predictions. (4) develop memory, time, and computation efficient methods to perform such analysis on a smartphone. (5) develop and experiment with sentiment feedback methods.
+
+The outcome of the project will be a sentiment sensing and feedback framework comprising body, smartphone and environmental sensors together with a prototype implementation tools to predict sentiment from observations and past predictions, and to provide the user feedback towards preferred goals.
+
+\label{maxSeitenzahl}
+
+
+\end{document}
