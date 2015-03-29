@@ -1,0 +1,773 @@
+\documentclass{resume}
+
+
+\usepackage{times}
+
+%% Use these lines for letter-sized paper
+
+\iffalse
+\usepackage[paper=letterpaper,
+            %includefoot, % Uncomment to put page number above margin
+            marginparwidth=1.2in,     % Length of section titles
+            marginparsep=.05in,       % Space between titles and text
+            margin=1in,               % 1 inch margins
+            includemp]{geometry}
+
+\setlength {\textheight} {9.00in}
+\setlength {\columnsep} {0.33in}
+\setlength {\textwidth} {7.0in}
+\setlength {\topmargin} {-0.5in}
+\setlength {\headheight} {0.0in}
+\setlength {\headsep} {0.5in}
+\setlength {\oddsidemargin} {-.25in}
+\setlength {\parindent} {1pc}
+\setlength {\baselineskip} {4in}
+\fi
+
+%\iffalse
+% Use these lines for A4-sized paper
+\usepackage[paper=a4paper,
+            %includefoot, % Uncomment to put page number above margin
+            marginparwidth=30.5mm,    % Length of section titles
+            marginparsep=1.5mm,       % Space between titles and text
+            margin=25mm,              % 25mm margins
+            includemp]{geometry}
+
+\setlength {\textheight} {9.8in}
+\setlength {\columnsep} {0.33in}
+\setlength {\textwidth} {6.52in}
+\setlength {\topmargin} {-0.5in}
+\setlength {\headheight} {0.0in}
+\setlength {\headsep} {0.5in}
+\setlength {\oddsidemargin} {-.25in}
+\setlength {\parindent} {1pc}
+\setlength {\baselineskip} {4in}
+%\fi
+
+
+
+
+\newcommand{\myline}{\rule{0.90\textwidth}{0.5pt}}
+
+\newcommand{\nolineskips}{
+\setlength{\parskip}{1pt}
+\setlength{\parsep}{1pt}
+\setlength{\topsep}{1pt}
+\setlength{\partopsep}{1pt}
+\setlength{\itemsep}{1pt}}
+
+
+\usepackage{revnum}
+
+%\usepackage{thumbpdf}
+\usepackage[pdftex,
+        colorlinks=true,
+        urlcolor=rltblue,       % \href{...}{...} external (URL)
+        filecolor=rltgreen,     % \href{...} local file
+        linkcolor=rltred,       % \ref{...} and \pageref{...}
+        pdftitle={Koby Crammer},
+        pdfauthor={Koby Crammer},
+        pdfsubject={CV},
+%        pdfkeywords={CV, resume},
+        pdfproducer={pdfLaTeX},
+%        pdfadjustspacing=1,
+        pagebackref,
+        pdfpagemode=UseOutlines,
+        bookmarksopen=true]{hyperref}
+
+\usepackage{color}
+\definecolor{rltred}{rgb}{0.75,0,0}
+\definecolor{rltgreen}{rgb}{0,0.5,0}
+\definecolor{rltblue}{rgb}{0,0,1}
+%\definecolor{rltblue}{rgb}{0.4,0.4,0.4}
+
+\newcommand{\mysection}[1]{
+\phantomsection\addcontentsline{toc}{section}{#1}\section*{\hspace{-0.5cm} #1}
+}
+
+\newcommand{\technion}{~Position at TECHNION~}
+\newcommand{\upenn}{~Position at UPENN~}
+
+\setbox1=\hbox{\technion}
+\setbox2=\hbox{\upenn}
+
+
+
+
+\author{Koby Crammer}%{\small November 6, 2009}}
+
+\address{
+Department of Electrical Enginering\\
+The Technion\\
+Technion City -  Haifa, 32000 \\
+Israel\\
+\href{mailto:koby@ee.technion.ac.il}{koby@ee.technion.ac.il}\\
+}{+972-4-829-3274 (W)\\
++972-4-829-5757 (\,F\,)\\~\\~\\
+\href{http://webee.technion.ac.il/people/koby/}{http://webee.technion.ac.il/people/koby/}
+}
+
+
+\begin{document}
+\label{start}
+
+\maketitle
+\vspace{-4cm}
+\centerline{Publications (updated March 29, 2015)}
+\vspace{3.5cm}
+\mysection{Publications}
+
+Google Scholar PoP h-index 30 and g-index 84.
+%Microsoft Academic Search h-index 21 and g-index 48. 
+
+
+\subsection*{Book Chapters}
+\begin{revnumerate}
+\nolineskips
+
+\item
+{Koby Crammer}, From Binary Classification to Categorical Prediction.
+In {\em Automatic Speech and Speaker Recognition: Large Margin and Kernel Methods}, Joseph Keshet
+and Samy Bengio, Eds., John Wiley \& Sons, 2009.
+\end{revnumerate}
+
+\subsection*{Journals}
+\begin{enumerate}
+\nolineskips
+
+\item
+{Koby Crammer} and Yoram Singer.
+\href{http://www.ai.mit.edu/projects/jmlr/papers/v2/crammer01a.html}
+{On the Algorithmic Implementation of Multiclass Kernel-based Vector Machines}.
+{\em Journal of Machine Learning Research} 2, 265-292, 2001.
+
+\item
+{Koby Crammer} and Yoram Singer.
+\href{http://www.cis.upenn.edu/~crammer/publications/ecoc-mlj02.pdf}
+{On the Learnability and Design of Output Codes for Multiclass Problems}.
+{\em Machine Learning} 47, 201-233, 2002.
+
+\item
+{Koby Crammer} and Yoram Singer.
+\href{http://www.ai.mit.edu/projects/jmlr/papers/v3/crammer03b.html}
+{A Family of Online Algorithms for Category Ranking}.
+ {\em Journal of Machine Learning Research} 3, 1025-1058, 2003.
+
+\item
+{Koby Crammer} and Yoram Singer.
+\href{http://www.ai.mit.edu/projects/jmlr/papers/v3/crammer03a.html}
+{Ultraconservative Online Algorithms for Multiclass Problems}.
+ {\em Journal of Machine Learning Research} 3, 951-991, 2003.
+
+\item
+{Koby Crammer} and Yoram Singer
+\href{http://www.mitpressjournals.org/doi/pdf/10.1162/0899766052530848}
+{Online Ranking by Projecting}.
+{\em Neural Computation} 17(1), 145 - 175, January 2005.
+\\~\\\centerline{\hrulefill\raisebox{-0.5\ht2}{\upenn}\hrulefill}\\
+
+\item
+{Koby Crammer}, Ofer Dekel, Joseph Keshet, Shai Shalev-Shwartz and Yoram Singer.
+\href{http://jmlr.csail.mit.edu/papers/v7/crammer06a.html}
+{Online Passive-Aggressive Algorithms}.
+ {\em Journal of Machine Learning Research} 7, 551-585, 2006.
+
+
+
+\item
+Axel Bernal, {Koby Crammer}, A. Hatzigeorgiou, and Fernando Pereira.
+\href{http://compbiol.plosjournals.org/perlserv/?request=get-document&doi=10.1371/journal.pcbi.0030054}
+{Global Discriminative Learning for Higher-Accuracy Computational Gene Prediction}.
+{\em PLoS Computational Biology} 3, March 2007.
+
+\item
+{Koby Crammer}, Michael Kearns, and Jennifer Wortman.
+\href{http://jmlr.csail.mit.edu/papers/v9/crammer08a.html}
+{Learning from Multiple Related Data Sources}.  {\em Journal of Machine
+Learning Research} 9, 1757--1774, 2008.
+
+\item
+Qian Liu, {Koby Crammer}, Fernando Pereira, and David S. Roos.
+\href{http://www.biomedcentral.com/1471-2105/9/433}
+{Reranking Candidate Gene Models with Cross-Species Comparison for Improved Gene Prediction}.  {\em BMC Bioinformatics} 9:433, 2008.
+\\~\\\centerline{\hrulefill\raisebox{-0.5\ht1}{\technion}\hrulefill}\\
+
+\item
+Shai Ben-David, John Blitzer, {Koby Crammer}, Alex Kulesza, Fernando Pereira and Jennifer Wortman.
+\href{http://www.springerlink.com/content/q6qk230685577n52/}{A Theory of Learning from Different Domains}.
+{\em Machine Learning Journal}, Volume 79, Issue 1-2, May 2010.
+
+\item
+Mark Dredze, Alex Kulesza and {Koby Crammer}.
+\href{http://www.springerlink.com/content/a78049767680386l/}{Multi-Domain Learning by Confidence-Weighted Parameter Combination} .
+{\em Machine Learning Journal}, Volume 79 Issue 1-2, May 2010.
+
+\item
+Axel Bernal, Koby Crammer and Fernando Pereira.
+\href{http://bioinformatics.oxfordjournals.org/content/early/2012/04/17/bioinformatics.bts176.full.pdf+html}{Automated Gene-Model Curation using Global Discriminative Learning}.
+{\em Bioinformatics}, April 2012
+
+\item
+{Koby Crammer}, Mark Dredze and Fernando Pereira.
+Confidence-Weighted Linear Classification for Natural Language
+Processing.
+{\em JMLR} 13(Jun):1891--1926, 2012. 
+
+\item
+Zhuang Wang, {Koby Crammer}, and Slobodan Vucetic.
+Breaking the Curse of Kernelization: Budgeted Stochastic Gradient
+Descent for Large-Scale SVM Training.
+{\em JMLR} 13(Oct):3103-3131, 2012.
+
+
+\item
+{Koby Crammer} and Claudio Gentile.
+\href{http://www.springer.com/home?SGWID=0-0-1003-0-0&aqId=2406203&download=1&checkval=951b947939b069f46cb63e1f6ee72695}{Multiclass Classification with Bandit Feedback using Adaptive
+Regularization.}
+{\em Machine Learning Journal},  Volume 90, Issue 3 (2013), Pages 347-383.
+
+
+\item
+{Koby Crammer}, Alex Kulesza and Mark Dredze.
+\href{http://www.springer.com/alert/urltracking.do?id=Lffdd03Mc0e861Sb052601}{Adaptive Regularization of Weights}. 
+{\em Machine Learning  Journal}, Volume 91, Issue 2 (2013), Pages 155-187.
+
+
+\item Edward Moroshko and {Koby Crammer}.
+\href{http://www.sciencedirect.com/science/article/pii/S0304397514007063}{Weighted Last-Step Min-Max Algorithm with Improved
+  Sub-Logarithmic Regret}.
+{\em TCS (Theoretical Computer Science)}, Volume 558 (2014), Pages 107-124.
+\end{enumerate}
+
+
+
+\subsection*{Journal Papers Accepted for Publication}
+\begin{enumerate}
+\nolineskips
+
+% \item Hadas Benisty, David Malah, and {Koby Crammer}.
+% Unaligned Voice Conversion Using Grid-Based Approximation.
+% Submitted to {\em IEEE Transactions on audio, speech and language processing}.
+
+\item Francesco Orabona, Koby Crammer and Nicolo Cesa-Bianchi. 
+ A Generalized Online Mirror Descent with Applications to
+   Classification and Regression.
+{\em Machine Learning Journal}, to appear.
+
+\item Koby Crammer, Edward Moroshko and Nina Vaits.
+Second-Order Non-Stationary Online Learning for Regression.
+{\em Journal of Machine Learning Research}, to appear.
+
+\end{enumerate}
+
+
+
+\subsection*{Submitted Journal Papers}
+\begin{enumerate}
+\nolineskips
+% \item Hadas Benisty, David Malah, and {Koby Crammer}.
+% Unaligned Voice Conversion Using Grid-Based Approximation.
+% Submitted to {\em IEEE Transactions on audio, speech and language processing}.
+
+
+%% \item Nina Vaitz, Edward Moroshko and {Koby Crammer}.
+%% Second-Order Non-Stationary
+%%   Online Learning for Regression. 
+%% Submitted to {\em IEEE Transactions on Information Theory}.
+
+
+\item Matan Orbach and Koby Crammer.
+TACO: Transduction Algorithm with Confidence.
+Submitted to {\em Machine Learning Journal}.
+
+
+
+\end{enumerate}
+
+
+\subsection*{Refereed Conference Papers}
+\begin{enumerate}
+\nolineskips
+
+
+% \item A Simple Geometric Interpretation of SVM using Stochastic Adversaries
+% In {\em Proceedings of the Fifteenth International Conference on
+%   Artificial Intelligence and Statistics}, 2012 (to appear).
+
+\item
+{Koby Crammer} and Yoram Singer.
+\href{http://www.cis.upenn.edu/~crammer/publications/colt00.pdf}{On the Learnability and Design of Output Codes for Multiclass Problems}.
+In {\em Proceedings of the Thirteen Annual Conference on Computational Learning Theory}, 2000.
+
+\item
+{Koby Crammer} and Yoram Singer.
+\href{http://www.cis.upenn.edu/~crammer/publications/nips00.pdf}{Improved Output Coding for Classification Using Continuous Relaxation}.
+In {\em Proceedings of the Thirteen Annual Conference on Neural Information Processing Systems}, 2000.
+\item
+{Koby Crammer} and Yoram Singer.
+\href{http://www.cis.upenn.edu/~crammer/publications/colt01.ps}{Ultraconservative Online Algorithms for Multiclass Problems}.
+In {\em Proceedings of the  Fourteenth Annual Conference on Computational Learning Theory}, 2001.
+\item
+{Koby Crammer} and Yoram Singer.
+\href{http://www.cis.upenn.edu/~crammer/publications/nips01.ps}{Pranking with Ranking}.
+In {\em Proceedings of the Fourteenth Annual Conference on Neural Information Processing Systems}, 2001.
+\item
+{Koby Crammer} and Yoram Singer.
+\href{http://www.cis.upenn.edu/~crammer/publications/sigir02.ps}{A New Family of Online Algorithms for Category Ranking}.
+In {\em Proceedings of the 25rd Conference on Research and Development in Information Retrieval} (SIGIR),
+2002.
+\item
+{Koby Crammer}, Ran Gilad-Bachrach, Amir Navot and Naftali Tishby.
+\href{http://www.cis.upenn.edu/~crammer/publications/nips02b.pdf}{Margin Analysis of the LVQ Algorithm}.
+In {\em Proceedings of the Fifteenth Annual Conference on Neural Information Processing Systems} (NIPS),
+2002.
+\item
+{Koby Crammer}, Joseph Keshet and Yoram Singer.
+\href{http://www.cis.upenn.edu/~crammer/publications/nips02a.pdf}{Kernel Design using Boosting}.
+In {\em Proceedings of the Fifteenth Annual Conference on Neural Information Processing Systems} (NIPS),
+2002.
+\item
+{Koby Crammer} and Yoram Singer.
+\href{http://www.cis.upenn.edu/~crammer/publications/colt03.ps}{Learning Algorithms for Enclosing Points in Bregmanian Balls}.
+In {\em Proceedings of the Fifteenth Annual Conference on Computational Learning Theory} (COLT), 2003.
+\item {Koby Crammer}, Jaz Kandola and Yoram Singer.
+\href{http://www.cis.upenn.edu/~crammer/publications/budget-nips03.pdf}{Online Classification on a Budget}.
+In {\em Proceedings of the Sixteenth Annual Conference on Neural Information Processing Systems} (NIPS), 2003.
+\item {Koby Crammer}, Ofer Dekel, Shai Shalev-Shwartz and Yoram Singer.
+\href{http://www.cis.upenn.edu/~crammer/publications/passiveAggressive-nips03b.pdf}{Online Passive-Aggressive Algorithms}.
+In {\em Proceedings of the Sixteenth Annual Conference on Neural Information Processing Systems} (NIPS), 2003.
+\item
+{Koby Crammer} and Gal Chechik.
+\href{http://www.cis.upenn.edu/~crammer/publications/ocibn-icml04.pdf}{A Needle in a Haystack: Local One-Class Optimization}.
+In {\em Proceedings of the Twenty-First International Conference on
+  Machine Learning} (ICML), 2004.
+
+\item Lavi Shpigelman, {Koby Crammer}, Rony Paz, Eilon Vaadia and Yoram Singer.
+\href{http://www.cis.upenn.edu/~crammer/publications/ddt-nips04.pdf}{A Temporal Kernel-Based Model for Tracking Hand-Movements from Neural Activities}.
+In {\em Proceedings of the Seventeenth Annual Conference on Neural Information Processing Systems} (NIPS), 2004.
+\\~\\\centerline{\hrulefill\raisebox{-0.5\ht2}{\upenn}\hrulefill}\\
+
+\item {Koby Crammer} and Yoram Singer.
+\href{http://www.cis.upenn.edu/~crammer/publications/colt05.pdf}{Loss Bounds for Online Category Ranking}.
+In {\em Proceedings of the Eighteenth Annual Conference on Computational Learning Theory} (COLT) , 2005.
+
+\item Ryan McDonald, {Koby Crammer} and Fernando Pereira.
+\href{http://www.cis.upenn.edu/~crammer/publications/dependencyACL2005.pdf}{Online Large-Margin Training of Dependency Parsers}.
+In {\em Proceedings of the 43rd Annual Meeting of the Association for Computational Linguistics}, (ACL) 2005.
+
+\item Ryan McDonald, {Koby Crammer} and Fernando Pereira.
+\href{http://www.cis.upenn.edu/~crammer/publications/segmentationHLT-EMNLP2005.pdf}{Flexible Text Segmentation with Structured Multilabel Classification}.
+In {\em Processing of Human Language Technology Conference on Empirical Methods in Natural Language Processing}, 2005.
+
+\item
+{Koby Crammer}, Michael Kearns, Jennifer Wortman
+\href{http://www.cis.upenn.edu/~crammer/publications/vardata.pdf}{Learning from Data of Variable Quality}.
+In {\em Proceedings of the Eighteenth Annual Conference on Neural Information Processing Systems (NIPS)}, 2005.
+\item
+{Koby Crammer} and Daniel D. Lee.
+\href{http://www.cis.upenn.edu/~crammer/publications/icassp06.pdf}{Room Impulse Response Estimation Using Sparse Online Prediction and
+Absolute Loss}.
+In {\em Proceedings of the IEEE International conference on Acoustics, Speech and Signal Processing}, 2006.
+\item {Koby Crammer}.
+\href{http://www.cis.upenn.edu/~crammer/publications/colt06.pdf}{Online Tracking of Linear Subspaces}.
+In {\em Proceedings of the 19th Annual Conference on Learning Theory},
+438-452, 2006.
+\item
+{Koby Crammer} and Amir Globerson.
+\href{http://www.cis.upenn.edu/~crammer/publications/qclass.pdf}{Discriminative Learning via Semidefinite Probabilities}.
+In {\em proceedings of Uncertainty in Artificial Intelligence} (UAI), 2006
+\item
+  Linli Xu, {Koby Crammer}, Dale Schuurmans.
+\href{http://www.cis.upenn.edu/~crammer/publications/AAAI0613XuL.pdf}{Robust Support Vector
+  Machine Training via Convex Outlier Ablation}.
+In {\em Proceedings of the Twenty-First National Conference on
+  Artificial Intelligence}, 2006.
+\item
+Shai Ben-David, John Blitzer, {Koby Crammer}, and Fernando Pereira.
+\href{http://www.cis.upenn.edu/~crammer/publications/nips06.pdf}{Analysis of Representations for Domain Adaptation}.
+In {\em Advances in Neural Information Processing Systems 19}, 2006.
+\item
+{Koby Crammer}, Michael Kearns, and Jennifer Wortman.
+\href{http://www.cis.upenn.edu/~crammer/publications/multisource_nips07.pdf}{Learning from Multiple Sources}.
+In {\em Advances in Neural Information Processing Systems 19}, 2006.
+\item
+{Koby Crammer}.
+\href{http://www.cis.upenn.edu/~crammer/publications/is2007.pdf}{A Conservative Aggressive Subspace Tracker}.
+In {\em Proceedings of the 10th European Conference on Speech
+  Communication and Technology} (Interspeech), 2007.
+\item
+John Blitzer, {Koby Crammer}, Alex Kulesza, Fernando Pereira and
+  Jennifer Wortman.
+\href{http://www.cis.upenn.edu/~crammer/publications/adaptation_weighting.pdf}
+{Learning Bounds for Domain Adaptation}.
+In {\em Advances in Neural Information Processing Systems 20}, 2007.
+\item
+Mark Dredze, {Koby Crammer} and Fernando Pereira.
+\href{http://www.cis.upenn.edu/~crammer/publications/icml08_variance.pdf}{Confidence-Weighted Linear Classification}.
+In {\em International Conference on Machine Learning 25}, 2008.
+\item
+{Koby Crammer}, Partha Pratim Talukdar and Fernando Pereira.
+\href{http://www.cis.upenn.edu/~crammer/publications/icml08_ocrd.pdf}{A Rate-Distortion One-Class Model and its Applications to
+  Clustering}.
+In {\em International Conference on Machine Learning 25}, 2008.
+\item
+Mark Dredze and {Koby Crammer}.
+\href{http://www.cis.upenn.edu/~crammer/publications/acl08_active_conf.pdf}{Active Learning with Confidence}.
+In {\em Association for Computational Linguistics}, 2008.
+\item
+Partha Pratim Talukdar, Marie Jacob, Mohammad Salman Mehmood, {Koby Crammer}, Zack Ives, Fernando Pereira and Sudipto Guha.
+\href{http://www.cis.upenn.edu/~crammer/publications/vldb08_kbdi.pdf}{Learning to Create Data-Integrating Queries}.
+In {\em Proceedings of the 34th International Conference on Very Large Databases}, VLDB 2008.
+\item
+Ron Bekkerman and {Koby Crammer}.
+\href{http://www.cis.upenn.edu/~crammer/publications/multi_domain_emnlp08.pdf}{One-Class Clustering in the Text Domain}.
+In {\em Conference on Empirical Methods in Natural Language Processing}, 2008 .
+\item
+Mark Dredze and {Koby Crammer}.
+\href{http://www.cis.upenn.edu/~crammer/publications/oc_emnlp08.pdf}{Online Methods for Multi-Domain Learning and Adaptation}.
+In {\em Conference on Empirical Methods in Natural Language Processing}, 2008.
+\item
+{Koby Crammer}, Mark Dredze, Fernando Pereira.
+\href{http://www.cis.upenn.edu/~crammer/publications/paper_nips08_std.pdf}{Exact Convex Confidence-Weighted Learning}.
+In {\em Advances in Neural Information Processing Systems}, 2008.
+\item
+{Koby Crammer}, Mehryar Mohri, Fernando Pereira.
+\href{http://www.cis.upenn.edu/~crammer/publications/gmms.pdf}{Gaussian Margin Machines}.
+In {\em The proceedings of the twelfth International Conference on
+Artificial Intelligence and Statistics}, 2009.
+\item
+Hui Lin, Jeff Bilmes and {Koby Crammer}.
+\href{http://www.cis.upenn.edu/~crammer/publications/lp_is09.pdf}{How to Loose Confidence: Probabilistic Linear Machines for Multiclass Classification}.
+In {\em Conference of the International Speech Communication Association (Interspeech)}, 2009.
+
+\item
+Partha Pratim Talukdar and {Koby Crammer}.
+\href{http://www.cis.upenn.edu/~crammer/publications/adsorption_ecml09.pdf}{New Regularized Algorithms for Transductive Learning}.
+In {\em European Conference on Machine Learning (ECML-PKDD)}, 2009.
+\item
+{Koby Crammer}, Mark Dredze and Alex Kulesza.
+\href{http://www.cis.upenn.edu/~crammer/publications/mccw_emnlp09.pdf}{Multi-Class Confidence Weighted Algorithms}.
+In {\em Empirical Methods in Natural Language Processing (EMNLP)},
+2009.
+\\~\\\centerline{\hrulefill\raisebox{-0.5\ht1}{\technion}\hrulefill}\\
+
+\item
+{Koby Crammer}, Alex Kulesza and Mark Dredze.
+\href{http://webee.technion.ac.il/people/koby/publications/arow_nips09.pdf}{Adaptive Regularization Of Weight Vectors}.
+In {\em Advances in Neural Information Processing Systems}, 2009.
+\item
+Ted Sandler, {Koby Crammer} and Lyle H. Ungar.
+\href{http://webee.technion.ac.il/people/koby/publications/icdm2009_PID1023443.pdf}{Resolving Identity Uncertainty with Learned Random Walks}.
+{\em IEEE International Conference on Data Mining}, 2009.
+
+\item {Koby Crammer}.
+\href{http://webee.technion.ac.il/people/koby/publications/icassp10.pdf}{Efficient online learning with individual learning-rates for Phoneme Sequence recognition}.
+{\em The 35th International Conference on Acoustics, Speech, and Signal Processing (ICASSP)}, 2010.
+
+\item Justin Ma, Alex Kulesza, Mark Dredze, {Koby Crammer}, Lawrence K. Saul, and Fernando Pereira.
+\href{http://webee.technion.ac.il/people/koby/publications/covariance-aistats2010.pdf}{Exploiting Feature Covariance in High-Dimensional Online Learning}.
+{\em Proceedings of the International Conference on Artificial Intelligence and Statistics (AISTATS)}, 2010 .
+
+
+\item
+Zhuang Wang, Koby Crammer, Slobodan Vucetic.
+\href{http://webee.technion.ac.il/people/koby/publications/ICML10_BPegasos.pdf}{Multi-Class Pegasos on a Budget}.
+{\em Proceedings International Conference on Machine Learning (ICML)}, 2010, 1143-1150.
+
+\item {Koby Crammer}, Eyal Even-Dar, Yishay Mansour, and Jennifer Wortman Vaughan.
+\href{http://webee.technion.ac.il/people/koby/publications/conceptdrift.pdf}{Regret Minimization with Concept Drift}.
+{\em Proceedings of the the 23rd Annual Conference on Learning Theory
+  (COLT)}, 2010, 168-180.
+
+
+
+
+\item Paramveer Dhillon, Partha Pratim Talukdar,and {Koby Crammer}.
+\href{http://webee.technion.ac.il/people/koby/publications/}{Learning Better Data Representation using Inference-Driven Metric Learning}.
+{\em Proceedings of the Annual Meeting of the Association for Computational Linguistics}, 2010.
+
+\item Avihai Mejer and {Koby Crammer}.
+\href{http://webee.technion.ac.il/people/koby/publications/paper_seq_emnlp10.pdf}{Confidence in Structured-Prediction using Confidence-Weighted Models}.
+{\em Proceedings of the Conference on Empirical Methods in Natural
+  Language Processing}, 2010, 971-981.
+
+\item Francesco Orabona and {Koby Crammer}.
+\href{http://webee.technion.ac.il/people/koby/publications/adaptive_nips10.pdf}{New Adaptive Algorithms for Online Classification}.
+{\em Proceedings of the Annual Conference on Neural Information
+  Processing Systems (NIPS)}, 2010, 1840-1848.
+
+\item  {Koby Crammer} and Daniel D. Lee.
+\href{http://webee.technion.ac.il/people/koby/publications/gaussian_mob_nips10.pdf}{Learning via Gaussian Herding }.
+{\em Proceedings of the Annual Conference on Neural Information Processing
+  Systems  (NIPS)}, 2010, 451-459.
+
+\item Zhuang Wang, Nemanja Djuric, Koby Crammer, Slobodan Vucetic.
+\href{http://webee.technion.ac.il/people/koby/publications/KDD2011.pdf}{Trading Representability for Scalability: Adaptive Multi-Hyperplane Machine for Nonlinear Classification}.
+{\em ACM SIGKDD Int. Conf. on Knowledge Discovery and Data Mining
+  (KDD)}, 2011, 24-32.
+
+\item Noam Slonim, Elad Yom-Tov, Koby Crammer.
+\href{http://webee.technion.ac.il/people/koby/publications/2011_4_14_scy_ijcai_final.pdf}{Active online classification via information maximization}.
+{\em Proceedings of the 22nd International Joint Conference on
+  Artificial Intelligence (IJCAI)}, 2011, 1498-1504.
+
+\item Koby Crammer, Claudio Gentile.
+\href{http://webee.technion.ac.il/people/koby/publications/mcbandit_icml11.pdf}{Multiclass classification with bandit feedback using adaptive regularization}.
+{\em Proc. of the 26th International Conference on Machine Learning
+  (ICML)}, 2011, 273-280.
+
+\item Nina Vaits, Koby Crammer.
+\href{http://webee.technion.ac.il/people/koby/publications/ada_arow_alt2011.pdf}{Re-Adapting the Regularization of Weights for Non-Stationary
+  Regression}.
+{\em Proc. of the 22nd International Conference on Algorithmic Learning Theory
+(ALT)}, 2011, 114-128.
+
+\item Roi Livni, {Koby Crammer} and Amir Globerson.
+\href{http://webee.technion.ac.il/people/koby/publications/229_paper.pdf}{A Simple Geometric Interpretation of SVM using Stochastic Adversaries}.
+{\em Proceedings of the 15th International Conference on Artificial Intelligence and Statistics (AISTATS)}, 2012.
+
+\item {Koby Crammer}, Alex Kulesza and Mark Dredze.
+\href{http://webee.technion.ac.il/people/koby/publications/icassp12_rls.pdf}{New
+  $H_\infty$ Bounds for the Recursive Least Squares Algorithm Exploiting Input Structure}.
+{\em The 37th International Conference on Acoustics, Speech, and Signal Processing (ICASSP)}, 2012.
+ 
+
+\item {Koby Crammer} and Daniel.D. Lee.
+\href{http://webee.technion.ac.il/people/koby/publications/icassp12_nherd.pdf}{Online
+  Discriminative Learning of Phoneme Recognition via Collections of Generalized Linear Models}.
+{\em The 37th International Conference on Acoustics, Speech, and Signal Processing (ICASSP)}, 2012.
+ 
+\item Avihai Mejer and {Koby Crammer}.
+\href{http://webee.technion.ac.il/people/koby/publications/conf_parsing_naacl12.pdf}{Are You Sure? Confidence in Prediction of Dependency
+          Tree Edges}.
+{\em Conference of the North American Chapter of the Association for
+  Computational Linguistics: Human Language Technologies}, 2012.
+
+ 
+\item Avihai Mejer and {Koby Crammer}.
+\href{http://webee.technion.ac.il/people/koby/publications/light_naacl12.pdf}{Training Dependency Parser Using Light Feedback}.
+{\em Conference of the North American Chapter of the Association for
+  Computational Linguistics: Human Language Technologies}, 2012.
+
+
+\item 
+ {Koby Crammer} and Gal Chechik.
+\href{http://webee.technion.ac.il/people/koby/publications/icml12_aroma.pdf}{Adaptive Regularization for Similarity Measures}.
+{\em ICML}, 2012.
+
+
+\item 
+Hadas Benisty, David Malah and {Koby Crammer}.
+\href{http://webee.technion.ac.il/people/koby/publications/1569582663.pdf}{Modular Global Variance Enhancement for Voice Conversion Systems}.
+{\em EUSIPCO}, 2012.
+
+
+
+\item 
+Matan Orbach and {Koby Crammer}.
+\href{http://webee.technion.ac.il/people/koby/publications/ecml12taco.pdf}{Graph Based Transduction with Confidence}.
+{\em ECML-PKDD}, 2012.
+
+
+\item
+
+Edward Moroshko and {Koby Crammer}.
+\href{http://webee.technion.ac.il/people/koby/publications/alt12.pdf}{Weighted Last-Step Min-Max Algorithm with Improved Sub-Logarithmic Regret}.
+{\em ALT}, 2012.
+
+\item Koby Crammer and {Tal Wagner}.
+\href{}{Volume Regularization for Binary Classification}.
+{\em NIPS}, 2012.
+
+
+\item Koby Crammer and {Yishay Mansour}.
+\href{}{Learning Multiple Tasks using Shared Hypotheses}.
+{\em NIPS}, 2012.
+
+\item Yoav Haimovitch, {Koby Crammer} and Shie Mannor.
+\href{http://webee.technion.ac.il/people/koby/publications/haimovitch124.pdf}{More Is Better: Large Scale Partially-supervised Sentiment Classification}
+{\em ACML}, 2012.
+
+\item Matan Orbach and {Koby Crammer}.
+\href{http://webee.technion.ac.il/people/koby/publications/taco_ieeei12.pdf}{Transductive Phoneme Classification Using Local Scaling And Confidence}.
+{\em IEEE 27-th Convention of Electrical and Electronics
+  Engineers in Israel (IEEEI)}, 2012
+
+\item Paramveer S. Dhillon, Partha Pratim Talukdar and {Koby Crammer}.
+\href{http://webee.technion.ac.il/people/koby/publications/graph_da_coling_2012}{Metric Learning for Graph-based Domain Adaptation}.
+{\em The 24th International Conference on Computational Linguistics (COLING)}, 2012.
+
+
+\item Edward Moroshko and {Koby Crammer}.
+\href{}{A Last-Step Regression Algorithm for Non-Stationary Online Learning}.
+{\em AISTATS}, 2013.
+
+
+\item Noam Slonim, Ehud Aharoni and, {Koby Crammer}.
+\href{}{Hartigan's $K$-means vs. Lloyd's $K$-means -- is it time for a change?}
+{\em IJCAI}, 2013.
+
+\item  
+Ben Zion Vatashsky and {Koby Crammer}.
+\href{}{Multi Class Learning with Individual Sparsity}.
+{\em IJCAI}, 2013.
+
+\item Yevgeny  Seldin , Peter  Bartlett , Koby  Crammer and, Yasin  Abbasi-Yadkori
+\href{}{Prediction with Limited Advice and Multiarmed Bandits with Paid Observations}.
+{\em ICML}, 2014.
+
+\item Edward Moroshko and {Koby Crammer}.
+\href{}{Selective Sampling with Drift }.
+{\em AISTATS}, 2014.
+
+\item Asaf Noy and {Koby  Crammer}.
+\href{}{Robust Forward Algorithms via PAC-Bayes and Laplace Distributions}.
+{\em AISTATS}, 2014.
+
+\item {Koby  Crammer}.
+\href{}{Doubly Aggressive Selective Sampling Algorithms for Classification}.
+{\em AISTATS}, 2014.
+
+\item Hadas Benisty, David Malah, and {Koby Crammer}
+\href{}{Non-Parallel Voice Conversion Using Joint Optimization of Alignment 
+by Temporal Context and Spectral Distortion}. 
+{\em ICASSP}, 2014.
+
+\item Maayan Harel, Shie Mannor, Ran El-Yaniv and, {Koby Crammer}. 
+\href{}{Concept Drift Detection Through Resampling}.
+{\em ICML}, 2014.
+
+\item Tor Lattimore, {Koby Crammer} and Csaba Szepesvari.
+\href{}{Optimal Resource Allocation with Semi-Bandit Feedback}.
+{\em UAI}, 2014. {\em Best Paper Runner-up Award}.
+
+\item Haim Cohen and {Koby Crammer}.
+ \href{}{Learning Multiple Tasks in Parallel with a Shared
+   Annotator}. 
+{\em NIPS} 2014.
+
+
+\item Hadas Benisty and {Koby Crammer}.
+\href{}{Metric Learning Using Labeled and Unlabeled Data for Semi-Supervised/Domain
+Adaptation Classification}.
+{\em IEEE 28-th Convention of Electrical and Electronics
+  Engineers in Israel (IEEEI)}, 2014.
+
+
+\item Hadas Benisty, David Malah and {Koby Crammer}.
+\href{}{Sequential Voice Conversion Using Grid-Based Approximation}.
+{\em IEEE 28-th Convention of Electrical and Electronics
+  Engineers in Israel (IEEEI)}, 2014.
+
+
+\item Itamar Katz and {Koby Crammer}.
+ \href{}{Outlier-Robust Convex Segmentation}. 
+{\em AAAI} 2015, to appear.
+
+
+\item Aviad Barzilay and {Koby Crammer}.
+\href{}{Convex Multi-Task Learning by Clustering}. 
+{\em AISTATS} 2015, to appear.
+
+
+\end{enumerate}
+
+\iffalse
+\subsection*{Submitted Conference Papers}
+\begin{revnumerate}
+
+\item
+{Koby Crammer}, and Daniel D. Lee.
+Learning via Gaussian Herding.
+
+\item
+Francesco Orabona and {Koby Crammer}.
+New Adaptive Algorithms for Online Classification.
+
+\item
+Avihai Mejer and {Koby Crammer}.
+Confidence in Structured-Prediction using Confidence-Weighted Linear Models.
+
+\item
+Noam Slonim, Elad Yom-Tov and {Koby Crammer}.
+Information based classifier for online text classification.
+\end{revnumerate}
+\fi
+
+%\newpage
+\subsection*{Workshop Papers, Abstracts and Technical Reports}
+\begin{enumerate}
+\nolineskips
+\item {Koby Crammer} and Yoram Singer.
+A Family of Online Algorithms for Category Ranking.
+{\em NIPS 2002 workshop: Beyond Classification and Regression; Learning Rankings,
+    Preferences, Equality Predicates, and Other Structures}, 2002.
+
+\item {Koby Crammer} and Yoram Singer.
+An Apparatus for General Discriminative Categorization with Kernel Machines.
+A Poster. Presented at the {\em Sixteenth Annual Conference on Computational Learning Theory} (COLT) , 2003.
+
+\item {Koby Crammer} and Noam Slonim.
+The Information-Bottleneck and data-representation : Bregman to the rescue.
+{\em NIPS 2003 workshop: Information Theory and Learning; The Bottleneck and Distortion Approach}.
+
+\item {Koby Crammer} and Yoram Singer.
+Online Topic Ranking for Text Documents.
+A demonstration at the
+{\em Sixteenth Annual Conference on Neural Information Processing Systems} (NIPS), 2003.
+
+\item {Koby Crammer}.
+\href{http://www.cis.upenn.edu/~crammer/publications/thesis.pdf}
+{Online Learning of Complex Categorical Problems}.
+PhD Thesis, Hebrew University, 2004.
+
+\item Ryan McDonald, {Koby Crammer} and Fernando Pereira.
+Large Margin Online Learning Algorithms for Structured Classification.
+{\em NIPS 2004 workshop: Learning With Structured Outputs Workshop}.
+
+\item {Koby Crammer}, Ryan McDonald, and Fernando Pereira.
+New Large Margin Algorithms for Structured Prediction.
+{\em NIPS 2004 workshop: Learning With Structured Outputs Workshop}.
+
+\item {Koby Crammer}, Ryan McDonald  and Fernando Pereira.
+\href{http://www.cis.upenn.edu/~crammer/publications/scalable.pdf}{Scalable Large-Margin Online Learning for Structured Classification}
+{\em Technical Report. Department of Computer and Information Science, University of Pennsylvania}, 2005.
+
+\item
+Kuzman Ganchev, {Koby Crammer},
+Fernando Pereira, Gideon Mann, Kedar Bellare, Andrew McCallum, Steven
+Carroll, Yang Jin, and Peter White.
+\href{http://www.cis.upenn.edu/~crammer/publications/biocreativeII07.pdf}{Penn/UMass/CHOP BiocreativeII Systems}.
+In {\em Proceedings of the Biocreative II  Workshop} p. 119 - 124, 2007.
+
+\item
+{Koby Crammer}, Mark Dredze, Kuzman Ganchev, Partha Pratim
+  Talukdar and Steven Carroll.
+\href{http://www.cis.upenn.edu/~crammer/publications/cmc_bionlp07.pdf}{Automatic Code Assignment to Medical Text}.
+BioNLP 2007.
+\item
+Partha Pratim Talukdar, John Blitzer, Ted Sandler, Mark Dredze, {Koby Crammer} and Fernando Pereira.
+\href{http://www.cis.upenn.edu/~crammer/publications/icml08_draso.pdf}{DRASO: Declaratively Regularized Alternating Structural Optimization}.
+ICML 2008 Workshop on Prior Knowledge for Text and Language Processing.
+
+\item {Koby Crammer}, Eyal Even-Dar, Yishay Mansour and Jennifer Wortman.
+\href{}{Regret Minimization with Concept Drift}. 3rd Annual Machine Learning Symposium, 2008
+\item
+Kedar Bellare, {Koby Crammer } and Dayne Freitag .
+\href{http://www.cis.upenn.edu/~crammer/publications/miraed_09.pdf}{Loss-Sensitive Discriminative Training of Machine Transliteration Models}. NAACL Student Research Workshop poster, 2009.
+
+% \item Mark Dredze, Partha Pratim Talukdar and {K___oby Crammer}.
+\href{http://webee.technion.ac.il/people/koby/publications/mld09_multi_label.pdf}{Sequence Learning from Data with Multiple Labels}.
+ECML-PKDD 2009 workshop on Learning from Multi-Label Data (MLD), 2009
+\item
+\href{http://webee.technion.ac.il/publication-link/index/id/596/abstract/1}{Confidence Estimation in Structured Prediction}.
+Avihai Mejer and {Koby Crammer}.
+CCIT Report 798, 2011.
+
+\item
+\href{webee.technion.ac.il/publication-link/index/id/641}{Sequential Voice Conversion Using Grid-Based Approximation}.
+Hadas Benisty, David Malah, and {Koby Crammer}.
+CCIT Report 843, 2013.
+\end{enumerate}
+
+\end{document}
