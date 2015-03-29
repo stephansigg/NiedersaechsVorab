@@ -100,17 +100,17 @@
 
 \subsection*{Topic, objectives and justification of the project}
 Emotional states are closely linked to Physical health~\cite{SentimentSensing_Salovey_2000}, such as anger, which increases the danger of heart disease~\cite{SentimentSensing_Smith_2004} or mood which impacts health-relevant behaviour, ageing and can also act as a predictor of mortality~\cite{SentimentSensing_Todaro_2003}.
-In addition, mental health is linked to emotion regulation~\cite{SentimentSensing_Gross_1995}, whereas stress, especially when pertaining, has significant impact on the brain, cognition and work performance~\cite{SentimentSensing_Lupien_2009}.
-On the other hand, positive affect benefits the immune system~\cite{SentimentSensing_Smith_2004} while happyness and satisfaction are good indicators for and even foster work performance, health, and also success in private life~\cite{SentimentSensing_Lyubomirsky_2005}.
+In addition, mental health is linked to emotion regulation~\cite{SentimentSensing_Gross_1995}, whereas stress, especially when pertaining, has significant impact on brain, cognition and work performance~\cite{SentimentSensing_Lupien_2009}.
+On the other hand, positive affect benefits the immune system~\cite{SentimentSensing_Smith_2004} while happyness and satisfaction are good indicators for work performance, health, and also success in private life~\cite{SentimentSensing_Lyubomirsky_2005}.
 
 Sentiment and emotion can be detected from Physiological signals with sensors such as Electromyograms (EMG, muscle activity), Electrodermal Activity (EDA, electrical conductivity of the skin surface), Electrocardiogram (EKG or ECG, heart activity), Electrooculogram (EOG, eye movement) or Electroencephalography (EEG, brain activity)~\cite{SentimentSensing_Calvo_2010}.
-These kind of sensors, however, are accessible only to a small amount of people and have drawbacks such as high cost, weight, non-portability, and sometimes involve invasive implantation.
-Furthermore, for a human utilising these tools, they constitute additional devices to carry around.
+These kind of sensors, however, are accessible only to a small share of the population and have drawbacks such as high cost, weight, non-portability, and sometimes involve invasive implantation.
+% Furthermore, for a human utilising these tools, they constitute additional devices to carry around.
 
 Recent work shows that it is also possible to detect sentiment from gesture and pose~\cite{Emotion_DeMeijer_1989}. 
 With the verge of the Internet of Things and increasing amount of mobile and body worn devices and sensors in everyday life, a multitude of sensors is available nowadays which has the potential to capture body movement and pose. 
 
-The focus and contribution of this project is to (1) recognise emotion from medical sensors, (2) exploit the potential of cheaper smartphone and on-body IoT sensors for sentiment sensing by identifying correlations in sensor data traces with medical sensors, (3a) exploit environmental signals such as RSSI or RF-signal strength for sentiment sensing and, (3b) predict the evolution of sentiment from the time series of past observations. (4) develop memory, time, and computation efficient methods to perform such analysis on a smartphone. (5) develop and experiment with sentiment feedback methods.
+The focus and contribution of this project is to (1) recognise emotion from medical sensors, (2) exploit the potential of cheaper smartphone and on-body IoT sensors for sentiment sensing by identifying correlations in sensor data traces with medical sensors, (3) exploit environmental signals such as RSSI or RF-signal strength for sentiment sensing, (4) predict the evolution of sentiment from the time series of past observations, (5) develop memory, time, and computation efficient methods to perform such analysis on a smartphone and, (6) develop and experiment with sentiment feedback methods.
 
 The outcome of the project will be a sentiment sensing and feedback framework comprising medical, body, smartphone and environmental sensors together with a prototype implementation
 
@@ -124,7 +124,7 @@ There is also some body of work on utilising text mining for sentiment sensing a
 Sentiment mining is an active research topic in recent years~\cite{SentimentSensing_Kramer_2014, SentimentSensing_Cambria_2013}. 
 Also referred to as opinion mining, it considers indirect sources and requires actual active involvement of subjects~\cite{SentimentSensing_Pang_2008, SentimentSensing_Zhai_2011}. 
 In particular, there is an active body of work in the direction of mining textual input (via sentiment-expressing words or phrases) in online social networks with the help of natural language processing and computational linguistics~\cite{SentimentSensing_Liu_2012}.
-We will, however, not consider the mining of text in the scope of this project but rather focus on sentiment sensing from physical sensors. Nevertheless, we may use text analysis to provide a supervision independent signal to build such a system. That is, if necessary, we will exploit textual input to better tune the parameters of our sensor-based sentiment analyzer. 
+We will, however, not consider the mining of text in the scope of this project but rather focus on sentiment sensing from physical sensors. Nevertheless, if necessary, we may exploit textual input to better tune the parameters of our sensor-based sentiment analyzer. 
 
 \subsubsection*{Sentiment sensing from body movement and pose}
 Emotion can be inferred from body gesture and pose~\cite{Pervasive_Jaggarwal_2012} at least as accurately as from face~\cite{Emotion_Nguyen_2012,Emotion_Castellano_2008,Emotion_Meeren_2005}.
@@ -143,7 +143,7 @@ Emotion can be recognised from non-trivial scenarios, such as simple daily-life 
 
 Some researchers~\cite{SentimentSensing_Mota_2003,SentimentSesing_Mello_2009}, were able to detect boredom, confusion, delight and frustration utilising pressure mats. 
 Such mats, however, are not portable and are therefore not applicable in our setting. 
-Instead, we aim to detect sentiment from body or environmental sensors. 
+Instead, we aim to detect sentiment from body- or environmental sensors. 
 
 % \paragraph*{Sensing attention from environmental sensors}
 Also, the sensing of attention has been investigated previously. 
@@ -162,22 +162,22 @@ Shi et al~\cite{Pervasive_Shi_2014} investigated, how these properties, in parti
 Activity recognition comprises the challenge to recognise human activities from the input of sensor data.
 Traditionally, acceleration has evolved as the standard modality for activity recognition both for high diffusion and convincing recognition rates~\cite{Pervasive_Ravi_2005,Pervasive_Cao_2012}.
 General research challenges for activity recognition regard the accurate classification of noisy data captured under real world conditions~\cite{Pervasive_Bao_2004} or the automation of recognition systems~\cite{Pervasive_Ploetz_2012}.
-The classification accuracy is highly dependent on the accurate sensor location.
+The classification accuracy is highly dependent on the accurate sensor placement.
 The integration of sensors in clothing as well as the recent remarkable progress in the robustness to rotation or displacement have improved this situation greatly~\cite{Pevasive_Chavarriaga_2011}.
-However, a subject is still required to cooperate and at least wear the sensors~\cite{Pervasive_Cohn_2012}.
-This requirement can not be assured generally in real-world applications. 
-In particular, even devices as private as mobile phones, which are frequently assumed to be constantly in the same context as its owner~\cite{Pervasive_Patridge_2008, Pervasive_Varshavsky_2008, Pervasive_Lane_2010}, can not serve as a sensor platform suitable for continuous monitoring of an individual's context.   
-Dey et al.~\cite{Pervasive_Dey_2011} showed that users have their mobile phone within arms reach only 54\% of the time.
-This confirms a similar investigation of Patel et al.~\cite{Pervasive_Patel_2006} which reported a share of 58\% for the same measure.
+% However, a subject is still required to cooperate and at least wear the sensors~\cite{Pervasive_Cohn_2012}.
+% This requirement can not be assured generally in real-world applications. 
+% In particular, even devices as private as mobile phones, which are frequently assumed to be constantly in the same context as its owner~\cite{Pervasive_Patridge_2008, Pervasive_Varshavsky_2008, Pervasive_Lane_2010}, can not serve as a sensor platform suitable for continuous monitoring of an individual's context.   
+% Dey et al.~\cite{Pervasive_Dey_2011} showed that users have their mobile phone within arms reach only 54\% of the time.
+% This confirms a similar investigation of Patel et al.~\cite{Pervasive_Patel_2006} which reported a share of 58\% for the same measure.
 
-We will therefore also consider environmental sources, in particular signal strength information from WiFi or 2-3G systems for their ubiquitous availability. 
+We will, in addition, also consider environmental sources, in particular signal strength information from WiFi or 2-3G systems for their ubiquitous availability. 
 In particular, good accuracy has been achieved recently with systems exploiting fluctuation in received radio signals. 
 Pu and others~\cite{RFsensing_Pu_2013,RFsensing_Kim_2009} showed that simultaneous detection of gestures from multiple individuals is possible by utilising multi-antenna nodes and micro Doppler fluctuations.
 They utilise a USRP SDR multi antenna receiver and one or more single antenna transmitters distributed in the environment to distinguish between a set of 9 gestures with an average accuracy of 0.94. 
 Their active device-free system exploits a MIMO receiver in order to recognise gestures from different persons present at the same time. 
 By leveraging a preamble gesture pattern, the receiver estimates the MIMO channel that maximises the reflections of the desired user.
 
-A main challenge was for them that the Doppler shift from human movement was several magnitudes smaller than the bandwidth of the signal employed.
+A main challenge was for them that the Doppler shift from human movement is several magnitudes smaller than the bandwidth of the signal employed.
 The authors therefore proposed to transform the received signal into several narrowband pulses which are then analysed for possible Doppler fluctuation.
 The group recently discussed application possibilities of their system~\cite{RFSensing_Kellog_2014}.
 
@@ -191,9 +191,13 @@ Higher accuracy of this estimation is granted by utilising frequency modulated c
 Impact of static objects could be mitigated by subtracting successive sample means whereas noise was filtered by its speed of changes in energy over frequency bands. 
 
 \subsection*{Research approach, methods and hypotheses}
-We plan to apply the machine learning approach in which prediction and feedback tools are built based on data. Specifically, we plan to install and employ a wide range of sensors, some on-body, some are already installed on everyday smartphones, and some are located in an environmental. We will collect data from these sensors and analyze it, where the goal is to find a small, cheap and efficient subset of sensors which provides a robust and stable signal for prediction. Next, we will build a prediction system of sentiment based on this signal. We will use the collected signals and true sentiment to generate with a predictive model of sentiment from signal. We will test the model on signals coming from participants of our study. We will also develop a feedback algorithm that will provide the user information about current sentimental state, and possibly future predicted one. Hopefully, the user will benefit from such feedback. Additional component we plan to pursue is the development of an efficient prediction and feedback methods, that could be executed on a smartphone.
+We plan to apply a machine learning approach in which prediction and feedback tools are built based on data. 
+Specifically, we plan to install and employ a wide range of sensors, some on-body, some are already installed on everyday smartphones, and some are located in an environment. 
+We will collect data from these sensors and analyze it, where the goal is to find a small, cheap and efficient subset of sensors which provides a robust and stable signal for prediction. Next, we will build a prediction system of sentiment based on this signal. We will use the collected signals and true sentiment to generate a predictive model of sentiment from the signal. 
+We will test the model on signals coming from participants of our study. We will also develop a feedback algorithm that will provide user information about current sentimental state, and possibly future predicted one. Hopefully, the user will benefit from such feedback. 
+Additional components we plan to pursue is the development of efficient prediction and feedback methods, that could be executed on a smartphone.
 
-We hypothesize that we will be able to collect sensor information on users, and their true or approximated sentimental state. We also assume that it is possible to predict sentiment from signals of sensors. 
+We hypothesize that we will be able to collect sensor information of users, and their true or approximated sentimental state. We also assume that it is possible to predict sentiment from signals of sensors. 
 
 \subsection*{Detailed work programme including time schedule}
 The expected time schedule is depicted in table~\ref{tableGesamtueberblick}. 
@@ -204,34 +208,36 @@ The notation '40' represents an allocation of 40 percent of one person quarter.
 
 \begin{table}
 \centering
-\begin{small}
-\begin{tabular}{|l||c|c|c|c|c|c|c|c||c|}
+\begin{footnotesize}
+\begin{tabular}{|l||c|c|c|c|c|c|c|c|c|c|c|c||c|}
 \hline
-Workpackages&&&&&&&&&\\
-	& Q1	&Q2	&Q3	&Q4	&Q5	&Q6	&Q7	&Q8	&\\\hline\hline
-Recent advances& &	&	&	&	&	&	&	 &\\
-WP-1	&20	&20	&20	&15	&10	&10	&5	&	 & 100\\\hline
-Sensing system& &	&	&	&	&	&	&	 &\\
-WP-2.1	&100	&	&	&	&	&	&	&	 & 100\\
-WP-2.2	&50	&50	&	&	&	&	&	&	 & 100\\
-WP-2.3	&30	&70	&	&	&	&	&	&	 & 100\\
-WP-2.4	&	&60	&40	&	&	&	&	&	 & 100\\\hline
-Experiments& &	&	&	&	&	&	&	&	\\
-WP-3.1	&	&	&140	&60	&	&	&	&	 & 200\\
-WP-3.2	&	&	&	&100	&100	&	&	&	 & 200\\\hline
-Sentiment analysis& &	&	&	&	&	&	&	 &\\
-WP-4.1	&	&	&	&25	&75	&	&	&	 & 100\\
-WP-4.2	&	&	&	&	&15	&95	&90	&	 & 200\\
-WP-4.3	&	&	&	&	&	&50	&50	&100	 & 200\\\hline
-Sentiment prediction& &	&	&	&	&	&	&	 &\\
+Workpackages&&&&&&&&&&&&&\\
+	& Q1	&Q2	&Q3	&Q4	&Q5	&Q6	&Q7	&Q8	&Q9	&Q10	&Q11	&Q12	&\\\hline\hline
+Recent advances& &	&	&	&	&	&	&	&	&	&	& 	&\\
+WP-1	&25	&25	&20	&20	&20	&20	&20	&15	&10	&10	&10	&5 	& 200\\\hline
+Sensing system& &	&	&	&	&	&	&	&	&	&	& 	&\\
+WP-2.1	&100	&	&	&	&	&	&	&	&	&	&	& 	& 100\\
+WP-2.2	&50	&50	&	&	&	&	&	&	&	&	&	& 	& 100\\
+WP-2.3	&25	&75	&	&	&	&	&	&	&	&	&	& 	& 100\\
+WP-2.4	&	&50	&50	&	&	&	&	&	&	&	&	& 	& 100\\
+WP-2.5	&	&	&	&30	&30	&40	&	&	&	&	&	& 	& 100\\\hline
+Experiments& &	&	&	&	&	&	&	&	&	&	&	&\\
+WP-3.1	&	&	&130	&70	&	&	&	&	&	&	&	& 	& 200\\
+WP-3.2	&	&	&	&	&	&	&50	&30	&30	&40	&30	&20 	& 200\\
+WP-3.3	&	&	&	&	&	&	&	&	&60	&	&	&40 	& 100\\\hline
+Analysis& &	&	&	&	&	&	&	&	&	&	& 	&\\
+WP-4.1	&	&	&	&80	&20	&	&	&	&	&	&	& 	& 100\\
+WP-4.2	&	&	&	&	&130	&70	&	&	&	&	&	& 	& 200\\
+WP-4.3	&	&	&	&	&	&70	&130	&	&	&	&	& 	& 200\\
+WP-4.4	&	&	&	&	&	&	&	&100	&55	&45	&	& 	& 200\\\hline
+Prediction& &	&	&	&	&	&	&	&	&	&	& &\\
 %WP-5	&	&	&	&	&	&45	&55	&100	 & 200\\\hline
-WP-5.1	&	&	&	&	&	&45	&45	&10	 & 100\\%\hline
-WP-5.2	&	&	&	&	&	&	&10	&90	 & 100\\\hline
-Sum	& 200	&200	&200	&200	&200	&200	&200	&200	 & 1600\\\hline
+WP-5.1	&	&	&	&	&	&	&	&55	 &45	&	&	&	& 100\\%\hline
+WP-5.2	&	&	&	&	&	&	&	&	 &	&100	&100	&	& 100\\\hline
+Sum	& 200	&200	&200	&200	&200	&200	&200	&200	 &200	&195	&140	&65	& 2100\\\hline
 \end{tabular}
-\end{small}
-\caption{Work schedule. The table specifies the occupation (1PM) subject to the quarterly period and project task. 
-The figures specify the percentage by which the workload is divided between the work packages.}
+\end{footnotesize}
+\caption{Work schedule. Occupation (1PM) subject to the quarterly period and project task (percentage by which the workload is divided between the work packages).}
 \label{tableGesamtueberblick}
 \end{table}
 
