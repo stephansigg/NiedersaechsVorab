@@ -1,0 +1,116 @@
+\documentclass[12pt]{article}
+\usepackage{setspace}
+
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+%\usepackage{ngerman}
+\usepackage{a4wide}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{color}
+\definecolor{light}{gray}{0.85}
+\definecolor{heavy}{gray}{0.30}
+\usepackage{amsfonts}
+\usepackage{dsfont}
+\usepackage{amssymb}
+\usepackage{setspace}% used for table notes
+\usepackage{makeidx}
+\usepackage[pdftex]{graphicx}
+\usepackage{multibib}
+% \usepackage{subfigure}
+\usepackage{subfig}
+\usepackage{eurosym}
+\newcites{all,own,related}%
+         {\normalsize{References (other authors)},%
+          \normalsize{References (applicant)},
+          \normalsize{ }\vspace{-.8cm}}
+          
+\usepackage{color}
+          
+\newcommand{\todoBase}{\hfill \notiz{TODO} $\square$}
+\newcommand{\projektname}{\texttt{Sense box}}
+
+\newcommand{\notiz}[1]{\marginpar{\tiny \framebox{\begin{minipage}{2.1cm} #1 \end{minipage}}}}
+\newcommand{\niklas}[1]{\marginpar{\footnotesize\notiz{Niklas:}\\\tiny \framebox{\begin{minipage}{2.1cm} #1 \end{minipage}}}}
+\newcommand{\dawud}[1]{\marginpar{\footnotesize\notiz{Dawud:}\\\tiny \framebox{\begin{minipage}{2.1cm} #1 \end{minipage}}}}
+\newcommand{\stephan}[1]{\marginpar{\footnotesize\notiz{Stephan:}\\\tiny \framebox{\begin{minipage}{2.1cm} #1 \end{minipage}}}}
+\newcommand{\todo}{\marginpar{\todoBase}}
+
+\newcommand{\kobyc}[1]{\begin{center}\fbox{\parbox{3in}{{\textcolor{green}{K: #1}}}}\end{center}}
+\newcommand{\stephans}[1]{\begin{center}\fbox{\parbox{3in}{{\textcolor{magenta}{S: #1}}}}\end{center}}
+
+
+\author{\begin{minipage}[t]{7.1cm}\centering \small \VornameAntragstellerA\ \NachnameAntragstellerA\\ \small Lehrstuhl für Kommunikationstechnik\\ \small ComTec\\ \small Universität Kassel\end{minipage}
+\begin{minipage}[t]{7.1cm}\centering \small \VornameAntragstellerB\ \NachnameAntragstellerB\\ \small Gruppe Verteilte und Ubiquitäre Systeme \\ \small Institut für Betriebssysteme und Rechnerverbund\\ \small TU Braunschweig\end{minipage}}
+
+\title{\projektname:\\\notiz{Social and sentiment sensing and assisting using on-body sensors}}
+
+\date{\small \today}
+% \usepackage[T1]{fontenc}
+% \newcommand{\changefont}[3]{
+% \fontfamily{#1} \fontseries{#2} \fontshape{#3} \selectfont}
+%\changefont{cmss}{m}{n}
+\fontfamily{cmss}
+\fontseries{m}
+\fontshape{n}
+\selectfont
+%%serifenlose Schrift:
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{helvet}
+
+%% Use header as in DFG template
+ \usepackage{fancyhdr}
+
+%% Redefine plain page style
+\fancypagestyle{plain}{
+ \fancyhf{}
+ \renewcommand{\headrulewidth}{0pt}
+ \fancyfoot[LE,RO]{\thepage}
+ }
+ \pagestyle{plain}
+% \lhead{\tiny \Name, \Strasse, \Plz\ \Ort, Germany. Phone: \Telefon, Email: \Email}
+\rhead{}
+% \rhead{\small page \arabic{page} of \pageref{maxSeitenzahl}}
+\rfoot{}
+%% Linebreak after paragraph
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+  {-3.25ex\@plus -1ex \@minus -.2ex}%
+  {1.5ex \@plus .2ex}%
+  {\normalfont\normalsize\bfseries}}
+\makeatother
+\begin{document}
+\onehalfspacing %1.5 spacing
+%% enable numbering for paragraphs also:
+\setcounter{secnumdepth}{5}
+% \maketitle
+\pagebreak
+\begin{center}
+\section*{Social and sentiment sensing and assisting using on-body sensors}
+\begin{tabular}{cc}
+  Stephan Sigg, & Koby Crammer\\
+  University of Goettingen, Germany & Department of Electrical Engineering, Technion \\
+ stephan.sigg@cs.uni-goettingen.de & koby@ee.technion.ac.il
+\end{tabular}
+
+\end{center}
+
+\vspace{1cm}
+
+Prof. Koby Crammer received a PhD (2004) in Computer science and BSc (1999) in mathematics, physics and computer science all from the Hebrew university Jerusalem and all Summa cum laude.
+He was a postdoctoral fellow and a research associate at the Department of Computer and Information Science, University of Pennsylvania between from 2004 to 2009. 
+Koby joined the Department of Electrical Engineering at the Technion in 2009.  
+He currently supervises eleven graduate students as well as one post-dococtroal fellow. Eight students graduated under his supervision.
+Koby taught few times introductory and advanced courses in machine learning, including for international students in the Technion, and in an intentional school in Lisbon, and signal and systems course. 
+
+
+Koby published more than fifteen journal papers and seventy five conference papers in leading venues. 
+He is an action editor of the editorial board of machine learning journal and journal of machine learning research, served in the program committee of leading conferences in machine learning and organized few international workshops. Recipient of the Rothschild fellowship, Fulbright fellowship (declined), Alon fellowship, Horev fellowship, and the Goldberg prize. 
+
+Koby research interests are in the design, analysis and study of machine learning and recognition methods and their application to real world data and especially natural language processing, big-complex datasets, and data analytics. His recent research interests are online learning, adaptive models, domain adaptation, multi-task learning, and contextual multi-armed bandits.
+
+In the recent years Koby's research was funded by the Israeli Science Foundation (ISF), German Israeli Foundation (GIF), the European Commission (International Reintegration Grant, IRG), and the Israel ministry of economics. Koby was a member of an ICT-4, Seventh Framework Programme. His received also funding from Google, Yahoo, Intel, and Fujitsu.
+\label{maxSeitenzahl}
+
+
+\end{document}
