@@ -92,10 +92,11 @@
   University of Goettingen, Germany & Department of Electrical Engineering, Technion \\
  stephan.sigg@cs.uni-goettingen.de & koby@ee.technion.ac.il
 \end{tabular}
+
 \end{center}
-\begin{itemize}
- \item[\color{blue}tbd] keywords
-\end{itemize}
+\begin{description}
+	\item[Keywords] \textit{Sentiment sensing, Mobile sensing, Machine learning, Data analysis}
+\end{description}
 
 \subsection*{Topic, objectives and justification of the project}
 Emotional states are closely linked to Physical health~\cite{SentimentSensing_Salovey_2000}, such as anger, which increases the danger of heart disease~\cite{SentimentSensing_Smith_2004} or mood which impacts health-relevant behaviour, ageing and can also act as a predictor of mortality~\cite{SentimentSensing_Todaro_2003}.
@@ -460,9 +461,10 @@ The researchers plan to have periodic phone meetings, and visit each other every
 
 
 \subsection*{Anticipated results}
-\begin{itemize}
- \item[\color{blue}tbd]
-\end{itemize}
+This project will generate an initial body of knowledge on the recognition of sentiment from various sensor types.
+In particular, in the scope of the project, a prototype implementation for a mobile sentiment recognition app is developed and a corpus of sensor readings together with the associated ground truth is provided. 
+The results will provide insight into the potential of sentiment sensing and prediction from medical, smartphone and body sensors.
+
 \subsection*{Relevant preceding work of the applicants}
 % \begin{itemize}
 %  \item[\color{blue}tbd]
@@ -488,11 +490,13 @@ Such gestures can be detected based on WiFi RSSI using only time-domain features
 
 \subsubsection*{Developing Prediction Models}
 Koby Crammer have been working on developing prediction models since his PhD. He developed new methods for assigning one category~\cite{CrammerSi00,CrammerSi00a,CrammerSi01,CrammerSi01a,CrammerDrKu09,DBLP:journals/jmlr/LivniCG12,DBLP:conf/icml/WangCV10,DBLP:conf/ijcai/VatashskyC13,DBLP:journals/jmlr/WangCV12}
- or more~\cite{CrammerSi03,DBLP:conf/naacl/McDonaldCP05} to a given input. Koby also worked extensively worked on developing new learning methods and models to predict sequential data and taking correlations into account. These methods have been used in text analysis~\cite{mcdonald-04,mejer2010confidence}, speech analysis~\cite{DBLP:conf/icassp/CrammerL12,DBLP:conf/icassp/Crammer10} and bioinformatics~\cite{DBLP:journals/bioinformatics/BernalCP12,DBLP:journals/ploscb/BernalCHP07,DBLP:journals/bmcbi/LiuCPR08}
+ or more~\cite{CrammerSi03,DBLP:conf/naacl/McDonaldCP05} to a given input. The task of predicting sentiment (or composed sentimental state) from sensor input share some properties with these problems.
+ 
+ Koby also worked extensively worked on developing new learning methods and models to predict sequential data and taking correlations into account. These methods have been used in text analysis~\cite{mcdonald-04,mejer2010confidence}, speech analysis~\cite{DBLP:conf/icassp/CrammerL12,DBLP:conf/icassp/Crammer10} and bioinformatics~\cite{DBLP:journals/bioinformatics/BernalCP12,DBLP:journals/ploscb/BernalCHP07,DBLP:journals/bmcbi/LiuCPR08}.
 
 
 \subsubsection*{Developing Efficient Algorithms}
-Since 2008 Koby have worked extensively on new adaptive models and algorithms that are very time and memory efficient. This worked is based on earlier work~\cite{DBLP:journals/jmlr/CrammerDKSS06} on online learning. \cite{DBLP:journals/ml/CrammerKD13,mejer2012training,dredze-ml-09,Crammer:2012:CLC:2343676.2343704,DBLP:conf/icassp/CrammerL12}. Additional work pursed are new efficient methods for large scale learning~\cite{DBLP:conf/icml/WangCV10,DBLP:journals/jmlr/WangCV12}.
+Since 2008 Koby have worked extensively on new adaptive models and algorithms that are very time and memory efficient. This worked is based on earlier work~\cite{DBLP:journals/jmlr/CrammerDKSS06} on online learning. The methods were designed for predicting a real number~\cite{CrammerKuDr12,MoroshkoC12}, single bit from an input~\cite{DBLP:journals/ml/CrammerKD13,Crammer:2012:CLC:2343676.2343704,DBLP:conf/nips/CrammerL10}, one out for few~\cite{CrammerDrKu09,dredze-ml-09}, or many decisions simultaneously~\cite{mejer2012training,DBLP:conf/icassp/CrammerL12}. Additional work pursed are new efficient methods for large scale learning~\cite{DBLP:conf/icml/WangCV10,DBLP:journals/jmlr/WangCV12}.
 
 Koby have also developed new methods that are efficient in interaction with annotation, and specifically human annotation. These methods can require annotation only for parts of the input~\cite{DBLP:journals/jmlr/HaimovitchCM12,DBLP:conf/pkdd/OrbachC12,OrbachCr12ieeei}, or they actively choose what inputs should be annotated~\cite{dredze-08b,DBLP:journals/ml/CrammerG13,mejer2012training}.
 
@@ -900,8 +904,7 @@ Zhongwu Zhai, Hua Xu, Bada Kang, and Peifa Jia.
 \newblock {\em Expert Systems with Applications}, 38(8):9139--9146, 2011.
 
 
-
-
+% kkk
 
 \bibitem{DBLP:journals/ploscb/BernalCHP07}
 Axel Bernal, Koby Crammer, Artemis~G. Hatzigeorgiou, and Fernando Pereira.
@@ -977,10 +980,24 @@ Koby Crammer and Claudio Gentile.
 regularization.
 \newblock {\em Machine Learning}, 90(3):347--383, 2013.
 
+\bibitem{CrammerKuDr12}
+Koby Crammer, Alex Kulesza, and Mark Dredze.
+\newblock New $\mathcal{H}\infty$ bounds for the recursive least squares
+algorithm exploiting input structure.
+\newblock In {\em ICASSP}, pages 2017--2020, 2012.
+
 \bibitem{DBLP:journals/ml/CrammerKD13}
 Koby Crammer, Alex Kulesza, and Mark Dredze.
 \newblock Adaptive regularization of weight vectors.
 \newblock {\em Machine Learning}, 91(2):155--187, 2013.
+
+\bibitem{DBLP:conf/nips/CrammerL10}
+Koby Crammer and Daniel~D. Lee.
+\newblock Learning via gaussian herding.
+\newblock In {\em Advances in Neural Information Processing Systems 23: 24th
+	Annual Conference on Neural Information Processing Systems 2010. Proceedings
+	of a meeting held 6-9 December 2010, Vancouver, British Columbia, Canada.},
+pages 451--459, 2010.
 
 \bibitem{DBLP:conf/icassp/CrammerL12}
 Koby Crammer and Daniel~D. Lee.
@@ -1064,6 +1081,12 @@ Avihai Mejer and Koby Crammer.
 	Chapter of the Association for Computational Linguistics: Human Language
 	Technologies}, pages 488--497. Association for Computational Linguistics,
 2012.
+
+\bibitem{MoroshkoC12}
+Edward Moroshko and Koby Crammer.
+\newblock Weighted last-step min-max algorithm with improved sub-logarithmic
+regret.
+\newblock In {\em ALT}, pages 245--259, 2012.
 
 \bibitem{DBLP:conf/pkdd/OrbachC12}
 Matan Orbach and Koby Crammer.
