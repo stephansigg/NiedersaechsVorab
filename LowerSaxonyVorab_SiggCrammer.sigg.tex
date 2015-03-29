@@ -92,10 +92,11 @@
   University of Goettingen, Germany & Department of Electrical Engineering, Technion \\
  stephan.sigg@cs.uni-goettingen.de & koby@ee.technion.ac.il
 \end{tabular}
+
 \end{center}
-\begin{itemize}
- \item[\color{blue}tbd] keywords
-\end{itemize}
+\begin{description}
+ \item[Keywords] \textit{Sentiment sensing, Mobile sensing, Machine learning, Data analysis}
+\end{description}
 
 \subsection*{Topic, objectives and justification of the project}
 Emotional states are closely linked to Physical health~\cite{SentimentSensing_Salovey_2000}, such as anger, which increases the danger of heart disease~\cite{SentimentSensing_Smith_2004} or mood which impacts health-relevant behaviour, ageing and can also act as a predictor of mortality~\cite{SentimentSensing_Todaro_2003}.
@@ -192,13 +193,14 @@ Impact of static objects could be mitigated by subtracting successive sample mea
 \subsection*{Research approach, methods and hypotheses}
 We plan to apply the machine learning approach in which prediction and feedback tools are built based on data. Specifically, we plan to install and employ a wide range of sensors, some on-body, some are already installed on everyday smartphones, and some are located in an environmental. We will collect data from these sensors and analyze it, where the goal is to find a small, cheap and efficient subset of sensors which provides a robust and stable signal for prediction. Next, we will build a prediction system of sentiment based on this signal. We will use the collected signals and true sentiment to generate with a predictive model of sentiment from signal. We will test the model on signals coming from participants of our study. We will also develop a feedback algorithm that will provide the user information about current sentimental state, and possibly future predicted one. Hopefully, the user will benefit from such feedback. Additional component we plan to pursue is the development of an efficient prediction and feedback methods, that could be executed on a smartphone.
 
-We hypothesize that we will be able to collect sensor information on users, and their true or approximated sentimental state. We also assume that it is possible to predict sentiment from signals of sensors. Both assumptions are reasonable as similar tasks were  already performed by both PIs in other contexts. 
+We hypothesize that we will be able to collect sensor information on users, and their true or approximated sentimental state. We also assume that it is possible to predict sentiment from signals of sensors. 
 
 \subsection*{Detailed work programme including time schedule}
 The expected time schedule is depicted in table~\ref{tableGesamtueberblick}. 
 A detailed description of the distribution of work packages to personnel is given in the following.
 The figures represent three person months (equal to one person quarter).
 The notation '40' represents an allocation of 40 percent of one person quarter. 
+\kobyc{where we should add detecting and removing sensor outliers? develop efficient algorithms? usage of text for developing models? }
 
 \begin{table}
 \centering
@@ -268,8 +270,21 @@ In addition to the collection of data, the application will enable feedback to t
 For instance, possible feedback would be recommendations conditioned on sensed sentiment.  
 % \kobyc{add applciation for both collecting sensors and integrating them}
 
+\paragraph*{WP-2.2: Integration of medical sensing equipment}
+\begin{tabular}{rl}
+ Estimated effort& 3 PMs\\
+ Precondition & WP-2.1\\
+ Milestone & \begin{minipage}[t]{12.2cm}
+\textit{Integration of medical sensor equipment to the sentiment sensing system}\vspace{.2cm}
+             \end{minipage}
+\end{tabular}
 
-\paragraph*{WP-2.2: Integration of smartphone and body sensors}
+\noindent
+In this workpackage we integrate medical sensors (EMG and EOG) with the developed framework. 
+We will have access to the medical sensors via a cooperation with the medical center at Georg-August University Goettingen, in particular with the Neurohabilitation Engineering Group of Professor Dario Farina\footnote{http://www.nre.bccn.uni-goettingen.de/index.php?id=82}. 
+We will develop methods to predict the output of the medical sensors from smartphone and other sensors in WP-4.2 for the use in our sentiment prediction system.
+
+\paragraph*{WP-2.3: Integration of smartphone and body sensors}
 \begin{tabular}{rl}
  Estimated effort& 3 PMs\\
  Precondition & WP-2.1\\
@@ -287,7 +302,7 @@ We will evaluate the amount of sensor information such that we will be able to m
 
 % \kobyc{compression? + heart rate sensors? fitness wristband}
 
-\paragraph*{WP-2.3: Integration of environmental sensors}
+\paragraph*{WP-2.4: Integration of environmental sensors}
 \begin{tabular}{rl}
  Estimated effort& 3 PMs\\
  Precondition & WP-2.1\\
@@ -301,36 +316,6 @@ In this workpackage we integrate USRP\footnote{http://www.ettus.com} devices wit
 For this, we can utilise 8 fully equipped USRP-1 devices and transceivers for the 800 MHz range available at the chair for Computer networks at Georg-August University Goettingen.
 % \kobyc{keep it?}
 
-\kobyc{I moved the original WP-2.1 "Integration of medical sensing equipment" to W-2.4 just below. I propose to replace it with a new workpackage just after it. This is because it will make our dependency in others smaller, and it will make the focus on something can be done everwhere.	}
-
-\paragraph*{WP-2.4: Integration of medical sensing equipment (propose to remove)}
-\begin{tabular}{rl}
-	Estimated effort& 3 PMs\\
-	Precondition & WP-2.1\\
-	Milestone & \begin{minipage}[t]{12.2cm}
-		\textit{Integration of medical sensor equipment to the sentiment sensing system}\vspace{.2cm}
-	\end{minipage}
-\end{tabular}
-
-\noindent
-In this workpackage we integrate medical sensors (EMG and EOG) with the developed framework. 
-We will have access to the medical sensors via a cooperation with the medical center at Georg-August University Goettingen, in particular with the Neurohabilitation Engineering Group of Professor Dario Farina\footnote{http://www.nre.bccn.uni-goettingen.de/index.php?id=82}. 
-We will develop methods to predict the output of the medical sensors from smartphone and other sensors in WP-4.2 for the use in our sentiment prediction system.
-
-
-\paragraph*{WP-2.4: Sensor output analysis and fusion}
-\begin{tabular}{rl}
-	Estimated effort& 3 PMs\\
-	Precondition & WP-2.1,2,3\\
-	Milestone & \begin{minipage}[t]{12.2cm}
-		\textit{Analysis and fusion of output from all sensors.}\vspace{.2cm}
-	\end{minipage}
-\end{tabular}
-
-\noindent
-In this workpackage we will analyze the sensor data and evaluate their redundancy. This study will be used to develop methods to fuze data from all sensors into a single coherent and compact stream. We will develop methods to remove noise and outliers readings. These tools will be used to process sensor data before feeding it into sentiment prediction models.
-
-\kobyc{can we combine both 3.1 and 3.2? what are the differance between them?}
 \paragraph*{WP-3: Experiments}
 \paragraph*{WP-3.1: Generation of experimental data samples}
 \begin{tabular}{rl}
@@ -341,11 +326,10 @@ In this workpackage we will analyze the sensor data and evaluate their redundanc
              \end{minipage}
 \end{tabular}
 
-\kobyc{edit the following if we modify wp 2.4 above}
 \noindent
-Utilizing the sentiment sensing system developed in WP-2, we will collect data from medical, smartphone, body and environmental sensors for our sentiment analysis in WP-4. 
+Utilising the sentiment sensing system developed in WP-2, we will collect data from medical, smartphone, body and environmental sensors for our sentiment analysis in WP-4. 
 We will consider two classes of medical sensors, for instance, EMG and EOG, acceleration data from the INGA and smartphone sensors as well as RF-signal information captured by USRP devices. 
-We aim at collecting a body of data from 30-50 subjects in laboratory settings in which a series of standard tasks will be conducted by the subjects while the sentiment classes are induced by the experiment design. 
+We aim at collecting a body of data from 30-50 subjects in laboratory settings in which a series of standard tasks will be conducted by the subjects while the sentiment classes are induced by the experiement design. 
 The subjects will be recruited from students and University staff as well as from patients or medical test persons in cooperation with the medical center at University of Goettingen.
 % We will conduct two separate data sets over the course of the project in two separate three-month periods. 
 At least three sentiment classes will be considered, such as happiness, stress, and tiredness. 
@@ -374,7 +358,7 @@ In addition, users will receive recommendations based on the sensed sentiment pa
 % \kobyc{ask the user for feedback WP-2.2}
 
 \paragraph*{WP-4: Sentiment analysis}
-\kobyc{maybe remove 4.1 or integrate it with 4.2?}
+
 \paragraph*{WP-4.1: Sentiment analysis from medical sensors}
 \begin{tabular}{rl}
  Estimated effort& 3 PMs\\
@@ -426,7 +410,7 @@ We will in this workpackage develop features for the prediction of sentiment fro
 Building on our and other previous work detecting movement and gestures from received RF-signals, we will detect gestures, movement and pose of individuals. 
 Then, we will devise new methods to predict from the output of these prediction regarding physical state (movement, gestures and pose) mental state, such as emotion and sentiment. 
 
-\paragraph*{WP-5: Prediction of sentiment based on past data and provide feedback for future}
+\paragraph*{WP-5: Prediction of sentiment based on historical data}
 \paragraph*{WP-5.1: Integrating past sentiment}
 \begin{tabular}{rl}
  Estimated effort& 3 PMs\\
@@ -435,8 +419,8 @@ Then, we will devise new methods to predict from the output of these prediction 
 \textit{A document describing the potential of sentiment analysis of long sensor traces}\vspace{.2cm}
              \end{minipage}
 \end{tabular}
+\textbf{TODO}
 \noindent
-We will analyze long sequences of sensor-input and sentimental-state. Our goal is to find long-correlations between the state of the sentiment across in various time scales (minutes, hours, days). Based on these results we will develop models to predict sentiment based on both current sensor data and previous (or historical) sentiment, either predicted (or also given via interface). 
 
 
 \paragraph*{WP-5.2: Generating user feedback}
@@ -449,20 +433,35 @@ We will analyze long sequences of sensor-input and sentimental-state. Our goal i
 \end{tabular}
 
 \noindent
-We will develop few feedback methods to users about current and future predicted sentiment. Our goal is to build an automatic system that will find an optimal feedback mechanism to achieve certain goals, defined by the user. We plan to build on recent advances~\cite{DBLP:journals/ml/CrammerG13} in multi-armed bandit algorithms based on context which are optimizing exploration of methods and exploiting them.
+In this workpackage, we consider the generation of user feedback.
+In particular, we intend to influence the user's sentiment with such feedback. 
+Examples are the enforcement of stress-reducing behaviour or recommendations on behaviour to improve health or well-being. 
+% \todo
+% \textbf{TODO: More details here!!}
+
+\kobyc{modify wp5 : wp5.1 use previous sentiment wp5.2 feedback}
 
 
 \subsection*{Type and extent of the cooperation and division of tasks between the partners}
-Goettingen's expertise lie in sensor (please add), and 
-Technion's expertise lie in the design of new methods for data analysis, building predictive models, and devise highly efficient methods. We envision a relation in which Goettingen take the lead on sensor deployment and analysis, and Technion on analysis and building prediction models. We plan to close the loop, and use the models and analysis-outcome to better improve sensor usage. Smartphones and body sensors will be deployed on both locations. We will to assign a student in each institute, and plan for them to work as a team.
+Goettingen's expertise lie in mobile pervasive sensing systems, distributed, networked systems and compressive sensing.     
+Technion's expertise lie in the design of new methods for data analysis, building predictive models, and devise highly efficient methods. 
+\kobyc{to add more about who will do what and the interface bewteen the two institutes}
 
-The researchers plan to have periodic phone meetings, and visit each other every six months. We hope that our Goettingen's students will be have long visit in Technion in vice-versa. This will not only advance the project, but will also serve, as a way to deepen their network and the connections between the two institutes. 
+The researchers plan to have periodic phone meetings, and visit each other every 6 months. We hope that our Goettingen's students will be have long visit in Technion in vice-versa. This will not only advance the project, but will also serve, as a way to deepen their network and the connections between the two institutes. 
 
 
+% \begin{itemize}
+%  \item[\color{blue}tbd]
+% \end{itemize}
 \subsection*{Anticipated results}
-\begin{itemize}
- \item[\color{blue}tbd]
-\end{itemize}
+% \begin{itemize}
+%  \item[\color{blue}tbd]
+% \end{itemize}
+This project will generate an initial body of knowledge on the recognition of sentiment from various sensor types.
+In particular, in the scope of the project, a prototype implementation for a mobile sentiment recognition app is developed and a corpus of sensor readings together with the associated ground truth is provided. 
+The results will provide insight into the potential of sentiment sensing and prediction from medical, smartphone and body sensors.
+
+
 \subsection*{Relevant preceding work of the applicants}
 % \begin{itemize}
 %  \item[\color{blue}tbd]
@@ -486,29 +485,15 @@ These considerations have been extended to passive systems which utilise ambient
 Recent results show, that it is further possible to detect directed attention from fluctuations on the RF-channel by interpreting body movement captured from RF-readings~\cite{Pervasive_Shi_2014}.
 Such gestures can be detected based on WiFi RSSI using only time-domain features on an off-the-shelf mobile phone~\cite{RFSensing_Sigg_2014}.
 
-\subsubsection*{Developing Prediction Models}
-Koby Crammer have been working on developing prediction models since his PhD. He developed new methods for assigning one category~\cite{CrammerSi00,CrammerSi00a,CrammerSi01,CrammerSi01a,CrammerDrKu09,DBLP:journals/jmlr/LivniCG12,DBLP:conf/icml/WangCV10,DBLP:conf/ijcai/VatashskyC13,DBLP:journals/jmlr/WangCV12}
- or more~\cite{CrammerSi03,DBLP:conf/naacl/McDonaldCP05} to a given input. Koby also worked extensively worked on developing new learning methods and models to predict sequential data and taking correlations into account. These methods have been used in text analysis~\cite{mcdonald-04,mejer2010confidence}, speech analysis~\cite{DBLP:conf/icassp/CrammerL12,DBLP:conf/icassp/Crammer10} and bioinformatics~\cite{DBLP:journals/bioinformatics/BernalCP12,DBLP:journals/ploscb/BernalCHP07,DBLP:journals/bmcbi/LiuCPR08}
-
-
-\subsubsection*{Developing Efficient Algorithms}
-Since 2008 Koby have worked extensively on new adaptive models and algorithms that are very time and memory efficient. This worked is based on earlier work~\cite{DBLP:journals/jmlr/CrammerDKSS06} on online learning. \cite{DBLP:journals/ml/CrammerKD13,mejer2012training,dredze-ml-09,Crammer:2012:CLC:2343676.2343704,DBLP:conf/icassp/CrammerL12}. Additional work pursed are new efficient methods for large scale learning~\cite{DBLP:conf/icml/WangCV10,DBLP:journals/jmlr/WangCV12}.
-
-Koby have also developed new methods that are efficient in interaction with annotation, and specifically human annotation. These methods can require annotation only for parts of the input~\cite{DBLP:journals/jmlr/HaimovitchCM12,DBLP:conf/pkdd/OrbachC12,OrbachCr12ieeei}, or they actively choose what inputs should be annotated~\cite{dredze-08b,DBLP:journals/ml/CrammerG13,mejer2012training}.
-
-\subsubsection*{Detecting outliers}
-Koby Crammer developed few models to detect outliers in data or finding a small subset of measurements that can be representative and coherent. The methods are either working by enclosing a large subset of inputs in a small ball~\cite{DBLP:conf/colt/CrammerS03}, using non-convex loss functions~\cite{CrammerCh04}, or rate-distortion methods from information theory~\cite{DBLP:conf/icml/CrammerTP08}.
-
-
 
 \subsection*{Brief details of the type and the extent of previous cooperation between applicants}
-The applicants were introduced to each other by a third researcher. They communicated tightly and continuously for both setting the project goal and methods, and, clearly, writing this application. 
-
+\begin{itemize}
+ \item[\color{blue}tbd]
+\end{itemize}
 \subsection*{Perspectives with respect to possible follow-up projects between the partners with funding from other sources}
-H2020 project, one of the ICT ones, need to find proper calls.
-\kobyc{do you know specific ones?}
-
-
+\begin{itemize}
+ \item[\color{blue}tbd]
+\end{itemize}
 \subsection*{Funding of the project including own contribution}
 The project teams consists of the project researchers Dr. Koby Crammer and Dr. Stephan Sigg as well as two PhD students (to be appointed for this project) and two student assistants.
 \begin{description}
@@ -519,8 +504,6 @@ The project teams consists of the project researchers Dr. Koby Crammer and Dr. S
 	\item[Technion] 1 research staff member, TV-L 13, 75\% project + 25\% external, 2 years 
 	\item[Technion] 1 student assistant, 40 hours/week, 2 years 
 \end{description}
-Technion will make use of the machine learning computing cluster composed of more than 50 nodes. If there will be a need, Technion will make the proper adaptation of the cluster to the possible requirements of the project.
-
 
 \bibliographystyle{plain}
 % argument is your BibTeX string definitions and bibliography database(s)
@@ -899,208 +882,7 @@ Zhongwu Zhai, Hua Xu, Bada Kang, and Peifa Jia.
 \newblock Exploiting effective features for chinese sentiment classification.
 \newblock {\em Expert Systems with Applications}, 38(8):9139--9146, 2011.
 
-
-
-
-
-\bibitem{DBLP:journals/ploscb/BernalCHP07}
-Axel Bernal, Koby Crammer, Artemis~G. Hatzigeorgiou, and Fernando Pereira.
-\newblock Global discriminative learning for higher-accuracy computational gene
-prediction.
-\newblock {\em PLoS Computational Biology}, 3(3), 2007.
-
-\bibitem{DBLP:journals/bioinformatics/BernalCP12}
-Axel Bernal, Koby Crammer, and Fernando Pereira.
-\newblock Automated gene-model curation using global discriminative learning.
-\newblock {\em Bioinformatics}, 28(12):1571--1578, 2012.
-
-\bibitem{CrammerCh04}
-K.~Crammer and G.~Chechik.
-\newblock A needle in a haystack: Local one-class optimization.
-\newblock 2004.
-
-\bibitem{CrammerDrKu09}
-K.~Crammer, M.~Dredze, and A.~Kulesza.
-\newblock Multi-class confidence weighted algorithms.
-\newblock In {\em EMNLP}, 2009.
-
-\bibitem{CrammerSi00a}
-K.~Crammer and Y.~Singer.
-\newblock Improved output coding for classification using continuous
-relaxation.
-\newblock 2000.
-
-\bibitem{CrammerSi00}
-K.~Crammer and Y.~Singer.
-\newblock On the learnability and design of output codes for multiclass
-problems.
-\newblock 2000.
-
-\bibitem{CrammerSi01a}
-K.~Crammer and Y.~Singer.
-\newblock On the algorithmic implementation of multiclass kernel-based vector
-machines.
-\newblock {\em Jornal of Machine Learning Research}, 2:265--292, 2001.
-
-\bibitem{CrammerSi01}
-K.~Crammer and Y.~Singer.
-\newblock Ultraconservative online algorithms for multiclass problems.
-\newblock 2001.
-
-\bibitem{CrammerSi03}
-K.~Crammer and Y.~Singer.
-\newblock A new family of online algorithms for category ranking.
-\newblock {\em Jornal of Machine Learning Research}, 3:1025--1058, 2003.
-
-\bibitem{DBLP:conf/icassp/Crammer10}
-Koby Crammer.
-\newblock Efficient online learning with individual learning-rates for phoneme
-sequence recognition.
-\newblock In {\em Proceedings of the {IEEE} International Conference on
-	Acoustics, Speech, and Signal Processing, {ICASSP} 2010, 14-19 March 2010,
-	Sheraton Dallas Hotel, Dallas, Texas, {USA}}, pages 4878--4881, 2010.
-
-\bibitem{DBLP:journals/jmlr/CrammerDKSS06}
-Koby Crammer, Ofer Dekel, Joseph Keshet, Shai Shalev{-}Shwartz, and Yoram
-Singer.
-\newblock Online passive-aggressive algorithms.
-\newblock {\em Journal of Machine Learning Research}, 7:551--585, 2006.
-
-\bibitem{Crammer:2012:CLC:2343676.2343704}
-Koby Crammer, Mark Dredze, and Fernando Pereira.
-\newblock Confidence-weighted linear classification for text categorization.
-\newblock {\em J. Mach. Learn. Res.}, 98888:1891--1926, June 2012.
-
-\bibitem{DBLP:journals/ml/CrammerG13}
-Koby Crammer and Claudio Gentile.
-\newblock Multiclass classification with bandit feedback using adaptive
-regularization.
-\newblock {\em Machine Learning}, 90(3):347--383, 2013.
-
-\bibitem{DBLP:journals/ml/CrammerKD13}
-Koby Crammer, Alex Kulesza, and Mark Dredze.
-\newblock Adaptive regularization of weight vectors.
-\newblock {\em Machine Learning}, 91(2):155--187, 2013.
-
-\bibitem{DBLP:conf/icassp/CrammerL12}
-Koby Crammer and Daniel~D. Lee.
-\newblock Online discriminative learning of phoneme recognition via collections
-of generalized linear models.
-\newblock In {\em 2012 {IEEE} International Conference on Acoustics, Speech and
-	Signal Processing, {ICASSP} 2012, Kyoto, Japan, March 25-30, 2012}, pages
-1961--1964, 2012.
-
-\bibitem{DBLP:conf/colt/CrammerS03}
-Koby Crammer and Yoram Singer.
-\newblock Learning algorithm for enclosing points in bregmanian spheres.
-\newblock In {\em Computational Learning Theory and Kernel Machines, 16th
-	Annual Conference on Computational Learning Theory and 7th Kernel Workshop,
-	COLT/Kernel 2003, Washington, DC, USA, August 24-27, 2003, Proceedings},
-pages 388--402, 2003.
-
-\bibitem{DBLP:conf/icml/CrammerTP08}
-Koby Crammer, Partha~Pratim Talukdar, and Fernando~C. Pereira.
-\newblock A rate-distortion one-class model and its applications to clustering.
-\newblock In {\em Machine Learning, Proceedings of the Twenty-Fifth
-	International Conference {(ICML} 2008), Helsinki, Finland, June 5-9, 2008},
-pages 184--191, 2008.
-
-\bibitem{dredze-08b}
-Mark Dredze and Koby Crammer.
-\newblock Active learning with confidence.
-\newblock In {\em Association for Computational Linguistics}, 2008.
-
-\bibitem{dredze-ml-09}
-Mark Dredze, Alex Kulesza, and Koby Crammer.
-\newblock Multi-domain learning by confidence-weighted parameter combination.
-\newblock {\em Machine Learning}, 79(1-2):123--149, 2010.
-
-\bibitem{DBLP:journals/jmlr/HaimovitchCM12}
-Yoav Haimovitch, Koby Crammer, and Shie Mannor.
-\newblock More is better: Large scale partially-supervised sentiment
-classication.
-\newblock In {\em Proceedings of the 4th Asian Conference on Machine Learning,
-	{ACML} 2012, Singapore, Singapore, November 4-6, 2012}, pages 175--190, 2012.
-
-\bibitem{DBLP:journals/bmcbi/LiuCPR08}
-Qian Liu, Koby Crammer, Fernando C.~N. Pereira, and David~S. Roos.
-\newblock Reranking candidate gene models with cross-species comparison for
-improved gene prediction.
-\newblock {\em {BMC} Bioinformatics}, 9, 2008.
-
-\bibitem{DBLP:journals/jmlr/LivniCG12}
-Roi Livni, Koby Crammer, and Amir Globerson.
-\newblock A simple geometric interpretation of {SVM} using stochastic
-adversaries.
-\newblock In {\em Proceedings of the Fifteenth International Conference on
-	Artificial Intelligence and Statistics, {AISTATS} 2012, La Palma, Canary
-	Islands, April 21-23, 2012}, pages 722--730, 2012.
-
-\bibitem{mcdonald-04}
-Ryan McDonald, Koby Crammer, and Fernando Pereira.
-\newblock Large margin online learning algorithms for scalable structured
-classification.
-\newblock In {\em NIPS Workshop on Structured Outputs}, 2004.
-
-\bibitem{DBLP:conf/naacl/McDonaldCP05}
-Ryan~T. McDonald, Koby Crammer, and Fernando Pereira.
-\newblock Flexible text segmentation with structured multilabel classification.
-\newblock In {\em {HLT/EMNLP} 2005, Human Language Technology Conference and
-	Conference on Empirical Methods in Natural Language Processing, Proceedings
-	of the Conference, 6-8 October 2005, Vancouver, British Columbia, Canada},
-2005.
-
-\bibitem{mejer2010confidence}
-Avihai Mejer and Koby Crammer.
-\newblock Confidence in structured-prediction using confidence-weighted models.
-\newblock In {\em Proceedings of the 2010 conference on empirical methods in
-	natural language processing}, pages 971--981. Association for Computational
-Linguistics, 2010.
-
-\bibitem{mejer2012training}
-Avihai Mejer and Koby Crammer.
-\newblock Training dependency parser using light feedback.
-\newblock In {\em Proceedings of the 2012 Conference of the North American
-	Chapter of the Association for Computational Linguistics: Human Language
-	Technologies}, pages 488--497. Association for Computational Linguistics,
-2012.
-
-\bibitem{DBLP:conf/pkdd/OrbachC12}
-Matan Orbach and Koby Crammer.
-\newblock Graph-based transduction with confidence.
-\newblock In {\em Machine Learning and Knowledge Discovery in Databases -
-	European Conference, {ECML} {PKDD} 2012, Bristol, UK, September 24-28, 2012.
-	Proceedings, Part {II}}, pages 323--338, 2012.
-
-\bibitem{OrbachCr12ieeei}
-Matan Orbach and Koby Crammer.
-\newblock Transductive phoneme classification using local scaling and
-confidence.
-\newblock In {\em IEEEI}, 2012.
-
-\bibitem{DBLP:conf/ijcai/VatashskyC13}
-Ben~Zion Vatashsky and Koby Crammer.
-\newblock Multi class learning with individual sparsity.
-\newblock In {\em {IJCAI} 2013, Proceedings of the 23rd International Joint
-	Conference on Artificial Intelligence, Beijing, China, August 3-9, 2013},
-2013.
-
-\bibitem{DBLP:conf/icml/WangCV10}
-Zhuang Wang, Koby Crammer, and Slobodan Vucetic.
-\newblock Multi-class pegasos on a budget.
-\newblock In {\em Proceedings of the 27th International Conference on Machine
-	Learning (ICML-10), June 21-24, 2010, Haifa, Israel}, pages 1143--1150, 2010.
-
-\bibitem{DBLP:journals/jmlr/WangCV12}
-Zhuang Wang, Koby Crammer, and Slobodan Vucetic.
-\newblock Breaking the curse of kernelization: budgeted stochastic gradient
-descent for large-scale {SVM} training.
-\newblock {\em Journal of Machine Learning Research}, 13:3103--3131, 2012.
-
 \end{thebibliography}
-
-
-%\bibliography{LowerSaxonyVorab_SiggCrammer}
 
 
 % \bibliography{/home/stephan/Daten/Arbeit/Veroeffentlichungen/Literatur/Literatur_080128_v2_STS}
