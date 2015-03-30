@@ -39,6 +39,13 @@
 \newcommand{\kobyc}[1]{\begin{center}\fbox{\parbox{3in}{{\textcolor{green}{K: #1}}}}\end{center}}
 \newcommand{\stephans}[1]{\begin{center}\fbox{\parbox{3in}{{\textcolor{magenta}{S: #1}}}}\end{center}}
 
+\newcommand{\nolineskips}{
+	\setlength{\parskip}{0pt}
+	\setlength{\parsep}{0pt}
+	\setlength{\topsep}{0pt}
+	\setlength{\partopsep}{0pt}
+	\setlength{\itemsep}{0pt}}
+
 
 \author{\begin{minipage}[t]{7.1cm}\centering \small \VornameAntragstellerA\ \NachnameAntragstellerA\\ \small Lehrstuhl für Kommunikationstechnik\\ \small ComTec\\ \small Universität Kassel\end{minipage}
 \begin{minipage}[t]{7.1cm}\centering \small \VornameAntragstellerB\ \NachnameAntragstellerB\\ \small Gruppe Verteilte und Ubiquitäre Systeme \\ \small Institut für Betriebssysteme und Rechnerverbund\\ \small TU Braunschweig\end{minipage}}
@@ -141,8 +148,8 @@ Emotion can be recognised from non-trivial scenarios, such as simple daily-life 
 
 % It will be interesting to see how well RF information can be exploited in order to identify body gesture and pose and to classify this for human emotion classes.
 
-Some researchers~\cite{SentimentSensing_Mota_2003,SentimentSesing_Mello_2009}, were able to detect boredom, confusion, delight and frustration utilizing pressure mats. 
-Such mats, however, are not portable and are therefore not applicable in our setting. 
+ Researchers~\cite{SentimentSensing_Mota_2003,SentimentSesing_Mello_2009}, were able to detect boredom, confusion, delight and frustration utilizing pressure mats. 
+Such mats are not portable and thus are not applicable in our setting. 
 Instead, we aim to detect sentiment from body- or environmental sensors. 
 
 % \paragraph*{Sensing attention from environmental sensors}
@@ -251,7 +258,7 @@ Sum	& 200	&200	&200	&200	&200	&200	&200	&200	 &200	&200	&200	&200	& 2400\\\hline
 
 \noindent
 In this workpackage we will follow up recent developments focusing sentiment sensing and opinion mining.
-This is an ongoing task which is distributed over the whole project duration.
+This ongoing task is distributed over the whole project duration.
 
 \paragraph*{WP-2: Development of sentiment sensing systems}
 
@@ -275,7 +282,7 @@ We perform preliminary analysis of the data collected from various sources to ev
 	Estimated effort& 3 PMs\\
 	Precondition & WP-2.1\\
 	Milestone & \begin{minipage}[t]{12.2cm}
-		\textit{Integration of medical sensor equipment to the sentiment sensing system}\vspace{.2cm}
+		\textit{Integration of medical sensor equipment to the  sensing system}\vspace{.2cm}
 	\end{minipage}
 \end{tabular}
 
@@ -307,13 +314,13 @@ We will evaluate the amount of sensor information such that we will be able to m
  Estimated effort& 3 PMs\\
  Precondition & WP-2.1\\
  Milestone & \begin{minipage}[t]{12.2cm}
-\textit{Integration of USRP software radio nodes to the sentiment sensing system}\vspace{.2cm}
+\textit{Integration of USRP software radio nodes to the  sensing system}\vspace{.2cm}
              \end{minipage}
 \end{tabular}
 
 \noindent
 In this workpackage we integrate USRP\footnote{http://www.ettus.com} devices with the developed framework. 
-For this, we can utilize 8 fully equipped USRP-1 devices and transceivers for the 800 MHz range available at the chair for Computer networks at Georg-August University Goettingen.
+For this, we can utilize 8 fully equipped USRP-1 devices and transceivers for the 800 MHz range available at the chair for Computer networks at Georg-August U. Goettingen.
 % \kobyc{keep it?}
 
 % \kobyc{I moved the original WP-2.1 "Integration of medical sensing equipment" to W-2.4 just below. I propose to replace it with a new workpackage just after it. This is because it will make our dependency in others smaller, and it will make the focus on something can be done everwhere.	}
@@ -514,10 +521,10 @@ The results will provide insight into the potential of sentiment sensing and pre
 %  \item[\color{blue}tbd]
 % \end{itemize}
 \subsubsection*{Prediction of sensor readings}
-Stephan Sigg has been working on the prediction/continuation of time series from sensor readings from 2005 through 2009. 
+Stephan Sigg has been working on the prediction/continuation of time series from sensor readings between 2005-2009.
 In this analytic work he showed that the order in which processing operations are applied to sensor readings impacts the overall error probability for the prediction algorithm, regardless of the actual prediction approach utilized.
-A stochastic model to estimate this impact has been presented which was evaluated in simulations and case studies~\cite{4027}. 
-In addition, a novel class of context-prediction methods based on alignment approaches~\cite{4026} was derived which was shown to outperform traditional approaches on nominal data sequences. 
+A stochastic model to estimate this impact has been presented and evaluated in simulations and case studies~\cite{4027}. 
+Also, a novel class of context-prediction methods based on alignment approaches~\cite{4026} was derived which was shown to outperform traditional approaches on nominal data sequences. 
 This approach has been re-used by various groups for the prediction of contextual information.
 Its complexity has been derived analytically and was compared to alternative context prediction methods~\cite{4027}. 
 The method was applied to readings of inertial sensors, GPS readings and long-time weather data. 
@@ -557,8 +564,9 @@ Depending on the potential and results of the present project, we are considerin
 A further alternative, involving younger scientists, are the establishing of Initial Training Networks\footnote{http://ec.europa.eu/research/mariecurieactions/about-mca/actions/itn/index\_en.htm}.
 
 \subsection*{Funding of the project including own contribution}
-The project teams consists of the project researchers Dr. Koby Crammer and Dr. Stephan Sigg as well as two PhD students (to be appointed for this project) and two student assistants.
+The project teams consists of the project researchers Dr. Koby Crammer and Dr. Stephan Sigg as well as two PhD students (to be appointed for this project) and assistants.
 \begin{description}
+	\nolineskips
 	\item[UGOE] Dr. Stephan Sigg (externally funded), 3 years
 	\item[UGOE] 1 research staff member, TV-L 13, 75\% project + 25\% external, 3 years
 	\item[UGOE] 1 student assistant, 40 hours/week, 3 years

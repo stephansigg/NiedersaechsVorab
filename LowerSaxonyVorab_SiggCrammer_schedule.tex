@@ -116,98 +116,13 @@ The notation '40' represents an allocation of 40 percent of one person quarter.
 
 A first workpackage (WP-1) is a review of recent advances in the topic in general, and for each component (sensing, analysis, modeling, prediction) in particular. Thus, the work of this workpackage is spread across the entire project. The estimated effort is 6 PM (during all project in both institutes).
 
-The goal of the next workpackage (WP-2) is to build a sensing system and infrastructure for collecting data. We estimate the effort required for this part by 5 quarters, divided into five stages, and performed in both institutes.
+The goal of the next workpackage (WP-2) is to build a sensing system and infrastructure for collecting data. We estimate the effort required for this part by 5 man-quarters (15 PM), divided into five stages, each will take about 1 man-quarter (3 PM). The task will be performed in both institutes. 
 
-kkk
-
-\paragraph*{WP-2: Development of sentiment sensing systems}
-
-\paragraph*{WP-2.1: Development of the basic recognition system}
-\begin{tabular}{rl}
-	Estimated effort& 3 PMs\\
-	Precondition & --\\
-	Milestone & \begin{minipage}[t]{12.2cm}
-		\textit{Sentiment sensing system with interfaces for various sensor types}\vspace{.2cm}
-	\end{minipage}
-\end{tabular}
-
-\noindent
-In this workpackage we develop a sensing system to attach medical, body, smartphone and environmental sensors.
-The system will comprise interfaces for various sensing sources and cover of mobile clients to collect data samples and a server backend where the data is collected and processed. 
-We perform preliminary analysis of the data collected from various sources to evaluate various aspects of them, such as, robustness, noise, and redundancy.
-% \kobyc{add applciation for both collecting sensors and integrating them}
-
-\paragraph*{WP-2.2: Integration of medical sensing equipment}
-\begin{tabular}{rl}
-	Estimated effort& 3 PMs\\
-	Precondition & WP-2.1\\
-	Milestone & \begin{minipage}[t]{12.2cm}
-		\textit{Integration of medical sensor equipment to the  sensing system}\vspace{.2cm}
-	\end{minipage}
-\end{tabular}
-
-\noindent
-In this workpackage we integrate medical sensors (EMG and EOG) with the developed framework. 
-We will have access to the medical sensors via a cooperation with the medical center at Georg-August University Goettingen, in particular with the Neurohabilitation Engineering Group of Professor Dario Farina\footnote{http://www.nre.bccn.uni-goettingen.de/index.php?id=82}. 
-We will develop methods to predict the output of the medical sensors from smartphone and other sensors in WP-4.2 for the use in our sentiment prediction system.
-
-\paragraph*{WP-2.3: Integration of smartphone and body sensors}
-\begin{tabular}{rl}
-	Estimated effort& 3 PMs\\
-	Precondition & WP-2.1\\
-	Milestone & \begin{minipage}[t]{12.2cm}
-		\textit{Integration of smartphone and body sensors to the sentiment sensing system}\vspace{.2cm}
-	\end{minipage}
-\end{tabular}
-
-\noindent
-In this workpackage we integrate smartphone and body sensors with the developed framework. 
-Our focus will be on the integration of acceleration data from smartphones and sensor nodes. 
+In stage 1, we will develop a basic recognition system, that will have interfaces for various sensor types, such as medical, body, smartphone and environmental sensors. It will include a server backend where the data is collected and processed. During the development we will evaluate various aspects, such as, robustness, noise, and redundancy.
+In the second stage we will integrate medical sensing equipment, such as EMG and EOG. It will be performed in collaboration with the medical center at Georg-August University Goettingen. We will stat preliminary analysis of this source. In the third stage we will integrate smartphone and body sensors. 
 In particular, we will utilize INGA\footnote{https://www.ibr.cs.tu-bs.de/projects/inga/} sensor nodes to which we have access through a cooperation with TU Braunschweig, Germany. 
-In addition, heart rate and accelerometer sensors, for instance, from fitness wristbands will be incorporated. 
-We will evaluate the amount of sensor information such that we will be able to minimize usage of the phone's resource, and extend battery life.
-
-% \kobyc{compression? + heart rate sensors? fitness wristband}
-
-
-
-\paragraph*{WP-2.4: Integration of environmental sensors}
-\begin{tabular}{rl}
-	Estimated effort& 3 PMs\\
-	Precondition & WP-2.1\\
-	Milestone & \begin{minipage}[t]{12.2cm}
-		\textit{Integration of USRP software radio nodes to the  sensing system}\vspace{.2cm}
-	\end{minipage}
-\end{tabular}
-
-\noindent
-In this workpackage we integrate USRP\footnote{http://www.ettus.com} devices with the developed framework. 
-For this, we can utilize 8 fully equipped USRP-1 devices and transceivers for the 800 MHz range available at the chair for Computer networks at Georg-August U. Goettingen.
-% \kobyc{keep it?}
-
-% \kobyc{I moved the original WP-2.1 "Integration of medical sensing equipment" to W-2.4 just below. I propose to replace it with a new workpackage just after it. This is because it will make our dependency in others smaller, and it will make the focus on something can be done everwhere.	}
-
-\paragraph*{WP-2.5: Development of a mobile sensing system for continuous sampling}
-\begin{tabular}{rl}
-	Estimated effort& 3 PMs\\
-	Precondition & WP-2.1,WP-2.2,WP-2.3,WP-2.4\\
-	Milestone & \begin{minipage}[t]{12.2cm}
-		\textit{Android mobile sensing application}\vspace{.2cm}
-	\end{minipage}
-\end{tabular}
-
-\noindent
-An application for android mobile devices will be developed for mobile data collection. 
-The application will incorporate smartphone sensors and enable the addition of further body sensors, for instance, via bluetooth.
+In addition we plan to integrate sensors from wristbands. We will evaluate the amount of sensor information such that we will be able to minimize usage of the phone's resource, and extend battery life. In the third stage we will integrate environmental sensors, namely USRP. Finally, in the fifth state we will develop an Android mobile sensing application that will incorporate smartphone sensors and enable the addition of further body sensors, for instance, via bluetooth.
 In addition to the collection of data, the application will enable feedback to the user based on the sensed patterns. 
-For instance, possible feedback would be recommendations conditioned on sensed sentiment.  
-This application will be instrumented in WP-3.2.
-The purpose of this application is the study of sentiment and the potential of user feedback to alter sentiment related behavior over a longer period of time. 
-In particular, correlations between distinct sensor types, exploited in WP-4, will be utilized to mitigate missing sensor readings (e.g. from medical sensors) with sensor readings from other sensors.  
-
-% \kobyc{can we combine both 3.1 and 3.2? what are the difference between them?}
-
-
  
 \begin{table}[t]
 	\centering
