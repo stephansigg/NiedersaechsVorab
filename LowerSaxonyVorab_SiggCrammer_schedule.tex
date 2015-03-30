@@ -1,0 +1,407 @@
+\documentclass[12pt]{article}
+\usepackage{setspace}
+
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+%\usepackage{ngerman}
+\usepackage{a4wide}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{color}
+\definecolor{light}{gray}{0.85}
+\definecolor{heavy}{gray}{0.30}
+\usepackage{amsfonts}
+\usepackage{dsfont}
+\usepackage{amssymb}
+\usepackage{setspace}% used for table notes
+\usepackage{makeidx}
+\usepackage[pdftex]{graphicx}
+\usepackage{multibib}
+% \usepackage{subfigure}
+\usepackage{subfig}
+\usepackage{eurosym}
+\newcites{all,own,related}%
+         {\normalsize{References (other authors)},%
+          \normalsize{References (applicant)},
+          \normalsize{ }\vspace{-.8cm}}
+          
+\usepackage{color}
+          
+\newcommand{\todoBase}{\hfill \notiz{TODO} $\square$}
+\newcommand{\projektname}{\texttt{Sense box}}
+
+\newcommand{\notiz}[1]{\marginpar{\tiny \framebox{\begin{minipage}{2.1cm} #1 \end{minipage}}}}
+\newcommand{\niklas}[1]{\marginpar{\footnotesize\notiz{Niklas:}\\\tiny \framebox{\begin{minipage}{2.1cm} #1 \end{minipage}}}}
+\newcommand{\dawud}[1]{\marginpar{\footnotesize\notiz{Dawud:}\\\tiny \framebox{\begin{minipage}{2.1cm} #1 \end{minipage}}}}
+\newcommand{\stephan}[1]{\marginpar{\footnotesize\notiz{Stephan:}\\\tiny \framebox{\begin{minipage}{2.1cm} #1 \end{minipage}}}}
+\newcommand{\todo}{\marginpar{\todoBase}}
+
+\newcommand{\kobyc}[1]{\begin{center}\fbox{\parbox{3in}{{\textcolor{green}{K: #1}}}}\end{center}}
+\newcommand{\stephans}[1]{\begin{center}\fbox{\parbox{3in}{{\textcolor{magenta}{S: #1}}}}\end{center}}
+
+\newcommand{\nolineskips}{
+	\setlength{\parskip}{0pt}
+	\setlength{\parsep}{0pt}
+	\setlength{\topsep}{0pt}
+	\setlength{\partopsep}{0pt}
+	\setlength{\itemsep}{0pt}}
+
+
+\author{\begin{minipage}[t]{7.1cm}\centering \small \VornameAntragstellerA\ \NachnameAntragstellerA\\ \small Lehrstuhl für Kommunikationstechnik\\ \small ComTec\\ \small Universität Kassel\end{minipage}
+\begin{minipage}[t]{7.1cm}\centering \small \VornameAntragstellerB\ \NachnameAntragstellerB\\ \small Gruppe Verteilte und Ubiquitäre Systeme \\ \small Institut für Betriebssysteme und Rechnerverbund\\ \small TU Braunschweig\end{minipage}}
+
+\title{\projektname:\\\notiz{Social and sentiment sensing and assisting using on-body sensors}}
+
+\date{\small \today}
+% \usepackage[T1]{fontenc}
+% \newcommand{\changefont}[3]{
+% \fontfamily{#1} \fontseries{#2} \fontshape{#3} \selectfont}
+%\changefont{cmss}{m}{n}
+\fontfamily{cmss}
+\fontseries{m}
+\fontshape{n}
+\selectfont
+%%serifenlose Schrift:
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{helvet}
+
+%% Use header as in DFG template
+ \usepackage{fancyhdr}
+
+%% Redefine plain page style
+\fancypagestyle{plain}{
+ \fancyhf{}
+ \renewcommand{\headrulewidth}{0pt}
+ \fancyfoot[LE,RO]{\thepage}
+ }
+ \pagestyle{plain}
+% \lhead{\tiny \Name, \Strasse, \Plz\ \Ort, Germany. Phone: \Telefon, Email: \Email}
+\rhead{}
+% \rhead{\small page \arabic{page} of \pageref{maxSeitenzahl}}
+\rfoot{}
+%% Linebreak after paragraph
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+  {-3.25ex\@plus -1ex \@minus -.2ex}%
+  {1.5ex \@plus .2ex}%
+  {\normalfont\normalsize\bfseries}}
+\makeatother
+\begin{document}
+\onehalfspacing %1.5 spacing
+%% enable numbering for paragraphs also:
+\setcounter{secnumdepth}{5}
+% \maketitle
+\pagebreak
+\begin{center}
+\section*{Social and sentiment sensing and assisting using on-body sensors}
+\begin{tabular}{cc}
+  Stephan Sigg, & Koby Crammer\\
+  University of Goettingen, Germany & Department of Electrical Engineering, Technion \\
+ stephan.sigg@cs.uni-goettingen.de & koby@ee.technion.ac.il
+\end{tabular}
+
+\end{center}
+\begin{description}
+	\item[Keywords] \textit{Sentiment sensing, Mobile sensing, Machine learning, Data analysis}
+\end{description}
+
+\section*{Time and Work Plan}
+We divide the work into four main components: building sensing system, utilizing it to collect data, analyzing the data, building prediction models and feedback components. 
+These components are connected and related to each other, and the flow from one to another is not linear, but circular.
+
+We now sketch the components in details and then we discuss nature of circular flow. The expected time schedule is depicted in table~\ref{tableGesamtueberblick}. 
+A detailed description of the distribution of work packages to personnel is given in the following.
+The figures represent three person months (equal to one person quarter).
+The notation '40' represents an allocation of 40 percent of one person quarter. 
+
+A first workpackage (WP-1) is a review of recent advances in the topic in general, and for each component (sensing, analysis, modeling, prediction) in particular. Thus, the work of this workpackage is spread across the entire project. The estimated effort is 6 PM (during all project in both institutes).
+
+The goal of the next workpackage (WP-2) is to build a sensing system and infrastructure for collecting data. We estimate the effort required for this part by 5 quarters, divided into five stages, and performed in both institutes.
+
+kkk
+
+\paragraph*{WP-2: Development of sentiment sensing systems}
+
+\paragraph*{WP-2.1: Development of the basic recognition system}
+\begin{tabular}{rl}
+	Estimated effort& 3 PMs\\
+	Precondition & --\\
+	Milestone & \begin{minipage}[t]{12.2cm}
+		\textit{Sentiment sensing system with interfaces for various sensor types}\vspace{.2cm}
+	\end{minipage}
+\end{tabular}
+
+\noindent
+In this workpackage we develop a sensing system to attach medical, body, smartphone and environmental sensors.
+The system will comprise interfaces for various sensing sources and cover of mobile clients to collect data samples and a server backend where the data is collected and processed. 
+We perform preliminary analysis of the data collected from various sources to evaluate various aspects of them, such as, robustness, noise, and redundancy.
+% \kobyc{add applciation for both collecting sensors and integrating them}
+
+\paragraph*{WP-2.2: Integration of medical sensing equipment}
+\begin{tabular}{rl}
+	Estimated effort& 3 PMs\\
+	Precondition & WP-2.1\\
+	Milestone & \begin{minipage}[t]{12.2cm}
+		\textit{Integration of medical sensor equipment to the  sensing system}\vspace{.2cm}
+	\end{minipage}
+\end{tabular}
+
+\noindent
+In this workpackage we integrate medical sensors (EMG and EOG) with the developed framework. 
+We will have access to the medical sensors via a cooperation with the medical center at Georg-August University Goettingen, in particular with the Neurohabilitation Engineering Group of Professor Dario Farina\footnote{http://www.nre.bccn.uni-goettingen.de/index.php?id=82}. 
+We will develop methods to predict the output of the medical sensors from smartphone and other sensors in WP-4.2 for the use in our sentiment prediction system.
+
+\paragraph*{WP-2.3: Integration of smartphone and body sensors}
+\begin{tabular}{rl}
+	Estimated effort& 3 PMs\\
+	Precondition & WP-2.1\\
+	Milestone & \begin{minipage}[t]{12.2cm}
+		\textit{Integration of smartphone and body sensors to the sentiment sensing system}\vspace{.2cm}
+	\end{minipage}
+\end{tabular}
+
+\noindent
+In this workpackage we integrate smartphone and body sensors with the developed framework. 
+Our focus will be on the integration of acceleration data from smartphones and sensor nodes. 
+In particular, we will utilize INGA\footnote{https://www.ibr.cs.tu-bs.de/projects/inga/} sensor nodes to which we have access through a cooperation with TU Braunschweig, Germany. 
+In addition, heart rate and accelerometer sensors, for instance, from fitness wristbands will be incorporated. 
+We will evaluate the amount of sensor information such that we will be able to minimize usage of the phone's resource, and extend battery life.
+
+% \kobyc{compression? + heart rate sensors? fitness wristband}
+
+
+
+\paragraph*{WP-2.4: Integration of environmental sensors}
+\begin{tabular}{rl}
+	Estimated effort& 3 PMs\\
+	Precondition & WP-2.1\\
+	Milestone & \begin{minipage}[t]{12.2cm}
+		\textit{Integration of USRP software radio nodes to the  sensing system}\vspace{.2cm}
+	\end{minipage}
+\end{tabular}
+
+\noindent
+In this workpackage we integrate USRP\footnote{http://www.ettus.com} devices with the developed framework. 
+For this, we can utilize 8 fully equipped USRP-1 devices and transceivers for the 800 MHz range available at the chair for Computer networks at Georg-August U. Goettingen.
+% \kobyc{keep it?}
+
+% \kobyc{I moved the original WP-2.1 "Integration of medical sensing equipment" to W-2.4 just below. I propose to replace it with a new workpackage just after it. This is because it will make our dependency in others smaller, and it will make the focus on something can be done everwhere.	}
+
+\paragraph*{WP-2.5: Development of a mobile sensing system for continuous sampling}
+\begin{tabular}{rl}
+	Estimated effort& 3 PMs\\
+	Precondition & WP-2.1,WP-2.2,WP-2.3,WP-2.4\\
+	Milestone & \begin{minipage}[t]{12.2cm}
+		\textit{Android mobile sensing application}\vspace{.2cm}
+	\end{minipage}
+\end{tabular}
+
+\noindent
+An application for android mobile devices will be developed for mobile data collection. 
+The application will incorporate smartphone sensors and enable the addition of further body sensors, for instance, via bluetooth.
+In addition to the collection of data, the application will enable feedback to the user based on the sensed patterns. 
+For instance, possible feedback would be recommendations conditioned on sensed sentiment.  
+This application will be instrumented in WP-3.2.
+The purpose of this application is the study of sentiment and the potential of user feedback to alter sentiment related behavior over a longer period of time. 
+In particular, correlations between distinct sensor types, exploited in WP-4, will be utilized to mitigate missing sensor readings (e.g. from medical sensors) with sensor readings from other sensors.  
+
+% \kobyc{can we combine both 3.1 and 3.2? what are the difference between them?}
+
+
+ 
+\begin{table}[t]
+	\centering
+	\begin{footnotesize}
+		\begin{tabular}{|l||c|c|c|c|c|c|c|c|c|c|c|c||c|}
+			\hline
+			% Workpackages&&&&&&&&&&&&&\\
+			& Q1	&Q2	&Q3	&Q4	&Q5	&Q6	&Q7	&Q8	&Q9	&Q10	&Q11	&Q12	&\\\hline\hline
+			Recent advances& &	&	&	&	&	&	&	&	&	&	& 	&\\
+			WP-1	&25	&25	&20	&20	&20	&20	&20	&15	&10	&10	&10	&5 	& 200\\\hline
+			Sensing system& &	&	&	&	&	&	&	&	&	&	& 	&\\
+			WP-2.1	&100	&	&	&	&	&	&	&	&	&	&	& 	& 100\\
+			WP-2.2	&50	&50	&	&	&	&	&	&	&	&	&	& 	& 100\\
+			WP-2.3	&25	&75	&	&	&	&	&	&	&	&	&	& 	& 100\\
+			WP-2.4	&	&50	&50	&	&	&	&	&	&	&	&	& 	& 100\\
+			WP-2.5	&	&	&	&30	&30	&40	&	&	&	&	&	& 	& 100\\\hline
+			Experiments& &	&	&	&	&	&	&	&	&	&	&	&\\
+			WP-3.1	&	&	&130	&70	&	&	&	&	&	&	&	& 	& 200\\
+			WP-3.2	&	&	&	&	&	&	&50	&30	&30	&45	&30	&15 	& 200\\
+			WP-3.3	&	&	&	&	&	&	&	&	&60	&	&	&40 	& 100\\\hline
+			Analysis& &	&	&	&	&	&	&	&	&	&	& 	&\\
+			WP-4.1	&	&	&	&80	&20	&	&	&	&	&	&	& 	& 100\\
+			WP-4.2	&	&	&	&	&130	&70	&	&	&	&	&	& 	& 200\\
+			WP-4.3	&	&	&	&	&	&70	&130	&	&	&	&	& 	& 200\\
+			WP-4.4	&	&	&	&	&	&	&	&100	&55	&45	&	& 	& 200\\
+			WP-4.5	&	&	&	&	&	&	&	&	&	&50	&100	&50 	& 200\\\hline
+			Prediction& &	&	&	&	&	&	&	&	&	&	& &\\
+			%WP-5	&	&	&	&	&	&45	&55	&100	 & 200\\\hline
+			WP-5.1	&	&	&	&	&	&	&	&55	 &45	&	&	&	& 100\\%\hline
+			WP-5.2	&	&	&	&	&	&	&	&	 &	&50	&60	&90	& 200\\\hline
+			Sum	& 200	&200	&200	&200	&200	&200	&200	&200	 &200	&200	&200	&200	& 2400\\\hline
+		\end{tabular}
+	\end{footnotesize}
+	\caption{Occupation (1PM) subject to the quarterly period and project task.}
+	\label{tableGesamtueberblick}
+\end{table}
+\paragraph*{WP-3: Experiments}
+\paragraph*{WP-3.1: Generation of experimental data samples}
+\begin{tabular}{rl}
+ Estimated effort& 6 PMs\\
+ Precondition & WP-2\\
+ Milestone & \begin{minipage}[t]{12.2cm}
+\textit{Generation of a data set for sentiment analysis}\vspace{.2cm}
+             \end{minipage}
+\end{tabular}
+
+% \kobyc{edit the following if we modify wp 2.4 above}
+\noindent
+Utilizing the sentiment sensing system developed in WP-2, we will collect data from medical, smartphone, body and environmental sensors for our sentiment analysis in WP-4. 
+We will consider two classes of medical sensors, for instance, EMG and EOG, acceleration data from the INGA and smartphone sensors as well as RF-signal information captured by USRP devices. 
+We aim at collecting a body of data from 30-50 subjects in laboratory settings in which a series of standard tasks will be conducted by the subjects while the sentiment classes are induced by the experiment design. 
+The subjects will be recruited from students and University staff as well as from patients or medical test persons in cooperation with the medical center at University of Goettingen.
+% We will conduct two separate data sets over the course of the project in two separate three-month periods. 
+At least three sentiment classes will be considered, such as happiness, stress, and tiredness. 
+The experimental setting will be designed to induce these sentiment classes in role-play and interactive games.
+To generate ground truth, participants we will collect feedback after the experiments. 
+In the test design and execution we will receive support from the Institute of Psychology at TU Braunschweig, let by Professor Simone Kauffeld\footnote{https://www.tu-braunschweig.de/psychologie/abt/aos/mitarbeiterinnen/kauffeld/index.html}.
+The purpose of this workpackage is the generation of data for the development of accurate classifiers for sentiment prediction given all available sensor modalities and the identification of possible correlations between sensor classes.
+
+\paragraph*{WP-3.2: Mobile data collection from smartphones}
+\begin{tabular}{rl}
+ Estimated effort& 6 PMs\\
+ Precondition & WP-2\\
+ Milestone & \begin{minipage}[t]{12.2cm}
+\textit{Generation of a data set for the prediction of sentiment}\vspace{.2cm}
+             \end{minipage}
+\end{tabular}
+
+\noindent
+We will collect acceleration data from smartphone and body sensors for our sentiment prediction considered in WP-5. 
+In this experiment, the accelerometer data from 10-20 persons will be collected over a period of 6 months both in Israel and Germany. 
+These individuals, recruited from students and staff of both universities, will be equipped with body sensors measuring acceleration data as well as with portable medical sensors. 
+In order to reach dense sampling, we will consider the use of fitness trackers\footnote{for instance https://www.fitbit.com/de/chargehr} and monetary reward systems. 
+During the experiments, in order to improve our confidence on the ground truth, users will occasionally be asked for feedback by the application.
+In addition, users will receive recommendations based on the sensed sentiment patterns. 
+
+% \kobyc{both in germany and israel}
+% \kobyc{ask the user for feedback WP-2.2}
+
+\paragraph*{WP-3.3: User interaction and feedback}
+\begin{tabular}{rl}
+ Estimated effort& 3 PMs\\
+ Precondition & WP-3.2\\
+ Milestone & \begin{minipage}[t]{12.2cm}
+\textit{Report on the efficiency of the installed feedback mechanisms}\vspace{.2cm}
+             \end{minipage}
+\end{tabular}
+
+\noindent
+In this workpackage, the efficiency and performance of the implemented feedback mechanisms of the app implemented in WP-3.2.
+In particular, this feedback is generated by user questionnaires.
+In the questionnaire design and execution we will receive support from the Institute of Psychology at TU Braunschweig, let by Professor Simone Kauffeld\footnote{https://www.tu-braunschweig.de/psychologie/abt/aos/mitarbeiterinnen/kauffeld/index.html}.
+Two feedback rounds are implemented in the middle and at the end of WP-3.2 in order to enable adaptation of the feedback in the second phase. 
+
+\paragraph*{WP-4: Sentiment analysis}
+% \kobyc{maybe remove 4.1 or integrate it with 4.2?}
+\paragraph*{WP-4.1: Sentiment analysis from medical sensors}
+\begin{tabular}{rl}
+ Estimated effort& 3 PMs\\
+ Precondition & WP-3\\
+ Milestone & \begin{minipage}[t]{12.2cm}
+\textit{Suitable features and a classifier for sentiment from at least two types of medical sensors}\vspace{.2cm}
+             \end{minipage}
+\end{tabular}
+
+\noindent
+In this workpackage we investigate the identification of sentiment from data of medical sensors. 
+We will develop new learning methods for detecting sentiment from EMG and EOG data. 
+These methods will take into consideration the special nature of these signals.
+
+\paragraph*{WP-4.2: Sentiment analysis from body and smartphone sensors}
+\begin{tabular}{rl}
+ Estimated effort& 6 PMs\\
+ Precondition & WP-3, WP-4.1\\
+ Milestone & \begin{minipage}[t]{12.2cm}
+\textit{Correlations between features from medical and smartphone sensors and a classifier for sentiment from these sensors}\vspace{.2cm}
+             \end{minipage}
+\end{tabular}
+
+\noindent
+We will in this workpackage develop suitable features for the prediction of sentiment from body and smartphone sensors. Our goal is to have a small number of predictive features. 
+In particular, similarly to previous work regarding movement, gestures and pose as indicators of emotion, classifiers for the detection of such classes will be developed and linked to the classification of sentiment. 
+In addition, building on the results from WP-4.1 we will further investigate correlations between sensor readings of medical and acceleration sensors in order to give an estimation to which extent medical sensors can be substituted by cheaper acceleration sensors for the application in large scale on-phone sensing applications.
+
+\paragraph*{WP-4.3: Sentiment classification from body and smartphone sensors}
+\begin{tabular}{rl}
+ Estimated effort& 6 PMs\\
+ Precondition & WP-3, WP-4.1, WP-4.2\\
+ Milestone & \begin{minipage}[t]{12.2cm}
+\textit{Classifier for sentiment over extended period of time}\vspace{.2cm}
+             \end{minipage}
+\end{tabular}
+
+\noindent
+In this workpackage, we focus the analysis of sentiment over an extended period of time. 
+In particular, we investigate the identification of typical sentiment patterns from the observed sensor data.
+From this, we focus on the prediction of sentiment based not only on current sensor input, but also on recent historical data. 
+That is, modelling the state-of-mind of a person, and use it to improve prediction of future state-of-mind. 
+In particular, similar to our previous work~\cite{4026,4027}, we consider the use of alignment matching approaches to identify approximately similar sub-patterns in sentiment time series and to predict probable continuation of these patterns.
+
+% \kobyc{related sentiment to location or time?}
+
+\paragraph*{WP-4.4: Sentiment analysis from environmental sensors}
+\begin{tabular}{rl}
+ Estimated effort& 6 PMs\\
+ Precondition & WP-3\\
+ Milestone & \begin{minipage}[t]{12.2cm}
+\textit{Features and a classifier for sentiment from received RF-signals}\vspace{.2cm}
+             \end{minipage}
+\end{tabular}
+
+\noindent
+We will in this workpackage develop features for the prediction of sentiment from received RF signals. 
+Building on our and other previous work detecting movement and gestures from received RF-signals, we will detect gestures, movement and pose of individuals. 
+Then, we will devise new methods to predict from the output of these prediction regarding physical state (movement, gestures and pose) mental state, such as emotion and sentiment. 
+
+\paragraph*{WP-4.5: Sensor output analysis and fusion}
+\begin{tabular}{rl}
+	Estimated effort& 3 PMs\\
+	Precondition & WP-2.1,WP-2.2,WP-2.3\\
+	Milestone & \begin{minipage}[t]{12.2cm}
+		\textit{Analysis and fusion of output from all sensors.}\vspace{.2cm}
+	\end{minipage}
+\end{tabular}
+
+\noindent
+In this workpackage we will analyse the sensor data and evaluate their redundancy. This study will be used to develop methods to fuze data from all sensors into a single coherent and compact stream. We will develop methods to remove noise and outliers readings. These tools will be used to process sensor data before feeding it into sentiment prediction models.
+
+
+\paragraph*{WP-5: Prediction of sentiment based on past data and provide feedback for future}
+\paragraph*{WP-5.1: Integrating past sentiment}
+\begin{tabular}{rl}
+ Estimated effort& 3 PMs\\
+ Precondition & WP-3, WP-4\\
+ Milestone & \begin{minipage}[t]{12.2cm}
+\textit{A document describing the potential of sentiment analysis of long sensor traces}\vspace{.2cm}
+             \end{minipage}
+\end{tabular}
+
+\noindent
+We will analyse long sequences of sensor-input and sentimental-state. Our goal is to find long-correlations between the state of the sentiment across in various time scales (minutes, hours, days). Based on these results we will develop models to predict sentiment based on both current sensor data and previous (or historical) sentiment, either predicted (or also given via interface). 
+
+
+\paragraph*{WP-5.2: Generating user feedback}
+\begin{tabular}{rl}
+	Estimated effort& 3 PMs\\
+	Precondition & WP-5-1\\
+	Milestone & \begin{minipage}[t]{12.2cm}
+		\textit{A document describing the potential of sentiment prediction from long sensor traces}\vspace{.2cm}
+	\end{minipage}
+\end{tabular}
+
+\noindent
+We will develop few feedback methods to users about current and future predicted sentiment. Our goal is to build an automatic system that will find an optimal feedback mechanism to achieve certain goals, defined by the user. We plan to build on recent advances~\cite{DBLP:journals/ml/CrammerG13} in multi-armed bandit algorithms based on context which are optimizing exploration of methods and exploiting them.
+
+
+\end{document}
