@@ -101,7 +101,7 @@
 \subsection*{Topic, objectives and justification of the project}
 Emotional states are closely linked to Physical health~\cite{SentimentSensing_Salovey_2000}, such as anger, which increases the danger of heart disease~\cite{SentimentSensing_Smith_2004} or mood which impacts health-relevant behaviour, ageing and can also act as a predictor of mortality~\cite{SentimentSensing_Todaro_2003}.
 In addition, mental health is linked to emotion regulation~\cite{SentimentSensing_Gross_1995}, whereas stress, especially when pertaining, has significant impact on brain, cognition and work performance~\cite{SentimentSensing_Lupien_2009}.
-On the other hand, positive affect benefits the immune system~\cite{SentimentSensing_Smith_2004} while happyness and satisfaction are good indicators for work performance, health, and also success in private life~\cite{SentimentSensing_Lyubomirsky_2005}.
+On the other hand, positive affect benefits the immune system~\cite{SentimentSensing_Smith_2004} while happiness and satisfaction are good indicators for work performance, health, and also success in private life~\cite{SentimentSensing_Lyubomirsky_2005}.
 
 Sentiment and emotion can be detected from Physiological signals with sensors such as Electromyograms (EMG, muscle activity), Electrodermal Activity (EDA, electrical conductivity of the skin surface), Electrocardiogram (EKG or ECG, heart activity), Electrooculogram (EOG, eye movement) or Electroencephalography (EEG, brain activity)~\cite{SentimentSensing_Calvo_2010}.
 These kind of sensors, however, are accessible only to a small share of the population and have drawbacks such as high cost, weight, non-portability, and sometimes involve invasive implantation.
@@ -184,15 +184,15 @@ The group recently discussed application possibilities of their system~\cite{RFS
 In a related system, Adib and Katabi~\cite{Pervasive_Adib_2013} employ MIMO interference nulling and combine samples taken over time to achieve a similar result while compensating for the missing spatial diversity in a single-antenna receiver system.
 In their system, they leverage standard WiFi hardware at 2.4GHz.
 
-Later, this work was extended to 3D motion tracking by utlising three or more directional receive antennas in exactly defined relative orientation~\cite{RFSensing_Adib_2014}. 
+Later, this work was extended to 3D motion tracking by utilising three or more directional receive antennas in exactly defined relative orientation~\cite{RFSensing_Adib_2014}. 
 In particular, the system is able to track the center of a human body with an error below 21cm in any direction and can also detect movement of body parts and directions of a pointing body part, such as a hand. 
-This localisation is possible through time-of-flight estimation and triangulisation.
+This localisation is possible through time-of-flight estimation and triangulation.
 Higher accuracy of this estimation is granted by utilising frequency modulated carrier waves (sending a signal that changes linearly in frequency with time) over a bandwidth of 1.69GHz.
 Impact of static objects could be mitigated by subtracting successive sample means whereas noise was filtered by its speed of changes in energy over frequency bands. 
 
 \subsection*{Research approach, methods and hypotheses}
 We plan to apply a machine learning approach in which prediction and feedback tools are built based on data. Specifically, we plan to install and employ a wide range of sensors, some on-body, some are already installed on everyday smartphones, and some are located in an environment. 
-We will collect data from these sensors and analyze it, where the goal is to find a small, cheap and efficient subset of sensors which provides a robust and stable signal for prediction. Next, we will build a prediction system of sentiment based on this signal. We will use the collected signals and true sentiment to generate a predictive model of sentiment from the signal.
+We will collect data from these sensors and analyse it, where the goal is to find a small, cheap and efficient subset of sensors which provides a robust and stable signal for prediction. Next, we will build a prediction system of sentiment based on this signal. We will use the collected signals and true sentiment to generate a predictive model of sentiment from the signal.
 We will test the model on signals coming from participants of our study. We will also develop a feedback algorithm that will provide user information about current sentimental state, and possibly future predicted one. Hopefully, the user will benefit from such feedback. Additional components we plan to pursue is the development of efficient prediction and feedback methods, that could be executed on a smartphone.
 
 We hypothesize that we will be able to collect sensor information of users, and their true or approximated sentimental state. We also assume that it is possible to predict sentiment from signals of sensors. Both assumptions are reasonable as similar tasks were  already performed by both PIs in other contexts. 
@@ -336,7 +336,7 @@ This application will be instrumented in WP-3.2.
 The purpose of this application is the study of sentiment and the potential of user feedback to alter sentiment related behaviour over a longer period of time. 
 In particular, correlations between distinct sensor types, exploited in WP-4, will be utilised to mitigate missing sensor readings (e.g. from medical sensors) with sensor readings from other sensors.  
 
-% \kobyc{can we combine both 3.1 and 3.2? what are the differance between them?}
+% \kobyc{can we combine both 3.1 and 3.2? what are the difference between them?}
 \paragraph*{WP-3: Experiments}
 \paragraph*{WP-3.1: Generation of experimental data samples}
 \begin{tabular}{rl}
@@ -391,8 +391,8 @@ In addition, users will receive recommendations based on the sensed sentiment pa
 
 \noindent
 In this workpackage, the efficiency and performance of the implemented feedback mechanisms of the app implemented in WP-3.2.
-In particular, this feedback is generated by user questionaires.
-In the questionaire design and execution we will receive support from the Institute of Psychology at TU Braunschweig, let by Professor Simone Kauffeld\footnote{https://www.tu-braunschweig.de/psychologie/abt/aos/mitarbeiterinnen/kauffeld/index.html}.
+In particular, this feedback is generated by user questionnaires.
+In the questionnaire design and execution we will receive support from the Institute of Psychology at TU Braunschweig, let by Professor Simone Kauffeld\footnote{https://www.tu-braunschweig.de/psychologie/abt/aos/mitarbeiterinnen/kauffeld/index.html}.
 Two feedback rounds are implemented in the middle and at the end of WP-3.2 in order to enable adaptation of the feedback in the second phase. 
 
 \paragraph*{WP-4: Sentiment analysis}
@@ -438,7 +438,7 @@ In addition, building on the results from WP-4.1 we will further investigate cor
 In this workpackage, we focus the analysis of sentiment over an extended period of time. 
 In particular, we investigate the identification of typical sentiment patterns from the observed sensor data.
 From this, we focus on the prediction of sentiment based not only on current sensor input, but also on recent historical data. 
-That is, modeling the state-of-mind of a person, and use it to improve prediction of future state-of-mind. 
+That is, modelling the state-of-mind of a person, and use it to improve prediction of future state-of-mind. 
 In particular, similar to our previous work~\cite{4026,4027}, we consider the use of alignment matching approaches to identify approximately similar sub-patterns in sentiment time series and to predict probable continuation of these patterns.
 
 % \kobyc{related sentiment to location or time?}
@@ -467,7 +467,7 @@ Then, we will devise new methods to predict from the output of these prediction 
 \end{tabular}
 
 \noindent
-In this workpackage we will analyze the sensor data and evaluate their redundancy. This study will be used to develop methods to fuze data from all sensors into a single coherent and compact stream. We will develop methods to remove noise and outliers readings. These tools will be used to process sensor data before feeding it into sentiment prediction models.
+In this workpackage we will analyse the sensor data and evaluate their redundancy. This study will be used to develop methods to fuze data from all sensors into a single coherent and compact stream. We will develop methods to remove noise and outliers readings. These tools will be used to process sensor data before feeding it into sentiment prediction models.
 
 
 \paragraph*{WP-5: Prediction of sentiment based on past data and provide feedback for future}
@@ -481,7 +481,7 @@ In this workpackage we will analyze the sensor data and evaluate their redundanc
 \end{tabular}
 
 \noindent
-We will analyze long sequences of sensor-input and sentimental-state. Our goal is to find long-correlations between the state of the sentiment across in various time scales (minutes, hours, days). Based on these results we will develop models to predict sentiment based on both current sensor data and previous (or historical) sentiment, either predicted (or also given via interface). 
+We will analyse long sequences of sensor-input and sentimental-state. Our goal is to find long-correlations between the state of the sentiment across in various time scales (minutes, hours, days). Based on these results we will develop models to predict sentiment based on both current sensor data and previous (or historical) sentiment, either predicted (or also given via interface). 
 
 
 \paragraph*{WP-5.2: Generating user feedback}
