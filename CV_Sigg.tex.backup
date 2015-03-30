@@ -1,0 +1,913 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+%\usepackage[ansinew]{inputenc}
+\usepackage{a4wide}
+\usepackage{fancyhdr}
+\usepackage{eurosym}
+\usepackage{graphicx}
+%\usepackage[pdftex]{graphicx}
+%\selectlanguage{german}
+%\setlength{\topmargin}{-0.5cm}
+\setlength{\textheight}{23cm}
+\setlength{\oddsidemargin}{-.4cm}
+\setlength{\topmargin}{-1cm}
+\setlength{\textwidth}{16.7cm}
+\pagestyle{fancy}
+\renewcommand{\familydefault}{\sfdefault}
+% Deine Adresse:
+\newcommand{\Name}{Stephan Sigg}
+\newcommand{\Strasse}{Burg 4}
+\newcommand{\Ort}{Braunschweig}
+\newcommand{\Plz}{38124}
+\newcommand{\Telefon}{+49~5341~4022052}
+\newcommand{\Email}{stephan.sigg@udo.edu}
+\newcommand{\Country}{Germany}
+
+\lhead{\tiny \Name, \Strasse, \Plz\ \Ort, \Country. Phone: \Telefon, Email: \Email}
+\cfoot{\footnotesize page \arabic{page} of \pageref{MaxSeitenzahl}}
+
+%\lfoot{Neu}
+%\pagestyle{myheadings}
+%\markboth{\scriptsize \hfill Stephan Sigg \hfill $\bullet$ \hfill Hessische Str. 165 \hfill $\bullet$ \hfill
+%&44339 Dortmund \hfill $\bullet$ \hfill Tel. 0231/3997729\hfill}
+%{\scriptsize \hfill Stephan Sigg\hfill $\bullet$ \hfill Hessische Str. 165 \hfill $\bullet$ \hfill 44339
+%Dortmund \hfill $\bullet$ \hfill Tel. 0231/3997729 \hfill}
+
+%\pagenumbering{roman}
+%\nopagenumbering
+\newcounter{saveenumi}
+% \renewcommand{\labelenumi}{\alph{enumi})}
+% \renewcommand{\labelenumii}{\arabic{enumii}.}
+
+\begin{document}
+\lhead{ }
+\label{ErsteSeite}
+\centerline{ \Large \textbf{Curriculum vitae}}
+\vspace{-.5cm}
+%  \subsection*{General information}
+%  \vspace{-.5cm}
+\begin{tabbing}
+\hspace{2.4cm} \= \\
+	\>\textit{Stephan Sigg, Dipl.-Inform., Dr. rer. nat.}\\[.1cm]
+% Date of birth \> January, 25th 1978 in Hanover, Germany\\[.1cm]
+% Civil status \> Married, two daughters (2 and 5 years)\\[.1cm]
+Residence	\> \Strasse, \Plz~\Ort, \Country\\[.1cm]
+Phone \> \Telefon\\[.1cm]
+Email \> \Email\\[.1cm]
+Web \>http://www.stephansigg.de/stephan
+\end{tabbing}
+% \vspace{.5cm}
+
+
+
+Since October 2013, Stephan Sigg is with the Computer Networks Group of Georg-August-University Goettingen. Before, he was a researcher at TU-Braunschweig and an academic guest in the Wearable Computing Lab at ETH Zurich and in the Nodes laboratory at University of Helsinki. From December 2010 to March 2013, Stephan was with the National Institute of Informatics (NII), in the Information systems architecture research division. He was a visiting Professor for Distributed and Ubiquitous Systems at the TU Braunschweig in the winter term 2010 and a PostDoc researcher at the chair for Pervasive Computing Systems (TecO) of the Karlsruhe Institute of Technology (KIT) in 2010 and a PostDoc researcher at the chair for Distributed and Ubiquitous Systems at the TU Braunschweig from 2008 to 2010. He obtained his PhD (Dr. rer. nat.; 2008) from University of Kassel where he was with the chair for Communication Technology (ComTec) from 2005 to 2007.
+
+His research interests include the design, analysis and optimisation of algorithms for distributed and ubiquitous systems. 
+Recently he has considered problems related to context prediction, collaborative transmission in Wireless sensor networks, context-based secure key generation, device-free passive activity recognition and computation of functions in wireless networks at the time of transmission. 
+
+% \subsection*{Short CV}
+% \vspace{-.5cm}
+\begin{tabbing}
+\hspace{3.2cm} \= \hspace{2.5cm} \=\\
+10.2013 --	\>\begin{minipage}[t]{13.2cm}	Researcher at the Georg-August-Universität Göttingen, Germany, in the Computer Networks group.\end{minipage}\\[0.2cm]
+04.2014 -- 08.2014 \>\begin{minipage}[t]{14cm}	Research visit at University of Helsinki, Finland, in the Nodes laboratory.\end{minipage}\\[0.2cm]
+08.2013 -- 09.2013 \>\begin{minipage}[t]{14cm}	Academic Guest at ETH Zurich, Switzerland in the Wearable Computing Lab.\end{minipage}\\[0.2cm]
+06.2013 -- 09.2013 \>\begin{minipage}[t]{14cm}	Researcher at TU Braunschweig.\end{minipage}\\[0.2cm]
+10.2012 -- 03.2013 \>\begin{minipage}[t]{14cm}	Part-time lecturer at Waseda University, Tokyo, Japan.\end{minipage}\\[0.2cm]
+12.2010 -- 03.2013 \>\begin{minipage}[t]{14cm}	Researcher at the National Institute of Informatics (NII) , Tokyo, Japan in the Information Systems Architecture Research Division.\end{minipage}\\[0.2cm]
+10.2010 -- 03.2011 \>\begin{minipage}[t]{14cm}	Visiting professorship at the distributed and ubiquitous systems group of the TU Braunschweig.\end{minipage}\\[0.2cm]
+04.2010 -- 09.2010 \>\begin{minipage}[t]{14cm}	Research staff member (Postdoc) at the Karlsruhe Institute of Technology (KIT) at the chair for Pervasive Computing Systems (TecO).\end{minipage}\\[0.2cm]
+01.2008 -- 03.2010 \>\begin{minipage}[t]{14cm}	Research staff member (Postdoc) at TU Braunschweig in the distributed and ubiquitous systems group.\end{minipage}\\[0.2cm]
+01.2005 -- 12.2007 \>\begin{minipage}[t]{14cm}	Research staff member at the University of Kassel at the chair for communication technology (ComTec).\end{minipage}\\[0.2cm]
+10.1999 -- 08.2004 \>\begin{minipage}[t]{14cm}	Study of computer sciences at the University of Dortmund with focus on algorithms and data structures\end{minipage}\\[0.2cm] 
+
+04.2014-08.2014 \>\begin{minipage}[t]{14cm}
+				\textbf{Visiting researcher} at the University of Helsinki (Nodes group, Prof. Sasu Tarkoma) \end{minipage}\\[0.2cm]
+				\>Research focus:\> \begin{minipage}[t]{11,4cm}Trendmining on the Carat Dataset; Context-based security\end{minipage}
+                 	  \\[0.3cm]
+Since 10.2013 \>\begin{minipage}[t]{14cm}
+				\textbf{PostDoc Researcher} at the chair for Computer Networks of the Georg-August University Goettingen, headed by Professor Xiaoming Fu\end{minipage}\\[0.2cm]
+				\>Research focus:\> \begin{minipage}[t]{11,4cm}Pervasive Computing, Smart Cities, Device-free RF-based recognition, Context-based security\end{minipage}\\[.1cm]
+   				\>Research team: \> \begin{minipage}[t]{11.4cm}Coordination of 1 team with focus on device-free RF-based recognition (four students). \end{minipage}\\[.1cm]
+				\>Advisor: \> \begin{minipage}[t]{11.4cm}1 PhD-student, 1 Bachelor-thesis, 3 student assistants\end{minipage}  
+                 	  \\[0.3cm]
+07.2013-08.2013 \>\begin{minipage}[t]{14cm}
+				\textbf{Academic guest} in the Wearable Computing Group of ETH Zurich (Prof. Gerhard Troester)\end{minipage}\\[0.2cm]
+				\>Research focus:\> \begin{minipage}[t]{11,4cm}Smartphone-based Gesture recognition from WiFi \end{minipage}
+                 	  \\[0.3cm]
+06.2013-09.2013 \>\begin{minipage}[t]{14cm}
+				\textbf{DAAD researcher}, Institute for operating Systems and computer networks (Prof. Lars Wolf) \end{minipage}\\[0.2cm]
+				\>Research focus:\> \begin{minipage}[t]{11,4cm}Gesture recognition from RF \end{minipage}
+                 	  \\[0.3cm]
+12.2012-03.2013 \>\begin{minipage}[t]{14cm}
+				\textbf{Researcher} at the National Institute of Informatics in the Information Systems Architecture Science Research Division, headed by Professor Yusheng Ji
+				\end{minipage}\\[0.2cm]
+				\>Research focus:\> \begin{minipage}[t]{11,4cm}Classification of activities of device-free entities from environmental stimuli utilising channel quality estimations in an Internet of Things; Secure cryptographic keys from ambient audio\end{minipage}\\[.1cm]
+   				\>Research team: \> \begin{minipage}[t]{11.4cm}Coordination of 2 teams with focus on secure keys from audio data (one programmer and one student) and RF-based activity recognition (2 PhD students). \end{minipage}\\[.1cm]
+				\>Advisor: \> \begin{minipage}[t]{11.4cm}1 PhD-student, 1 Bachelor-thesis, 1 student assistant\end{minipage}  
+                 	  \\[0.3cm]
+09.2012-03.2013 \>\begin{minipage}[t]{14cm}
+				\textbf{Part-time Lecturer} for Information Network Systems at Waseda University, Tokyo\end{minipage}\\[0.2cm]
+				\>Topics:\> \begin{minipage}[t]{11.4cm}Machine learning and classification, sensor networks, distributed systems, content centric netwroking, Open Flow, delay tolerant networking, TCP/IP\end{minipage}\\[.1cm]
+   				\>Teaching: \> \begin{minipage}[t]{11.4cm}1 lecture for undergraduate students\end{minipage}  %\\[.1cm]
+			 \\[.3cm]
+12.2010-11.2012 \>\begin{minipage}[t]{14cm}
+				\textbf{Research Grant} by the German Academic Exchange Service (DAAD-FIT Programme) at the National Institute of Informatics in the Information Systems Architecture Science Research Division, headed by Professor Yusheng Ji\end{minipage}\\[0.2cm]
+				\>Research focus:\> \begin{minipage}[t]{11,4cm}Classification of situations and activities in a wireless sensor network utilising channel quality estimations; Security based on sensed environmental data; Analysis, optimisation and design of algorithms for Pervasive Systems, distributed adaptive beamforming in wireless sensor networks\end{minipage}\\[.1cm]
+   				\>Research team: \> \begin{minipage}[t]{11.4cm}Coordination of 2 teams with focus on secure keys from audio data (one programmer and 1-3 students) and RF-based activity recognition (2 PhD students and 1 student). \end{minipage}\\[.1cm]
+   				\>Teaching: \> \begin{minipage}[t]{11.4cm}2 lectures and 2 exercises for graduate and undergraduate students, development and conduction of written examinations, first examiner in oral examinations. \end{minipage}  \\[.1cm]
+% 				\>Project work: \> Engaged in the DFG SPP project Organic Computing and in the BSI-project MoSe.%\\[.1cm]
+  				\>Acquisition: \> \begin{minipage}[t]{11.4cm}Acquisition (partly in collaboration) of third party funding worth of 2 person years.\end{minipage}\\[.1cm]
+				\>Advisor: \> \begin{minipage}[t]{11.4cm}1 PhD-student, 4 Internship students, 1 Bachelor thesis, 1 student assistant\end{minipage}
+                 	  \\[0.3cm]
+10.2010-03.2011 \>\begin{minipage}[t]{14cm}
+				\textbf{Visiting Professorship} at the Technische Universität Braunschweig in the group for distributed and ubiquitous systems\end{minipage}\\[0.2cm]
+				\>Research focus:\> \begin{minipage}[t]{11.4cm}Analysis, optimisation and design of algorithms for Pervasive Systems; Operating systems; distributed adaptive beamforming in wireless sensor networks\end{minipage}\\[.1cm]
+  				\>Teaching: \> \begin{minipage}[t]{11.4cm}2 lectures and 2 exercises for graduate and undergraduate students, development and conduction of written examinations, first examiner in oral examinations. \end{minipage}  \\[.1cm]
+ 				\>Project work: \> \begin{minipage}[t]{11.4cm}Engaged in the DFG SPP project Organic Computing and in the BSI-project MoSe\end{minipage}\\[.1cm]
+				\>Advisor: \> \begin{minipage}[t]{11.4cm}2 Bachelor-theses\end{minipage}
+                 	  \\[0.7cm]
+04.2010-09.2010 \>\begin{minipage}[t]{14cm}
+				\textbf{Postdoctoral associate} at the Karlsruhe Institute of Technology (KIT) at the chair for Pervasive Computing Systems (Prof. Michael Beigl).\end{minipage}\\[0.2cm]
+				\>Research focus:\> \begin{minipage}[t]{11.4cm}Analysis, optimisation and design of algorithms for Pervasive Systems,
+				distributed adaptive beamforming in wireless sensor networks\end{minipage}\\[.1cm]
+ 				\>Project work: \> \begin{minipage}[t]{11.4cm}Engaged in the DFG SPP project Organic Computing and in the BSI-project MoSe.\end{minipage}\\[.1cm]
+ 				\>Acquisition: \> \begin{minipage}[t]{11.4cm}Acquisition (partly in collaboration) of third party funding worth of 5 person years.\end{minipage}\\[.1cm]
+			        \>Advisor: \> \begin{minipage}[t]{11.4cm}1 PhD student\end{minipage}
+                 	  \\[0.3cm]
+% Since April 2010 \> \begin{minipage}[t]{14cm}\textbf{Engaged in the BSI-project MoSe} (Modelling of wireless sensor networks, in collaboration with the Institute for Telematics of the Karlsruhe Institute of Technology)\end{minipage}\\[.2cm] 
+% Since July 2009	\>\begin{minipage}[t]{14cm}
+% 				\textbf{Engaged in the DFG SPP 1183 project Organic Computing} (Emergent radio, Collaborative and cooperative communication in wireless sensor networks).
+%                 	  \end{minipage}
+% \\[.2cm]
+% Jun. 2008 -- Dec. 2008	\>\begin{minipage}[t]{14cm}
+% 				\textbf{Engaged in the EU-project CHOSeN} -- FP7-ICT-2007-2, Project number 224327 (Development of application-specific adaptable communication technologies for smart wireless sensor networks).
+%                  	  \end{minipage}
+% \\[0.2cm]
+01.2008-03.2010\>\begin{minipage}[t]{14cm}
+				\textbf{Postdoctoral associate} at the Technische Universität Braunschweig in the group for distributed and Ubiquitous systems (Prof. Michael Beigl).\end{minipage}\\[0.2cm]
+				\>Research focus:\> \begin{minipage}[t]{11.4cm}Analysis, optimisation and design of algorithms for Pervasive Systems,
+				distributed adaptive beamforming in wireless sensor networks\end{minipage}\\[.1cm]
+				\>Teaching: \> \begin{minipage}[t]{11.4cm}3 lectures for graduate students, advisor of 11 exercises to lectures for graduate and undergraduate students, advisor of 3 practical trainings, advisor of 8 seminars for graduate and undergraduate students, design and conduction of 5 written examinations, first or second examiner in oral examinations. \end{minipage}  \\[.1cm]
+				\>Project work: \> \begin{minipage}[t]{11.4cm}Engaged in in the BSI-project MoSe and in the EU-project CHOSeN (FP7-ICT-2007-2, 224327).\end{minipage}\\[.1cm]
+				\>Acquisition: \> \begin{minipage}[t]{11.4cm}Acquisition (partly in collaboration) of third party funding worth of 5 person years.\end{minipage}\\[.1cm]
+				\>Advisor: \> \begin{minipage}[t]{11.4cm}1 PhD student, 4 master theses, 2 bachelor theses, 4 Studienarbeiten, 9~student research assistants\end{minipage}
+                 	  \\[0.3cm]
+% Oct. 2005 -- Dec. 2007\>\begin{minipage}[t]{14cm}
+% 				\textbf{Engaged in the bmb+f-project mik21} (Java, PyS60, Maple, context-awareness and mobile applications, UML).
+%                 	  \end{minipage}
+% \\[0.2cm]
+% Jan. 2005 -- Sept. 2005\>\begin{minipage}[t]{14cm}
+% 				\textbf{Engaged in the bmb+f-project IpOnAir} (C++, Opnet, algorithms and optimisation, UMTS, HSDPA, packet scheduling).
+%                 	  \end{minipage}
+% \\[0.2cm]
+% Jan. 2005 -- Sept. 2005\>\begin{minipage}[t]{14cm}
+% 				\textbf{Engaged in the bmb+f-project Wireless Internet -- Kiosk} (C++, Opnet, %Bluetooth
+% 				 UMTS)
+%                 	  \end{minipage}\\[0.2cm]
+01.2005-12.2007\>\begin{minipage}[t]{14cm}
+			\textbf{PhD candidate} at the chair for communication technology of the University of Kassel, Germany (Prof. Klaus David).\end{minipage}\\[0.2cm]
+			\> Research focus: \> \begin{minipage}[t]{11.4cm} Algorithms and optimisation, services for mobile devices, context-awareness, context prediction.\end{minipage}\\[0.1cm]
+			\> Teaching: \> \begin{minipage}[t]{11.4cm} Advisor for 3 exercises to lectures for graduate students, development and conduction of 3 written examinations.\end{minipage}\\[.1cm]
+			\> Project work: \> \begin{minipage}[t]{11.4cm}Engaged in the bmb+f-projects mik21, IpOnAir and Wireless Internet -- Kiosk\end{minipage}\\[.1cm]
+			\> Advisor: \> \begin{minipage}[t]{11.4cm}4 master theses, 1 bachelor thesis, 2 student research assistants\end{minipage}
+\end{tabbing}
+\vspace{.5cm}
+\lhead{\footnotesize \Name, \Strasse, \Plz\ \Ort, \Country. Phone: \Telefon, Email: \Email}
+\subsection*{Professional activities}
+%  \vspace{-.5cm}
+\begin{tabbing}
+\hspace{2.6cm} \= \\
+TPC chair \> \begin{minipage}[t]{14cm}
+	       \textit{Mobile clouds track of the IEEE AP-cloud 2012 conference}, Shenzhen, China\\[.2cm]
+	       \textit{Doctoral colloquium} at the GMDS 2012/Informatik 2012, Brunswick, Germany\\[.2cm]	       
+	       \textit{AI@IE} 1st, 2nd and 3rd Workshop on AI Problems and Approaches for Intelligent Environments (ECAI 2012, Montpellier, France; IJCAI 2013, Beijing, China; EJCAI 2014, Prague, Czech)\\[.2cm]
+	       \textit{AwareCast} 1st, 2nd and 3rd Workshop on recent advances in behavior prediction and pro-active pervasive computing (Ubicomp 2014, Seattle, US; Ubicomp 2013, Zurich, Switzerland; Pervasive 2012, Newcastle, UK) \\[.2cm]
+	       \textit{ReSyS 2012} Workshop on Resilient Cyber-physical SystemS, Munich, Germany\\[.2cm]
+	       \textit{CoSDEO} 1st to 4th Workshop on Context-Systems Design, Evaluation and Optimisation (Ubicomp 2013, Zurich, Switzerland; MobiQuitous 2011, Copenhagen, Denmark; ARCS 2011, Como, Italy; ARCS 2010, Hannover, Germany)
+	       \end{minipage}\\[.3cm]
+Workshop Chair \> \begin{minipage}[t]{14cm}
+		11th International Conference on Mobile and Ubiquitous Systems: Computing, Networking and Services (MobiQuitous 2014)  
+		\end{minipage}\\[.3cm]
+General Chair \> \begin{minipage}[t]{14cm}
+		7th International Conference on Mobile Computing, Applications and Services (MobiCase 2015)
+\end{minipage}\\[.3cm]
+% Reviewer \> \begin{minipage}[t]{14cm}
+% 	    Reviewer for international journals, conferences and magazines (e.g. VTC2012-Fall, Journal of Communications and Networks (JCN) 2012, Journal of Ambient Intelligence and Smart Environments (JAISE) 2012, IEEE Pervasive Computing Magazine 2012, Ubicomp 2012, Springer Journal of Ambient Intelligence and Humanized Computing 2012, Elsevier Decision Support Systems 2011, Elsevier Information fusion journal 2010, IEEE Internet Computing magazine 2009, MobiSys 2009, IEEE Communications Letters 2006, PIMRC 2005).
+% 	    \end{minipage}\\[.3cm]
+Reviewer \> \begin{minipage}[t]{14cm}
+	    Reviewer for international journals, conferences and magazines (e.g. IEEE Pervasive Computing Magazine, IEEE VTC2012-Fall, ACM Ubicomp, ACM ISWC, ACM MobiSys, Journal of Communications and Networks (JCN), Elsevier Decision Support Systems, Elsevier Information fusion journal, Springer Journal of Ambient Intelligence and Humanized Computing, IEEE Transactions on Vehicular Technology, IEEE Transactions on Signal Processing, IEEE Transactions on Emerging Topics in Computing, IEEE Internet Computing magazine, IEEE Communications Letters, ACM Transactions on Intelligent Systems and Technology, IEEE PIMRC, IEEE Infocom).
+% 	        ISWTA
+	    \end{minipage}\\[.3cm]
+% Session Chair \> \begin{minipage}[t]{14cm}
+% 		Session on context awareness in the 8th international workshop on Applications and Services in Wireless Networks (ASWN 2008), October 2008 in Kassel, Germany.
+% 		 \end{minipage}\\[.3cm]
+% %% Complete list:
+% TPC member \> \begin{minipage}[t]{14cm}
+% 	       2012 IEEE Global Communications Conference, Exhibition and Industry forum (GlobeCom), Wireless Networking Symposium, December 3-7th 2012, California, USA\\[.2cm]
+% 	       2012 IEEE Symposium on Wireless Technology and Applications (ISWTA2012), September 23-26th, 2012, Bandung, Indonesia\\[.2cm]
+% 	       9th International Conference on Ubiquitous Intelligence and Computing, September 4-7th, 2012, Fukuoka, Japan\\[.2cm]
+% 	       6th IEEE International Workshop on Performance Modeling and Evaluation of Computer and Telecommunication Networks (PMECT 2012), July 30-August 2nd, 2012, Munich, Germany\\[.2cm]
+% 	       7th Workshop on Artificial Intelligence Techniques for Ambient Intelligence (AITAmI'12), June 26-27th, 2012, Guanajuato, Mexico\\[.2cm]
+% 	       2nd Workshop on Pervasive Urban Applications (PURBA) in conjunction with the 10th International Conference on Pervasive Computing, June 18-22, 2012, Newcastle, UK\\[.2cm]
+% 	       Current Issues in IT Security conference (Security12), May, 7-11th 2012, Freiburg, Germany\\[.2cm]
+% 	       6th International IEEE HeterWMN Workshop on Heterogeneous, Multi-Hop, Wireless and Mobile Networks in conjunction with the IEEE GLOBECOM 2011 conference , December 5-9, 2011, Houston, Texas, USA\\[.2cm]
+% 	       IEEE Symposium on Wireless Telecommunications Applications (ISWTA2011), September, 25-28, 2011, Langkawi, Malaysia\\[.2cm]
+% 	       2011 International Conference on Computer Applications and Industrial Electronics (ICCAIE 2011), December 4-7th, 2011, Penang, Malaysia\\[.2cm]
+% 	       8th IEEE International Conference on Ubiquitous Intelligence and Computing, September 1-4th, 2011, Banff, Canada\\[.2cm]
+% 	        8th International ICST Conference on Mobile and Ubiquitous Systems (MobiQuitous) December 2011, Copenhagen, Denmark\\[.2cm]
+% 	        5th ACM International Workshop on Context-Awareness for Self-Managing Systems (CASEMANS 2011) in conjunction with Ubicomp 2011, September 17, 2011, Beijing, China\\[.2cm]
+% 		5th IEEE International Workshop on Performance Modeling and Evaluation of Computer and Telecommunication Networks (PMECT 2011), August 1-4, 2011, Maui, Hawaii\\[.2cm]
+% 	        8th International Conference on Ubiquitous Intelligence and Computing (UIC 2011), August 26 - 29 2011, Banff, Canada\\[.2cm]
+% 		1st Workshop on Pervasive Urban Applications (PURBA) in conjunction with the 9th International Conference on Pervasive Computing, June 12-15, 2011, San Francisco, CA, USA\\[.2cm]
+% 	        4th ACM International Workshop on Context-Awareness for Self-Managing Systems (CASEMANS 2010) in conjunction with Ubicomp 2010, September 26, 2010, Copenhagen, Denmark\\[.2cm]
+% 		6th International Conference on Mobile Ad-hoc and Sensor Networks (MSN 2010), December 2010, Hangzhou, China\\[.2cm]
+%     		5th IEEE International Workshop on Heterogeneous, Multi-Hop, Wireless and Mobile Networks in conjunction with the IEEE GLOBECOM conference (HeterWMN 2010), December 2010, Miami, Florida, USA\\[.2cm]
+%     		4th IEEE International Workshop on Performance Modeling and Evaluation of Computer and Telecommunication Networks (PMECT 2010), August 2010, Zurich Switzerland\\[.2cm]
+%     		7th IEEE International Conference on Ubiquitous Intelligence and Computing (UIC 2010), October 2010, Xi'an, China\\[.2cm]
+%     		5th International Conference on Mobile Ad-hoc and Sensor Networks (MSN 2009), December 2009, Wu Yi Mountain, China
+% 		\end{minipage}\\[.3cm]
+%% Excerpt
+TPC member \> \begin{minipage}[t]{14cm}
+		Member of the TPC of international conferences and workshops (e.g. International Conference on Advances in Mobile Computing and Multimedia (MoMM), The International Conference on Mobile and Ubiquitous Multimedia (MUM), International ICST Conference on Mobile and Ubiquitous Systems (MobiQuitous), IEEE International Conference on Ubiquitous Intelligence and Computing (UIC), International Conference on Mobile Ad-hoc and Sensor Networks (MSN), IEEE Global Communications Conference (GlobeCom), Conference on current issues in IT security (Security),  
+		\end{minipage}\\[.3cm]
+Organizer \> \begin{minipage}[t]{14cm}
+		Shonan-Meeting on 'Challenges for real-time activity recognition', 09.2015.
+		\end{minipage}\\[.3cm]
+Editor \> \begin{minipage}[t]{14cm}
+		Guest editor of the Springer Personal and Ubiquitous Computing Theme Issue Security and trust in context-aware systems.
+		\end{minipage}\\[.3cm]		
+Editorial board \> \begin{minipage}[t]{14cm}
+		Elsevier Journal on Computer Communications (ComCom)\\
+		International Journal of peer-to-peer networks (IJP2P).
+		\end{minipage}		
+\end{tabbing}
+\vspace{.5cm}
+
+\lhead{\footnotesize \Name, \Strasse, \Plz\ \Ort, \Country. Phone: \Telefon, Email: \Email}
+% \pagebreak
+
+\subsection*{Scholarships, awards and prizes}
+% \vspace{-.5cm}
+\begin{tabbing}
+\hspace{2.6cm} \= \\
+2013	\>\begin{minipage}[t]{14cm}
+			  \textbf{PostDoc grant} of the DAAD for a research project in the frame of the programme 'Rückgewinnung Deutscher Wissenschaftler aus dem Ausland'.
+			  \end{minipage}
+\\[0.2cm]
+
+2013	\>\begin{minipage}[t]{14cm}
+			  \textbf{Invitation to the Shonan meeting} on 'Intelligent Information Processing -- Chances of Crowdsourcing'.
+			  \end{minipage}
+\\[0.2cm]
+2012	\>\begin{minipage}[t]{14cm}
+			  \textbf{Invitation to the Dagstuhl seminar} 12492 on human activity recognition in smart environments.
+			  \end{minipage}
+\\[0.2cm]
+2011	\>\begin{minipage}[t]{14cm}
+			  \textbf{Postdoctoral scholarship} of the German Academic Exchange Service (DAAD) for a researcher position at the National Institute of Informatics, Tokyo, Japan.
+			  \end{minipage}
+\\[0.2cm]
+2010	\>\begin{minipage}[t]{14cm}
+			  \textbf{Postdoctoral scholarship} of the German Academic Exchange Service (DAAD) for a researcher position at the National Institute of Informatics, Tokyo, Japan.
+			  \end{minipage}
+\\[0.2cm]
+02.2009 \> \begin{minipage}[t]{14cm} \textbf{VDI prize} of the VDI-Nordhessen for an outstanding dissertation in the year 2008 (1st prize)\end{minipage}
+\\[.2cm]
+02.2008
+	\>\begin{minipage}[t]{14cm}
+				\textbf{Dissertation with honours} in computer science (summa cum laude)
+                 	  \end{minipage}
+\end{tabbing}
+\vspace{.5cm}
+\subsection*{Acquired third-party funds (partly in collaboration)}
+% \vspace{-.5cm}
+\begin{tabbing}
+\hspace{2.6cm} \= \\
+04.2012		\>\begin{minipage}[t]{14cm}
+			  Starting grant of Georg-August University Goettingen, \officialeuro5~000
+			  \end{minipage}
+			  \\[0.2cm]
+04.2012		\>\begin{minipage}[t]{14cm}
+			  Research grant in the frame of the DAAD program 'Rückgewinnung Deutscher Wissenschaftler aus dem Ausland' (own position, 6 months)
+			  \end{minipage}
+\\[0.2cm]
+04.2012		\>\begin{minipage}[t]{14cm}
+			  Research funding for a project in the frame of the Grand Challenge of the National Institute for Informatics (NII) (in collaboration), \officialeuro20~000
+			  \end{minipage}
+\\[0.2cm]
+2011		\>\begin{minipage}[t]{14cm}
+			  Postdoctoral scholarship of the German Academic Exchange Service (DAAD), \officialeuro50~000
+			  \end{minipage}
+\\[0.2cm]
+2010		\>\begin{minipage}[t]{14cm}
+			  Postdoctoral scholarship of the German Academic Exchange Service (DAAD), \officialeuro50~000
+			  \end{minipage}
+\\[0.2cm]
+07.2009 \> \begin{minipage}[t]{14cm} DFG project in the SPP 1183 Organic Computing (in collaboration), \officialeuro75~000 \end{minipage}
+                 	  \\[.2cm]
+03.2009
+	\>\begin{minipage}[t]{14cm}
+				BSI-project 'MoSe -- Modelling of wireless sensor networks' (in collaboration), \officialeuro45~000
+                 	  \end{minipage}
+                 	  \\[.2cm]
+02.2009 	\>\begin{minipage}[t]{14cm}
+				1-year funding for the Iranian researcher Behnam Banitalebi as a research assistant from the International Office of the TU Braunschweig (in collaboration)
+                 	  \end{minipage}
+                 	  \\[.2cm]
+
+09.2008
+	\>\begin{minipage}[t]{14cm}
+				DFG-project 'SenseCast: Context prediction for the optimisation of network parameters in wireless sensor networks' (in collaboration), \officialeuro75~000
+                 	  \end{minipage}
+\end{tabbing}
+\vspace{.5cm}
+\subsection*{Invited Talks}
+% \vspace{-.5cm}
+\begin{tabbing}
+\hspace{2.6cm} \= \\
+08.2014		\>\begin{minipage}[t]{14cm}
+			  Social Opportunistic Sensing and Social Centric Networking -- Enabling concepts for Smart Cities, WiMobCity 2014, Philadelphia, US
+			  \end{minipage}
+			  \\[0.2cm]
+05.2014		\>\begin{minipage}[t]{14cm}
+			  Sensing of environmental stimuli for activity recognition and Secure device pairing, University of Helsinki, Finland
+			  \end{minipage}
+			  \\[0.2cm]
+08.2013		\>\begin{minipage}[t]{14cm}
+			  In-network calculation of mathematical functions, University of Science and Technology China, China
+			  \end{minipage}
+			  \\[0.2cm]
+05.2013		\>\begin{minipage}[t]{14cm}
+			  RF-based DFAR for wearable devices, Electronics Laboratory, ETH Zurich, Switzerland
+			  \end{minipage}
+\\[0.2cm]
+02.2013		\>\begin{minipage}[t]{14cm}
+			  Secure spontaneous device authentication from ambient audio, WWU Muenster, Germany
+			  \end{minipage}
+\\[0.2cm]
+01.2013		\>\begin{minipage}[t]{14cm}
+			  Harvesting environmental Stimuli, Osaka Prefecture University, Japan
+			  \end{minipage}
+\\[0.2cm]
+12.2012		\>\begin{minipage}[t]{14cm}
+			  Device-free activity recognition from the physical layer, Dagstuhl seminar 12492 on Human Activity Recognition
+			  \end{minipage}
+\\[0.2cm]
+07.2012 \> \begin{minipage}[t]{14cm} 
+			  Device interaction at the physical layer, Open University, Milton Keynes, UK
+\end{minipage}
+                 	  \\[.2cm]
+07.2012
+	\>\begin{minipage}[t]{14cm}
+			  What the RF-channel can tell us, Knowledge Media Institute, Milton Keynes, UK
+                 	  \end{minipage}
+                 	  \\[.2cm]
+01.2011 	\>\begin{minipage}[t]{14cm}
+			  Feedback-based distributed adaptive transmit beamforming, Informatik Kolloquium, TU Braunschweig, Germany
+                 	  \end{minipage}
+\end{tabbing}
+\vspace{.5cm}
+\pagebreak
+\subsection*{Education and academic qualifications}
+ \vspace{-.5cm}
+\begin{tabbing}
+\hspace{2.6cm} \= \hspace{2.5cm} \=\\
+02.2010	\>\begin{minipage}[t]{14cm}
+				\textbf{M.Sc. in the further education course} 'Hagener Masterstudiengang Management' at the FernUniversität Hagen, Germany.\end{minipage}\\[.2cm]
+				\>Grade: \> 1.5 \\
+				\>Thesis:\> Optimisation of a three stage cooling process. \\[.1cm]
+				\>Advisor:\> \begin{minipage}[t]{9.8cm}Prof. Dr. Herrmann Gehring, chair for business informatics.\end{minipage}
+\\[0.2cm]
+04.2008-04.2010 \>\begin{minipage}[t]{14cm}
+                   	\textbf{Study of the 'Masterstudiengang Management'} at the FernUniversität in Hagen, Germany.\end{minipage}\\[.2cm]
+                   	 \> Areas of study:\> \begin{minipage}[t]{11.4cm} General management, Economics, Personnel management, Controlling, Human resources development, Marketing, Business informatics, Project management.
+                   \end{minipage}
+\\[0.2cm]
+02.2008	\>\begin{minipage}[t]{14cm}
+				\textbf{PhD thesis defence} at the chair for communication technology of the University of Kassel, Germany. \end{minipage}\\[.2cm]
+				\> Grade: \> summa cum laude (Dr. rer. nat.)\\[.1cm]
+				\> Thesis: \> \begin{minipage}[t]{11.4cm}\lq Development of a novel context prediction algorithm and analysis of context prediction schemes\rq.\end{minipage} \\[.1cm]
+				\> First advisor: \> \begin{minipage}[t]{11.4cm}Prof. Dr.-Ing. Klaus David (Chair for communication technology, University of Kassel, Germany)\end{minipage}\\[.1cm]
+				\>Second advisor: \> \begin{minipage}[t]{11.4cm}Prof. Mag. Dr. Alois Ferscha (Institute for Pervasive Computing, Johannes Kepler University, Linz, Austria)\end{minipage}
+\\[0.2cm]
+% 22 April 2007	\>\begin{minipage}[t]{14cm}
+%                   	   Tutorial at VTC2007-Spring (attendee): Next-generation wireless multimedia transceivers in the turbo era, Lecturer: Lajos Hanzo (OFDM, MIMO).
+%                   	  \end{minipage}
+% \\[0.2cm]
+% 22 April 2007	\>\begin{minipage}[t]{14cm}
+%                   	   Tutorial at VTC2007-Spring (attendee): Advances in Multiuser MIMO systems, Lecturers: Li-Chun Wang and Tomoaki Ohtsuki (MIMO-basics, Multiuser MIMO-OFDM, MIMO in 3GPP LTE).
+%                   	  \end{minipage}
+% \\[0.2cm]
+11.2006-10.2007\> \begin{minipage}[t]{14cm}\textbf{Study of Human resource management} at the management school of the University of Kassel\end{minipage}\\[.2cm]
+				 \> Grade: \> 1.6 \\[.1cm]
+				 \> Areas of study: \> \begin{minipage}[t]{11.4cm}Personnel management, Human resources development, Employment law, Organisational development, Personnel administration\end{minipage}
+\\[0.2cm]
+% 11 September 2006	\>\begin{minipage}[t]{14cm}
+%                   	   Tutorial at the PIMRC 2006 (attendee): High Speed Downlink / Uplink Packet Access (HSDPA/HSUPA), Lecturers: Harri Holma and Antti Toskala (Radio resource management, Location-based services, positioning techniques, spectrum management and coexistence). 
+%                   	  \end{minipage}
+% \\[0.2cm]
+08.2004       \> 
+                        	\textbf{Graduation as Dipl.-Inform.}\\[.2cm]
+                        	 \> Grade: \> 1.3 \\[.1cm]
+				 \> Diploma thesis:\> \begin{minipage}[t]{11.4cm}\lq Ein Vergleich verschiedener Varianten endlicher Quantenautomaten\rq.\end{minipage}\\[.1cm]
+				 \> Advisor: \> \begin{minipage}[t]{11.4cm}PD Dr. Detlef Sieling, chair for efficient algorithms and complexity theory.\end{minipage}                        
+			\\[0.2cm]
+10.1999-08.2004 \> \begin{minipage}[t]{14cm}
+                        	\textbf{Study of computer sciences} at the University of Dortmund, Germany. \end{minipage}\\[.2cm]
+                        	 \> Focus: \> Algorithms, data structures and complexity.
+                         \\[0.2cm]
+% 03. June 1998		\> \begin{minipage}[t]{14cm}
+%                         	General qualification for University entrance, Grade: 2,3.
+%                         \end{minipage}
+% 			\\[0.2cm]
+09.1985-06.1998 \> \begin{minipage}[t]{14cm}
+                        	\textbf{Grammar school and primary school} in Marl, Germany.
+			\end{minipage}
+\end{tabbing}
+\vspace{.3cm}
+
+% \subsection*{Project work and occupation}
+% \vspace{-.5cm}
+% \begin{tabbing}
+% \hspace{2.4cm} \= \\
+% March 2002 -- April 2003\> \begin{minipage}[t]{14cm}
+% 				Project work. Topic: \lq Multicriteria optimisation with evolutionary algorithms\rq.
+%         			Object oriented software development in a team of 12 students (Java, UML, OOD, CVS, log4j, XML, Gnuplot).
+%                         \end{minipage}
+% 			\\[0.2cm]
+% March and April 2001  	\> \begin{minipage}[t]{14cm} Practical work in software development in a group of 6 students (UML, OOD, Java, CVS).
+%                         \end{minipage}
+%                         \\[0.2cm]
+% Oct. 2000 bis March 2002 \> \begin{minipage}[t]{14cm}
+% 				Student assistant at the University of Dortmund, Germany.
+%                         	Advisor of practical tests for students. Topics: Electrical engineering and computer architecture. \end{minipage}
+% \end{tabbing}
+
+% \pagebreak
+\subsection*{Further skills}
+ \vspace{-.5cm}
+\begin{tabbing}
+\hspace{2.6cm} \= \hspace{2.5cm} \=\\
+% Programming: 	\> \begin{minipage}[t]{14cm}
+%                         	Java, C++, Python, Matlab, CPLEX, \LaTeX%, XML, UML, HTML, WAP, \LaTeX
+%                         \end{minipage}
+%                         \\[0.2cm]
+% % Operating systems:     \> \begin{minipage}[t]{14cm}
+% %                          	Windows, Unix and Linux.
+% % 			\end{minipage}
+% \\[0.2cm]
+Tools: 			\>\begin{minipage}[t]{14cm}
+				Orange, Weka, Matlab, Maple, GnuRadio CPLEX, Gnuplot, Opnet
+% MoteRunner, 
+% , CVS, SVN, GIT, \LaTeX.
+			\end{minipage}
+                        \\[0.2cm]
+% Communication:      \> \begin{minipage}[t]{14cm}
+%                          	Feedback based distributed adaptive transmit beamforming, Cooperative communications, UMTS, HSDPA, E-DCH, GSM, EDGE, GPRS, MIMO, Zig-Bee, RFID, WLAN, Ethernet, Token-Ring, Appletalk.
+%                         \end{minipage}
+%                         \\[0.2cm]
+Language:    	\> German: \>Native language\\[.1cm]
+		\> English: \> Expert\\[.1cm]
+		\> Russian: \> \lq Oberstufe-A\rq\ (B2 of the European reference frame for languages)\\[.1cm]
+		\> Japanese: \> Beginner (JLPT 3) \\[.2cm]
+% Patents: \> \begin{minipage}[t]{14cm}
+%                         	1 filed patent.
+%                         \end{minipage}
+                        
+\end{tabbing}
+
+% \vspace{.2cm}
+
+{\flushleft \Ort, \today}\\[-.4cm]
+ \\[1cm]
+% \hspace{-7.3cm}\includegraphics[width=2.9cm]{signature_Sigg.pdf}\\[-.4cm]
+Stephan Sigg
+%  \pagebreak
+%  \section*{References}
+%  \vspace{1cm}
+% %  \begin{minipage}{8cm}
+% %  \textbf{Prof. Dr.-Ing Michael Beigl}\\
+% %  Karlsruhe Institute of Technology\\
+% %  Chair for Pervasive Computing Systems\\
+% %  Vincenz Prießnitzstr. 3\\
+% %  76131 Karlsruhe\\
+% %  Germany\\[.3cm]
+% %  Email: michael@teco.edu\\
+% %  Phone: +49 (721) 464704 13\\
+% %  Fax: +49 (721) 9663418
+% %  \end{minipage}
+%  \begin{minipage}{8cm}
+%  \textbf{Prof. Dr.-Ing Klaus David}\\
+%  University of Kassel\\
+%  Chair for Communication Technology\\
+%  Wilhelmshöher Allee 73\\
+%  34121 Kassel\\
+%  Germany\\[.3cm]
+%  Email: klaus.david@comtec.eecs.uni-kassel.de\\
+%  Phone: +49 561 804 6314\\
+%  Fax: +49 561 804 6360\\
+% \textit{(PhD superviser (2005-2007))}
+%  \end{minipage}
+% %  \\[1cm]
+% % \begin{minipage}{8cm}
+% % \textbf{Prof. Mag. Dr. Alois Ferscha}\\
+% % Johannes Kepler Universität Linz\\
+% % Institut für Pervasive Computing\\
+% % Altenberger Straße 69\\
+% % 4040 Linz\\
+% % Austria\\[.3cm]
+% % Email: ferscha@pervasive.jku.at\\
+% % Phone: +43 732 2468 8555\\
+% % Fax: +43 732 2468 8426
+% % \end{minipage}
+%      %  \begin{minipage}{8cm}
+%      %  \textbf{Prof. Dr.-Ing Lars Wolf}\\
+%      %  Technische Universität Braunschweig\\
+%      %  Operating Systems and Computer Networks\\
+%      %  Mühlenpfordtstraße 23\\
+%      %  38106 Braunschweig\\
+%      %  Germany\\[.3cm]
+%      %  Email: wolf@ibr.cs.tu-bs.de\\
+%      %  Phone: +49 531 391 3288\\
+%      %  Fax: +49 531 391 5936
+%      %  \end{minipage}
+% %  \\[1cm]
+% \begin{minipage}{9cm}
+% \textbf{Prof. Dr. Yusheng Ji}\\
+% National Institute of Informatics\\
+% Information Systems Architecture Research Division\\
+% National Center of Sciences, \\
+% 2-1-2 Hitotsubashi, Chiyoda-ku,\\
+% 101-8430 Tokyo, Japan\\[.3cm]
+% Email: kei@nii.ac.jp\\
+% Telefon: +81 3 4212 2525\\
+% Fax: +81 3 4212 2120\\
+% \textit{(superviser during my time at NII (2010-2013))}
+% \end{minipage}
+% % \begin{minipage}{8cm}
+% % \textbf{Prof. Dr. Hermann Gehring}\\
+% % FernUniversität in Hagen\\
+% % Lehrstuhl für Wirtschaftsinformatik\\
+% % Profilstraße 8\\
+% % 58084 Hagen\\
+% % Germany\\[.3cm]
+% % Email: winf@fernuni-hagen.de\\
+% % Phone: +49 2331 987 4431\\
+% % Fax: +49 2331 987 4447
+% % \end{minipage}
+% % 
+% % \pagebreak
+% %  \section*{Potential peer reviewers}
+% %  \vspace{1cm}
+% % \begin{minipage}{8cm}
+% % \textbf{Prof. Dr. Paul Lukowicz}\\
+% % Deutsches Forschungszentrum Künstliche Intelligenz (DFKI) GmbH\\
+% % Embedded Intelligence\\
+% % Trippstadter Straße 122\\
+% % 67663 Kaiserslautern\\
+% % Germany\\[.3cm]
+% % Email: Paul.Lukowicz@dfki.de\\
+% % Phone: +49 631 20575 2000
+% % \end{minipage}
+% %  \begin{minipage}{8cm}
+% %  \textbf{Prof. Mag. Dr. Alois Ferscha}\\
+% %  Johannes Kepler Universität Linz\\
+% %  Institut für Pervasive Computing\\
+% %  Altenberger Straße 69\\
+% %  4040 Linz\\
+% %  Austria\\[.3cm]
+% %  Email: ferscha@pervasive.jku.at\\
+% %  Phone: +43 732 2468 8555\\
+% %  Fax: +43 732 2468 8426
+% %  \end{minipage}
+% %  \\[1cm]
+% % \begin{minipage}{8cm}
+% % \textbf{Prof. Dr. Albrecht Schmidt}\\
+% % Institut für Visualisierung und Interaktive Systeme\\
+% % Universtät Stuttgart\\
+% % Pfaffenwaldring 5a\\
+% % 70569 Stuttgart\\
+% % Germany\\[.3cm]
+% % Email: albrecht.schmidt@vis.uni-stuttgart.de\\
+% % Phone: +49 711-685-60048
+% % \end{minipage}
+% %  \begin{minipage}{8cm}
+% %  \textbf{Prof. Dr. Oliver Amft}\\
+% %  Institut für Elektronik\\
+% %  ETH Zürich \\
+% %  Gloriastrasse 35\\
+% % 8092 Zürich\\ 
+% % Switzerland\\[.3cm]
+% % Email: amft@ieee.org\\
+% % Phone: +41 44 632 5936\\
+% % Fax: +41 44 632 12 10
+% % \end{minipage}
+% % \\[1cm]
+% % \begin{minipage}{8cm}
+% %  \textbf{Prof. Dr. Gerd Kortuem}\\
+% % Computing Department\\
+% % Faculty of Mathematics, Computing and Technology\\
+% % The Open Universtiy\\
+% % Walton Hall\\
+% % Milton Keynes\\
+% % United Kingdom\\[.3cm]
+% % Email: g.kortuem@open.ac.uk\\
+% % Phone: +44 1908 652692\\
+% %  \end{minipage}
+% % 
+% % 
+% \\[1cm]
+% \begin{minipage}{8cm}
+%  \textbf{Prof. Dr. Xiaoming Fu}\\
+%  Computer Networks\\
+%  Georg-August University Goettingen\\
+%  Goldschmidtstr. 7\\
+%  37077 Goettingen\\[.3cm]
+%  Email: fu@cs.uni-goettingen.de\\
+%  Phone: +49 551 39 172023\\
+%  Fax: +49 551 39 14416\\
+%  \textit{(head of group Computer Networks (2013-2014))}
+%   \end{minipage}
+% \pagebreak
+% 
+% \section*{Teaching experience}
+% % TODO: Seminars, Practical trainings
+% \subsection*{Lectures}
+% \begin{minipage}{17cm}
+% \textbf{Machine learning and Pervasive Computing}\\[.2cm]
+% \begin{tabular}{ll}
+% Course topics: & \begin{minipage}[t]{13,9cm} Machinelles Lernen, Test und Trainings-design, Recommender Systeme, Anomaly detection, Supervised/Unsupervised learning\end{minipage}\\[.2cm]
+% Audience: & Graduate students\\
+% Term: & Winter 2015\\
+% URL: & https://wiki.net.informatik.uni-goettingen.de/wiki/Machine\_Learning\_and\_Pervasive\_Computing\\
+% &\_(Winter\_2014/2015)\\
+% University: & Georg-August University Goettingen
+% \end{tabular}
+% \end{minipage}\\[.5cm]
+% \begin{minipage}{17cm}
+% \textbf{Selected topics on Pervasive Computing}\\[.2cm]
+% \begin{tabular}{ll}
+% Course topics: & \begin{minipage}[t]{13,9cm} Machine learning and Classification approaches, Context-based security (Fuzzy Commitment, Fuzzy Extractors, Error correcting codes)\end{minipage}\\[.2cm]
+% Audience: & Graduate students\\
+% Term: & Winter 2013\\
+% URL: & https://wiki.net.informatik.uni-goettingen.de/wiki/Selected\_topics\_in\_Pervasive\_Computing\\
+% &\_(Winter\_2013/2014)\\
+% University: & Georg-August University Goettingen
+% \end{tabular}
+% \end{minipage}\\[.5cm]
+% \begin{minipage}{17cm}
+% \textbf{Information network systems}\\[.2cm]
+% \begin{tabular}{ll}
+% Course topics: & \begin{minipage}[t]{13,9cm} Machine learning and Classification approaches, Fuzzy Commitment, Fuzzy Extractors, Error correcting codes, TCP/IP, Content centric networking, Open flow\end{minipage}\\[.2cm]
+% Audience: & Undergraduate students\\
+% Term: & Winter 2012\\
+% % URL: & http://www.ibr.cs.tu-bs.de/courses/ss11/noisy/\\
+% University: & Waseda University Tokyo
+% \end{tabular}
+% \end{minipage}\\[.5cm]
+% \begin{minipage}{17cm}
+% \textbf{Information and Communication Systems}\\[.2cm]
+% \begin{tabular}{ll}
+% Course topics: & \begin{minipage}[t]{13,9cm} Machine learning and classification, Feature extraction, Fuzzy Commitment, physically unclonable functions \end{minipage}\\[.4cm]
+% Audience: & PhD-students\\
+% Term: & Summer 2012\\
+% URL: & http://klab.nii.ac.jp/$\sim$sigg/Lectures/Slides\_ICS\_01\_Classification.pdf\\
+%      & http://klab.nii.ac.jp/$\sim$sigg/Lectures/Slides\_ICS\_02\_Security.pdf\\
+% University: & National Institute of Informatics
+% \end{tabular}
+% \end{minipage}\\[.5cm]
+% \begin{minipage}{17cm}
+% \textbf{Secure communication based on noisy input data}\\[.2cm]
+% \begin{tabular}{ll}
+% Course topics: & \begin{minipage}[t]{13,9cm} Machine learning and Classification approaches, Feature extraction from audio, Effects on the mobile radio channel, Feature extraction from RF, Fuzzy Commitment, Fuzzy Extractors, Error correcting codes, Entropy, Physical unclonable functions\end{minipage}\\[.2cm]
+% Audience: & Graduate students\\
+% Term: & Summer 2011/2012\\
+% URL: & http://www.ibr.cs.tu-bs.de/courses/ss11/noisy/\\
+% University: & Technische Universität Braunschweig
+% \end{tabular}
+% \end{minipage}\\[.5cm]
+% \begin{minipage}{17cm}
+% \textbf{Operating Systems}\\[.2cm]
+% \begin{tabular}{ll}
+% Course topics: & \begin{minipage}[t]{13,9cm} Processes, Process scheduling, Deadlocks, Semaphores, Memory allocation, Paging, Disk head scheduling, File systems, Distributed operating systems, Clock synchronisation, Commit protocols, Finding a coordinator, Security in Distributed systems, Fuzzy Cryptography\end{minipage}\\[.2cm]
+% Audience: & Undergraduate students\\
+% Term: & Winter 2010/2011\\
+% URL: & http://www.ibr.cs.tu-bs.de/courses/ws1011/bs/\\
+% University: & Technische Universität Braunschweig
+% \end{tabular}
+% \end{minipage}\\[.5cm]
+% \begin{minipage}{17cm}
+% \textbf{Collaborative transmission in wireless sensor networks}\\[.2cm]
+% \begin{tabular}{ll}
+% Course topics: & \begin{minipage}[t]{13,9cm}   Sensor networks (Technology, Challenges), The mobile radio channel (Fading, Path loss, Interference), Basics on probability theory(Balls and Bins, Random Walks), Black box optimisation (Evolutionary algorithms, Metropolis search, Simulated annealing, Local random search, Tabu search), Cooperative transmission (network coding, multi-hop relaying, data flooding, cluster based), Distributed adaptive beamforming (Open loop and closed loop distributed adaptive beamforming, Learning classifier systems\end{minipage}\\[.2cm]
+% Audience: & Graduate students\\
+% Terms: & Winter 2009/2010, Summer 2010, Winter 2010/2011\\
+% URL: & http://www.ibr.cs.tu-bs.de/courses/ws0910/collab/\\
+% 	& http://www.ibr.cs.tu-bs.de/courses/ss10/collab/\\
+% 	  & http://www.ibr.cs.tu-bs.de/courses/ws1011/collab/\\
+% University: & Technische Universität Braunschweig
+% \end{tabular}
+% \end{minipage}\\[.5cm]
+% \begin{minipage}{17cm}
+% \textbf{Operating Systems}\\[.2cm]
+% \begin{tabular}{ll}
+% Course topics: & \begin{minipage}[t]{13,9cm} Processes, Process scheduling, Deadlocks, Semaphores, Memory allocation, Paging, Disk head scheduling, File systems, Distributed operating systems, Clock synchronisation, Commit protocols, Finding a coordinator, Security in Distributed systems, Fuzzy Cryptography\end{minipage}\\[.2cm]
+% Audience: & Undergraduate students\\
+% Term: & Winter 2010/2011\\
+% URL: & http://www.ibr.cs.tu-bs.de/courses/ws1011/bs/\\
+% University: & Technische Universität Braunschweig
+% \end{tabular}
+% \end{minipage}\\[.5cm]
+% \begin{minipage}{17cm}
+% \textbf{Algorithms for context prediction in Ubiquitous Systems}\\[.2cm]
+% \begin{tabular}{ll}
+% Course topics: & \begin{minipage}[t]{13,9cm}   Introduction to context awareness and ubiquitous computing, Introduction to context prediction, Basics on probability theory, Deterministic approaches (exact and approximate pattern matching - Boyer Moore vs. Needleman Wunsch, State predictor, IPAM, ONISI), Approximate context prediction (Alignment prediction, SOM), Probabilistic approaches (Markov), Stochastic methods (ARMA, Kalman Filter), Randomised search approaches\end{minipage}\\[.2cm]
+% Audience: & Graduate students\\
+% Terms: & Winter 2008/2009\\
+% URL: & http://www.ibr.cs.tu-bs.de/courses/ws0809/prediction/\\ 
+% University: & Technische Universität Braunschweig
+% \end{tabular}
+% \end{minipage}
+% % 
+% % \subsection*{Exercises}
+% % \begin{minipage}{17cm}
+% % \textbf{Introduction to communication 2}\\[.2cm]
+% % \begin{tabular}{ll}
+% % Course topics: & \begin{minipage}[t]{13,9cm} Mobile radio channel and radio transmission, GSM services (speech, data, security functions), GSM system (BSS, MSC), GPRS, UMTS, Bluetooth, WLAN, Location based services\end{minipage}\\[.2cm]
+% % Audience: & Graduate students\\
+% % Terms: & Summer 2005, Summer 2006, Summer 2007\\
+% % URL: & http://www.comtec.eecs.uni-kassel.de/itc\_20/\\
+% % University: & University of Kassel, Chair for Communication technology
+% % \end{tabular}
+% % \end{minipage}\\[.5cm]
+% % \begin{minipage}{17cm}
+% % \textbf{Operating systems}\\[.2cm]
+% % \begin{tabular}{ll}
+% % Course topics: & \begin{minipage}[t]{13,9cm} Processes and threads (Interprocess communication, IPC problems, Scheduling, Deadlocks, Deadlock detection, recovery, avoidance and prevention), Memory management, IO, File systems, security\end{minipage}\\[.2cm]
+% % Audience: & Undergraduate students students\\
+% % Terms: & Winter 2007/2008 (part), Winter 2008/2009, Winter 2009/2010, Winter 2010/2011\\
+% % URL: & http://www.ibr.cs.tu-bs.de/courses/ws0708/bs/\\
+% %      & http://www.ibr.cs.tu-bs.de/courses/ws0809/bs/\\
+% %      & http://www.ibr.cs.tu-bs.de/courses/ws0910/bs/\\
+% %      & http://www.ibr.cs.tu-bs.de/courses/ws1011/bs/\\
+% % University: & Technische Universität Braunschweig
+% % \end{tabular}
+% % \end{minipage}\\[.5cm]
+% % \begin{minipage}{17cm}
+% % \textbf{Distributed systems}\\[.2cm]
+% % \begin{tabular}{ll}
+% % Course topics: & \begin{minipage}[t]{13,9cm} Client/Server principle, Middleware, Namespaces, Consistency and replication, security, distributed object based systems, distributed filesystems, RPC, CORBA, DCOM, Web-Technologies, Jini, NFS, Coda, Kerberos\end{minipage}\\[.2cm]
+% % Audience: & Undergraduate students students\\
+% % Terms: & Winter 2007/2008 (part), Winter 2008/2009, Winter 2009/2010\\
+% % URL: & http://www.ibr.cs.tu-bs.de/courses/ws0708/vs/\\
+% %      & http://www.ibr.cs.tu-bs.de/courses/ws0809/vs/\\
+% %      & http://www.ibr.cs.tu-bs.de/courses/ws0910/vs/\\
+% % University: & Technische Universität Braunschweig
+% % \end{tabular}
+% % \end{minipage}\\[.5cm]
+% % \begin{minipage}{17cm}
+% % \textbf{Applied distributed systems}\\[.2cm]
+% % \begin{tabular}{ll}
+% % Course topics: & \begin{minipage}[t]{13,9cm} Enterprise Application Integration, Enterprise Systems, Service Oriented Architecture (SOA),  Web-Technologies, Web-Services (SOAP, WSDL, UDDI), Service coordination and protocols, Service Composition, Grid Computing\end{minipage}\\[.2cm]
+% % Audience: & Graduate students\\
+% % Terms: & Summer 2008, Summer 2009\\
+% % URL: & http://www.ibr.cs.tu-bs.de/courses/ss08/avs/\\
+% %      & http://www.ibr.cs.tu-bs.de/courses/ss09/avs/\\
+% % University: & Technische Universität Braunschweig
+% % \end{tabular}
+% % \end{minipage}\\[.5cm]
+% % \begin{minipage}{17cm}
+% % \textbf{Human computer interaction}\\[.2cm]
+% % \begin{tabular}{ll}
+% % Course topics: & \begin{minipage}[t]{13,9cm} Human information processing (Models, physiologic and psychologic background, human senses), Methods for designing interactive systems, Principles for the design of human computer interfaces, Methods for the modelling of human computer interfaces, Evaluation of interactive systems (tools, evaluation methods, performance measurement, Checklisten)
+% % \end{minipage}\\[.2cm]
+% % Audience: & Undergraduate students students\\
+% % Terms: & Summer 2008, Summer 2009\\
+% % URL: & http://www.ibr.cs.tu-bs.de/courses/ss08/hci/\\
+% %      & http://www.ibr.cs.tu-bs.de/courses/ss09/hci/\\
+% % University: & Technische Universität Braunschweig
+% % \end{tabular}
+% % \end{minipage}\\[.5cm]
+% % \begin{minipage}{17cm}
+% % \textbf{Algorithms for context prediction in Ubiquitous Systems}\\[.2cm]
+% % \begin{tabular}{ll}
+% % Course topics: & \begin{minipage}[t]{13,9cm}   Introduction to context awareness and ubiquitous computing, Introduction to context prediction, Basics on probability theory, Deterministic approaches (exact and approximate pattern matching - Boyer Moore vs. Needleman Wunsch, State predictor, IPAM, ONISI), Approximate context prediction (Alignment prediction, SOM), Probabilistic approaches (Markov), Stochastic methods (ARMA, Kalman Filter), Randomised search approaches\end{minipage}\\[.2cm]
+% % Audience: & Graduate students\\
+% % Terms: & Winter 2008/2009\\
+% % URL: & http://www.ibr.cs.tu-bs.de/courses/ws0809/prediction/\\ 
+% % University: & Technische Universität Braunschweig
+% % \end{tabular}
+% % \end{minipage}\\[.5cm]
+% % \begin{minipage}{17cm}
+% % \textbf{Collaborative transmission in wireless sensor networks}\\[.2cm]
+% % \begin{tabular}{ll}
+% % Course topics: & \begin{minipage}[t]{13,9cm} Sensor networks (Technology, Challenges), Mobile radio channel (Fading, Path loss, Interference), Basics on probability theory(Balls and Bins, Random Walks), Black box optimisation (Evolutionary algorithms, Metropolis search, Hill climber), Cooperative transmission (network coding, multi-hop relaying, data flooding, cluster based), Distributed adaptive beamforming (Open loop and closed loop distributed adaptive beamforming\end{minipage}\\[.2cm]
+% % Audience: & Graduate students\\
+% % Terms: & Winter 2009/2010, Summer 2010 and Winter 2010/2011\\
+% % URL: & http://www.ibr.cs.tu-bs.de/courses/ws0910/collab/\\
+% %      & http://www.ibr.cs.tu-bs.de/courses/ss10/collab/\\
+% %      & http://www.ibr.cs.tu-bs.de/courses/ws1011/collab/\\
+% % University: & Technische Universität Braunschweig
+% % \end{tabular}
+% % \end{minipage}\\[.5cm]
+% % \begin{minipage}{17cm}
+% % \textbf{Secure communication based on noisy input data}\\[.2cm]
+% % \begin{tabular}{ll}
+% % Course topics: & \begin{minipage}[t]{13,9cm} Machine learning and Classification approaches, Feature extraction from audio, Effects on the mobile radio channel, Feature extraction from RF, Fuzzy Commitment, Fuzzy Extractors, Error correcting codes, Entropy, Physical unclonable functions\end{minipage}\\[.2cm]
+% % Audience: & Graduate students\\
+% % Terms: & Summer 2011\\
+% % URL: & http://www.ibr.cs.tu-bs.de/courses/ss11/noisy/\\
+% % University: & Technische Universität Braunschweig
+% % \end{tabular}
+% % \end{minipage}
+% 
+% % \pagebreak
+% % \section*{Publications}
+% % \subsection*{Journals}
+% % \begin{enumerate}
+% % \item Stephan Sigg: A fast binary feedback-based distributed adaptive carrier synchronisation for transmission among clusters of disconnected IoT nodes in smart spaces, Elsevier Journal on Ad Hoc Networks, vol. 16, May 2014, pp. 120-130 (doi:10.1016/j.adhoc.2013.12.006)
+% % \item Shuyu Shi, Stephan Sigg, Wei Zhao, and Yusheng Ji: Monitoring of Attention from Ambient FM-radio Signals, IEEE Pervasive Computing, Los Alamitos, CA, USA, IEEE Computer Society, Jan-Mar 2014, vol. 13, no. 1, pp. 30-36, 2014 (doi:10.1109/MPRV.2014.13)
+% % \item Stephan Sigg, Shuyu Shi and Yusheng Ji: Teach your WiFi-Device: Recognise Simultaneous Activities and Gestures from Time-Domain RF-Features, International Journal on Ambient Intelligence and Computing (IGI), vol. 6, no. 1, January 2014 (doi:10.4018/ijaci.2014010102)
+% % \item Stephan Sigg, Markus Scholz, Shuyu Shi, Yusheng Ji, Michael Beigl, "RF-Sensing of Activities From Non-Cooperative Subjects in Device-Free Recognition Systems Using Ambient and Local Signals," IEEE Transactions on Mobile Computing, Feb. 2014, vol. 13, no. 4 (doi:10.1109/TMC.2013.28)
+% % \item Dominik Schuermann, Stephan Sigg, "Secure Communication Based on Ambient Audio," IEEE Transactions on Mobile Computing, vol. 12, no. 2, pp.358-370, Feb., 2013 (doi: 10.1109/TMC.2011.271)
+% % \item Markus Scholz, Dawud Gordon, Leonardo Ramirez, Stephan Sigg, Tobias Dyrks, Michael Beigl: A Concept for Support of Firefighter Frontline Communication, in Future Internet, vol.5, no. 2, pp. 113-127, 2013 (doi: 10.3390/fi5020113)
+% % \item Stephan Sigg, Dawud Gordon, Georg von Zengen, Michael Beigl, Sandra Haseloff, Klaus David, "Investigation of Context Prediction Accuracy for Different Context Abstraction Levels," IEEE Transactions on Mobile computing, vol.11, no.6, pp.1047-1059, June 2012 (doi: 10.1109/TMC.2011.170)
+% % \item Predrag Jakimovski, Hedda R. Schmidtke, Stephan Sigg, Leonardo Weiss Ferreira Chaves, Michael Beigl, "Collective Communication for Dense Sensing Environments," Journal of Ambient Intelligence and Smart Environments, IOS Press, vol. 4, no. 2, pp.123-134, 2012 (doi: 10.3233/AIS-2012-0139)
+% % \item Stephan Sigg, Rayan Merched El Masri, Michael Beigl, "Feedback-Based Closed-Loop Carrier Synchronization: A Sharp Asymptotic Bound, an Asymptotically Optimal Approach, Simulations, and Experiments," IEEE Transactions on Mobile Computing, vol.10, no.11, pp.1605-1617, Nov. 2011 (doi: 10.1109/TMC.2011.21)
+% % \item Stephan Sigg, Sandra Haseloff, Klaus David, "An Alignment Approach for Context Prediction Tasks in UbiComp Environments," IEEE Pervasive Computing, vol.9, no.4, pp.90-97, October-December 2010 (doi: 10.1109/MPRV.2010.23)
+% % \setcounter{saveenumi}{\value{enumi}}
+% % 
+% % \end{enumerate}
+% % \subsection*{Conferences and workshops}
+% % \begin{enumerate}
+% % \setcounter{enumi}{\value{saveenumi}}
+% % \item Stephan Sigg, Xiaoming Fu: Social Opportunistic Sensing and Social Centric Networking - Enabling technology for Smart Cities, ACM International Workshop on Wireless and Mobile Technologies for Smart Cities (WiMobCity 2014), in conjunction with MobiHoc 2014, Philadelphia, PA, USA, ACM, August 2014.
+% % \item Stephan Sigg, Ulf Blanke and Gerhard Troester: The Telepathic Phone: Frictionless Activity Recognition from WiFi-RSSI, IEEE International Conference on Pervasive Computing and Communications (PerCom), Budapest, Hungary, March 24-28, 2014 \textit{(\underline{Most downloaded paper of PerCom2014} (IEEEXplore usage statistics))}
+% % \item Shuyu Shi, Stephan Sigg, Wei Zhao, and Yusheng Ji: Monitoring of Attention from Ambient FM-radio Signals, IEEE Pervasive Computing, Los Alamitos, CA, USA, IEEE Computer Society, Jan-Mar 2014, vol. 13, no. 1, pp. 30-36, 2014
+% % % \item Stephan Sigg, Markus Scholz, Shuyu Si, Yusheng Ji and Michael Beigl: RF-sensing of activities from non-cooperative subjects in device-free recognition systems using ambient and local signals, in IEEE Transactions on Mobile Computing (TMC), Feb. 2013, vol. 13, no. 4 
+% % \item Jiyin He, Kai Kunze, Christoph Lofi, Sanjay K. Madria and Stephan Sigg: Towards Mobile Sensor-Aware Crowdsourcing: Architecture, Opportunities and Challenges, UnCrowd 2014: DASFAA Workshop on Uncertain and Crowdsourced Data, Bali, Indonesia, April 21, 2014
+% % \item Stephan Sigg, Mario Hock, Markus Scholz, Gerhard Troester, Lars Wolf, Yusheng Ji and Michael Beigl: Passive, device-free recognition on your mobile phone: tools, features and a case study, 10th International Conference on Mobile and Ubiquitous Systems: Computing, Networking and Services (Mobiquitous 2013), Tokyo, Japan, 2013
+% % \item Stephan Sigg, Shuyu Shi, Felix Buesching, Yusheng Ji and Lars Wolf: Leveraging RF-channel fluctuation for activity recognition, 11th International Conference on Advances in Mobile Computing and Multimedia (MoMM2013), Vienna, Austria, 2013
+% % \item Stephan Sigg, Shuyu Shi, and Yusheng Ji: RF-based device-free recognition of simultaneously conducted activities, adjunct proceedings of the 2013 ACM International Joint Conference on Pervasive and Ubiquitous Computing (UbiComp 2013), Zurich, Switzerland, 2013
+% % \item Shuyu Shi, Stephan Sigg and Yusheng Ji: Joint Localisation and Activity Recognition from Ambient FM Broadcast Signals, adjunct proceedings of the 2013 ACM International Joint Conference on Pervasive and Ubiquitous Computing (UbiComp 2013), Zurich, Switzerland, 2013
+% % \item Shuyu Shi, Stephan Sigg and Yusheng Ji: ActiviTune: A Multi-stage system for activity recognition of passive entities from ambient FM-radio signals, in the 8th International Conference on Wireless Algorithms, Systems, and Applications (WASA 2013)
+% % \item Stephan Sigg, Predrag Jakimovski, Yusheng Ji and Michael Beigl: Utilising an algebra of random functions to realise function calculation via a physical channel, accepted for presentation at the 2013 IEEE 14th Workshop on Signal Processing Advances in Wireless Communications (SPAWC)
+% % \item Shuyu Shi, Stephan Sigg, and Yusheng Ji, "Passive detection of situations from ambient FM-radio signals" In Proceedings of the 2012 ACM Conference on Ubiquitous Computing (UbiComp '12). Pittsburgh, PA, USA, 1049-1053, 2012 (doi: 10.1145/2370216.2370440) 
+% % \item Stephan Sigg, Predrag Jakimovski, Michael Beigl, "Calculation of functions on the RF-channel for IoT," 2012 3rd International Conference on the Internet of Things (IOT), pp.107-113, 24-26 Oct. 2012 (doi: 10.1109/IOT.2012.6402311)
+% % \item Shuyu Shi; Stephan Sigg, Yusheng Ji, "Activity recognition from radio frequency data: Multi-stage recognition and features," 2012 IEEE Vehicular Technology Conference (VTC Fall), pp.1-6, 3-6 Sept. 2012 (doi: 10.1109/VTCFall.2012.6399382)
+% % \item Stephan Sigg, Lei Zhong, Yusheng Ji, "Activity recognition with implicit context classification," 2012 IEEE Vehicular Technology Conference (VTC Fall), pp.1-6, 3-6 Sept. 2012 (doi: 10.1109/VTCFall.2012.6399379)
+% % \item Stephan Sigg, Ngu Nguyen, An Huynh and Yusheng Ji: AdhocPairing: Spontaneous audio based secure device pairing for Android mobile devices, in Proceedings of the 4th International Workshop on Security and Privacy in Spontaneous Interaction and Mobile Phone Use, in conjunction with Pervasive 2012, 2012
+% % \item Ngu Nguyen; Stephan Sigg, An Huynh, Yusheng Ji, "Pattern-Based Alignment of Audio Data for Ad Hoc Secure Device Pairing," 2012 16th International Symposium on Wearable Computers (ISWC), pp.88-91, 18-22 June 2012 (doi: 10.1109/ISWC.2012.14)
+% % \setcounter{saveenumi}{\value{enumi}}
+% % \end{enumerate}
+% % \begin{enumerate}
+% % \setcounter{enumi}{\value{saveenumi}}
+% % \item Ngu Nguyen; Stephan Sigg, An Huynh, Yusheng Ji, "Using ambient audio in secure mobile phone communication," 2012 IEEE International Conference on Pervasive Computing and Communications Workshops (PERCOM Workshops), pp.431-434, 19-23 March 2012 (doi: 10.1109/PerComW.2012.6197527)
+% % \item Markus Scholz, Stephan Sigg, Hedda Schmidtke and Michael Beigl: Challenges for device-free radio-based activity recognition, in Proceedings of the 3rd Workshop on Context Systems Design Evaluation and Optimisation (CoSDEO), 2011
+% % \item Markus Scholz, Stephan Sigg, Dimana Shihskova, Georg von Zengen, Gerrit Bagshik, Toni Guenther, Michael Beigl and Yusheng Ji: SenseWaves: Radiowaves for context recognition, in Video Proceedings of the 9th International Conference on Pervasive Computing (Pervasive 2011), 2011
+% % \item Stephan Sigg, Dominik Schuermann and Jusheng Ji: PINtext: A framework for secure communication based on context, in Proceedings of the 8th International ICST Conference on Mobile and Ubiquitous Systems: Computing, Networking, and Services (MobiQuitous 2011), Lecture Notes of the Institute for Computer Sciences, Social Informatics and Telecommunications Engineering, vol. 104, pp.314-325, 2011 (doi:10.1007/978-3-642-30973-1\_31)
+% % \item Stephan Sigg, Predrag Jakimovski, Florian Becker, Hedda Schmidtke, Martin Alexander Neumann, Yusheng Ji and Michael Beigl: Neuron-inspired collaborative transmission in wireless sensor networks, in Proceedings of the 8th International ICST Conference on Mobile and Ubiquitous Systems: Computing, Networking, and Services (MobiQuitous 2011), Lecture Notes of the Institute for Computer Sciences, Social Informatics and Telecommunications Engineering, vol. 104, pp.273-284, 2011 (doi: 10.1007/978-3-642-30973-1\_28)
+% % \item Stephan Sigg, "Context-based security: state of the art, open research topics and a case study". In Proceedings of the 5th ACM International Workshop on Context-Awareness for Self-Managing Systems (CASEMANS '11). 	ACM, New York, NY, USA, 17-23. (doi: 10.1145/2036146.2036150) 
+% % % Stephan Sigg, Matthias Budde, Yusheng Ji and Michael Beigl: Entropy of audio fingerprints for unobtrusive device authentication, in Poster Proceedings of the 7th International and Interdisciplinary Conference on Modeling and Using Context (Context2011), 2011 (Online)
+% % \item Predrag Jakimovski, Florian Becker, Stephan Sigg, Hedda Rahel Schmidtke, Michael Beigl, "Collective Communication for Dense Sensing Environments," 2011 7th International Conference on Intelligent Environments (IE), pp.157-164, 25-28 July 2011 (doi: 10.1109/IE.2011.42) (**Best paper**)
+% % \item Behnam Banitalebi, Dawud Gordon, Stephan Sigg, Takashi Miyaki, Michael Beigl, "Collaborative Channel Equalization: Analysis and Performance Evaluation of Distributed Aggregation Algorithms in WSNs," 2011 8th IEEE International Conference on Mobile Ad-hoc and Sensor Systems (MASS), pp.450-459, 17-22 Oct. 2011 (doi: 10.1109/MASS.2011.51)
+% % \item Markus Reschke, Sebastian Schwarzl, Johannes Starosta, Stephan Sigg, "Situation Awareness Based on Channel Measurements," 2011 73rd IEEE Vehicular Technology Conference (VTC Spring), pp.1-5, 15-18 May 2011 (doi: 10.1109/VETECS.2011.5956453)
+% % \item Stephan Sigg and Michael Beigl: An adaptive protocol for distributed beamforming, in 17. Fachtagung 'Kommunikation in Verteilten Systemen 2011' (KiVS11), vol. 17 of OASICS, pp.38-48, Schloss Dagstuhl - Leibnitz-Zentrum fuer Informatik, Germany, March 2011
+% % \item Dawud Gordon, Stephan Sigg, and Michael Beigl, "Using prediction to conserve energy in recognition on mobile devices," 2011 IEEE International Conference on Pervasive Computing and Communications Workshops (PERCOM Workshops), pp.364-367, 21-25 March 2011 (doi: 10.1109/PERCOMW.2011.5766907)
+% % \item Johannes Starosta, Markus Reschke, Sebastian Schwarzl, Stephan Sigg and Michael Beigl: Context awareness through the RF-channel, 24th International Conference on Architecture of Computing Systems (ARCS), Lecture Notes in Computer Science (LNCS), Springer, vol. 6566, Como, Italy, February 2011
+% % \item Stephan Sigg, Michael Beigl and Behnam Banitalebi, "Efficient adaptive communication from resource restricted transmitters", In Organic Computing - A Paradigm Shift for Complex Systems, Christian Mueller-Schloer and Hartmut Schmeck and and Theo Ungerer, Springer, 2011
+% % \item Behnam Banitalebi, Stephan Sigg and Michael Beigl, "Performance analysis of receive collaboration in TDMA-based Wireless Sensor Networks", in Proceedings of the fourth International Conference on Mobile Ubiquitous Computing, Systems, Services and Technologies (Ubicomm), October 2010
+% % \item Stephan Sigg and Michael Beigl, "Expectation aware in-network context processing". In Proceedings of the 4th ACM International Workshop on Context-Awareness for Self-Managing Systems (CASEMANS '10). ACM, New York, NY, USA, 2010, (doi: 10.1145/1858367.1858376)
+% % \item Behnam Banitalebi, Stephan Sigg, Michael Beigl, "On the feasibility of receive collaboration in wireless sensor networks," 2010 IEEE 21st International Symposium on Personal Indoor and Mobile Radio Communications (PIMRC), pp.1608-1613, 26-30 Sept. 2010 (doi: 10.1109/PIMRC.2010.5671943)
+% % \item Rayan Merched El Masri, Stephan Sigg, Michael Beigl, "An asymptotically optimal approach to the distributed adaptive transmit beamforming in wireless sensor networks," 2010 European Wireless Conference (EW), pp.511-518, 12-15 April 2010 (doi: 10.1109/EW.2010.5483485)
+% % \item Niklas Klein, Stephan Sigg, Klaus David and Michael Beigl, "DAG Based Context Reasoning: Optimised DAG Creation," 2010 23rd International Conference on Architecture of Computing Systems (ARCS), pp.1-6, 22-23 Feb. 2010
+% % \item Stephan Sigg, Rayan Merched El Masri, Julian Ristau and Michael Beigl, "Limitations, performance and instrumentation of closed-loop feedback based distributed adaptive transmit beamforming in WSNs," 5th International Conference on Intelligent Sensors, Sensor Networks and Information Processing (ISSNIP), pp.451-456, 7-10 Dec. 2009 (doi: 10.1109/ISSNIP.2009.5416750)
+% % \item Stephan Sigg, Michael Beigl, "Algorithmic approaches to distributed adaptive transmit beamforming," 5th International Conference on Intelligent Sensors, Sensor Networks and Information Processing (ISSNIP), pp.433-438, 7-10 Dec. 2009 (doi: 10.1109/ISSNIP.2009.5416780)
+% % \item Stephan Sigg, Michael Beigl, "Algorithms for closed-loop feedback based distributed adaptive beamforming in wireless sensor networks," 5th International Conference on Intelligent Sensors, Sensor Networks and Information Processing (ISSNIP), pp.25-30, 7-10 Dec. 2009 (doi: 10.1109/ISSNIP.2009.5416847)
+% % \item Stephan Sigg, Michael Beigl, "Randomised Collaborative Transmission of Smart Objects", in 2nd International Workshop on Design and Integration Principles for Smart Objects (DIPSO2008) in conjunction with Ubicomp 2008, September 2008
+% % % \item Stephan Sigg, Daniel Röhr, Monty Beuster and Michael Beigl: Audio Fingerprinting in UbiComp Environments - Performance Measurements and Applications, in Proceedings of the fifth International Conference on Networked Sensing Systems (INSS'08), June 2008
+% % % \item Stephan Sigg, Monty Beuster, Daniel Röhr and Michael Beigl: Search Space Size and Context Prediction, in Proceedings of the fifth International Conference on Networked Sensing Systems (INSS'08), June 2008
+% % \item Stephan Sigg and Michael Beigl, "Collaborative Transmission in Wireless Sensor Networks by a ($1+1$)-EA," Eighth International Workshop on Applications and Services in Wireless Networks, ASWN '08. pp.37-46, 9-10 Oct. 2008 (doi: 10.1109/ASWN.2008.12)
+% % \item Stephan Sigg, Sandra Haseloff, Klaus David, "A study on context prediction and adaptivity," 2nd International Conference on Digital Information Management, ICDIM '07, vol.2, pp.717-722, Lyon, France, 28-31 Oct. 2007 (doi: 10.1109/ICDIM.2007.4444309)
+% % \item Stephan Sigg, Sandra Haseloff, Klaus David, "Prediction of Context Time Series", Proceedings of the 5th Workshop on Applications of Wireless Communications (WAWC'07), August 16, Lappeenranta, Finland, 2007
+% % \item Stephan Sigg, Sian Lun Lau, Sandra Haseloff, and Klaus David, "Approaching a definition of context prediction", Proceedings of the 3rd Workshop on Context Awareness for Proactive Systems CAPS07, Guildford, June 2007
+% % \item Stephan Sigg, Sandra Haseloff, Klaus David, "Minimising the Context Prediction Error,"  65th IEEE Vehicular Technology Conference, VTC2007-Spring, pp.272-276, 22-25 April 2007\linebreak (doi: 10.1109/VETECS.2007.68)
+% % \item Stephan Sigg, Sandra Haseloff, Klaus David, "A Novel Approach to Context Prediction in UBICOMP Environments," 2006 IEEE 17th International Symposium on Personal, Indoor and Mobile Radio Communications, pp.1-5, Helsinki, Finland, 11-14 Sept. 2006 (doi: 10.1109/PIMRC.2006.254051)
+% % \item Stephan Sigg, Sandra Haseloff, Klaus David, "The Impact of the Context Interpretation Error on the Context Prediction Accuracy," 3rd Annual International Conference on Mobile and Ubiquitous Systems - Workshops, pp.1,4, San Jose, CA, 17-21 July 2006 (doi: 10.1109/MOBIQW.2006.361718)
+% % \item Tino Löffler, Stephan Sigg, Sandra Haseloff, Klaus David: The Quick Step to Foxtrot. In: K. David, O. Drögehorn, S. Haseloff (eds.): Proceedings of the Second Workshop on Context Awareness for Proactive Systems (CAPS 2006), June 12-13, Kassel, Germany. Kassel university press, 2006
+% % \item Stephan Sigg, Klaus David, "Optimum Resource Allocation in HSDPA," 12th European Wireless Conference 2006 - Enabling Technologies for Wireless Multimedia Communications (European Wireless), pp.1-7, Athen, Greece, 2-5 April 2006
+% % \setcounter{saveenumi}{\value{enumi}}
+% % \end{enumerate}
+% % 
+% \subsection*{Theses and books}
+% \begin{enumerate}
+% \setcounter{enumi}{\value{saveenumi}}
+% \item Stephan Sigg: Optimisation of a three stage cooling process, Master's Thesis, FernUniversität in Hagen, February 2010
+% \item Stephan Sigg: Ein Vergleich von Varianten endlicher Quantenautomaten - Eine algorithmenorientierte Analyse, VDM, March 2008 (in German)
+% \item Stephan Sigg: Development of a novel context prediction algorithm and analysis of context prediction schemes. PhD thesis, University of Kassel, Chair for Communication Technology, February 2008
+% \item Stephan Sigg: Ein Vergleich verschiedener Varianten endlicher Quanten-Automaten. Diploma thesis, University of Dortmund, August 2004 (in German)
+% \end{enumerate}
+
+\label{MaxSeitenzahl}
+\end{document}
