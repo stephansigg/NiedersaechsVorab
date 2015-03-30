@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.19)  30 MAR 2015 19:23
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.19)  30 MAR 2015 19:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**LowerSaxonyVorab_SiggCrammer.tex
-(./LowerSaxonyVorab_SiggCrammer.tex
+**LowerSaxonyVorab_SiggCrammer_Zusammenfassung.tex
+(./LowerSaxonyVorab_SiggCrammer_Zusammenfassung.tex
 LaTeX2e <2011/06/27>
 Babel <3.9h> and hyphenation patterns for 78 languages loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -248,24 +248,24 @@ Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS)
 )
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 77.
+less on input line 70.
 
-(./LowerSaxonyVorab_SiggCrammer.aux)
-\openout1 = `LowerSaxonyVorab_SiggCrammer.aux'.
+(./LowerSaxonyVorab_SiggCrammer_Zusammenfassung.aux)
+\openout1 = `LowerSaxonyVorab_SiggCrammer_Zusammenfassung.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 89.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 82.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
@@ -338,89 +338,56 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 96.
-LaTeX Font Info:    Try loading font information for U+msa on input line 97.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 89.
+LaTeX Font Info:    Try loading font information for U+msa on input line 90.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 97.
+LaTeX Font Info:    Try loading font information for U+msb on input line 90.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (2.2087pt too wide) in paragraph at lines 97--102
+Overfull \hbox (2.2087pt too wide) in paragraph at lines 90--95
  [] 
  []
 
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 105.
-LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 105.
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 108.
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
+File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
+)
+Overfull \hbox (1.50323pt too wide) in paragraph at lines 106--107
+\OT1/phv/m/n/12 RSSI oder RF-signalst[]arke zu sch[]atzen, (3) al-go-rith-men f
+[]ur die Prog-nose der Sentiment-
+ []
+
+
+Overfull \hbox (3.53444pt too wide) in paragraph at lines 108--110
+\OT1/phv/m/n/12 mungen, Emo-tio-nen und Gef[]uhlen basierend auf smart-phone, M
+edi-zinis-chen und Umge-
+ []
+
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4]
-Overfull \hbox (17.34535pt too wide) in paragraph at lines 216--245
- [][] 
- []
-
-[5] [6] [7] [8]
-Overfull \hbox (0.58049pt too wide) in paragraph at lines 399--404
-\OT1/phv/m/n/12 In this work-pack-age, the ef-fi-ciency and per-for-mance of th
-e im-ple-mented feed-back mech-
- []
-
-
-Overfull \vbox (0.50578pt too high) has occurred while \output is active []
-
-
-[9] [10] [11] [12] [13] [14]
-Overfull \hbox (68.20229pt too wide) in paragraph at lines 561--561
-[][]\OT1/phv/m/n/10 http://www.dfg.de/en/research[]funding/programmes/internati
-onal[]cooperation/german[]israeli[]cooperation/index.html| 
- []
-
-[15]
-LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 600.
- (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
-File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-) [16]
-Underfull \hbox (badness 10000) in paragraph at lines 734--739
-[]\OT1/phv/m/n/10.95 Akhil Jag-gar-wal and Rox-anne L Canosa.  Emo-tion recog-n
-i-tion us-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 734--739
-\OT1/phv/m/n/10.95 ing body ges-ture and pose.  Tech-ni-cal re-port, 2012.  ava
-il-able on-line:
- []
-
-[17] [18] [19] [20] [21] [22] [23] [24] (./LowerSaxonyVorab_SiggCrammer.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+(./LowerSaxonyVorab_SiggCrammer_Zusammenfassung.aux) ) 
 Here is how much of TeX's memory you used:
- 4761 strings out of 493304
- 70996 string characters out of 6139871
- 161534 words of memory out of 5000000
- 8097 multiletter control sequences out of 15000+600000
- 30522 words of font info for 69 fonts, out of 8000000 for 9000
+ 4858 strings out of 493304
+ 70429 string characters out of 6139871
+ 139106 words of memory out of 5000000
+ 8205 multiletter control sequences out of 15000+600000
+ 12591 words of font info for 38 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 44i,12n,43p,763b,402s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/h
-elvetic/uhvro8a.pfb>
-Output written on LowerSaxonyVorab_SiggCrammer.pdf (24 pages, 94030 bytes).
+ 44i,11n,43p,469b,478s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf
+-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/ur
+w/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/u
+hvr8a.pfb>
+Output written on LowerSaxonyVorab_SiggCrammer_Zusammenfassung.pdf (1 page, 208
+11 bytes).
 PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
- 67 compressed objects within 1 object stream
+ 17 PDF objects out of 1000 (max. 8388607)
+ 11 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
