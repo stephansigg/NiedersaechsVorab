@@ -220,21 +220,22 @@ WP-2.4	&	&50	&50	&	&	&	&	&	&	&	&	& 	& 100\\
 WP-2.5	&	&	&	&30	&30	&40	&	&	&	&	&	& 	& 100\\\hline
 Experiments& &	&	&	&	&	&	&	&	&	&	&	&\\
 WP-3.1	&	&	&130	&70	&	&	&	&	&	&	&	& 	& 200\\
-WP-3.2	&	&	&	&	&	&	&50	&30	&30	&40	&30	&20 	& 200\\
+WP-3.2	&	&	&	&	&	&	&50	&30	&30	&45	&30	&15 	& 200\\
 WP-3.3	&	&	&	&	&	&	&	&	&60	&	&	&40 	& 100\\\hline
 Analysis& &	&	&	&	&	&	&	&	&	&	& 	&\\
 WP-4.1	&	&	&	&80	&20	&	&	&	&	&	&	& 	& 100\\
 WP-4.2	&	&	&	&	&130	&70	&	&	&	&	&	& 	& 200\\
 WP-4.3	&	&	&	&	&	&70	&130	&	&	&	&	& 	& 200\\
-WP-4.4	&	&	&	&	&	&	&	&100	&55	&45	&	& 	& 200\\\hline
+WP-4.4	&	&	&	&	&	&	&	&100	&55	&45	&	& 	& 200\\
+WP-4.5	&	&	&	&	&	&	&	&	&	&50	&100	&50 	& 200\\\hline
 Prediction& &	&	&	&	&	&	&	&	&	&	& &\\
 %WP-5	&	&	&	&	&	&45	&55	&100	 & 200\\\hline
 WP-5.1	&	&	&	&	&	&	&	&55	 &45	&	&	&	& 100\\%\hline
-WP-5.2	&	&	&	&	&	&	&	&	 &	&100	&100	&	& 200\\\hline
-Sum	& 200	&200	&200	&200	&200	&200	&200	&200	 &200	&195	&140	&65	& 2200\\\hline
+WP-5.2	&	&	&	&	&	&	&	&	 &	&50	&60	&90	& 200\\\hline
+Sum	& 200	&200	&200	&200	&200	&200	&200	&200	 &200	&200	&200	&200	& 2400\\\hline
 \end{tabular}
 \end{footnotesize}
-\caption{Work schedule. Occupation (1PM) subject to the quarterly period and project task (percentage by which the workload is divided between the work packages).}
+\caption{Occupation (1PM) subject to the quarterly period and project task.}
 \label{tableGesamtueberblick}
 \end{table}
 
@@ -415,7 +416,7 @@ These methods will take into consideration the special nature of these signals.
  Estimated effort& 6 PMs\\
  Precondition & WP-3, WP-4.1\\
  Milestone & \begin{minipage}[t]{12.2cm}
-\textit{Correlations between features from medical ans smartphone sensors and a classifier for sentiment from these sensors}\vspace{.2cm}
+\textit{Correlations between features from medical and smartphone sensors and a classifier for sentiment from these sensors}\vspace{.2cm}
              \end{minipage}
 \end{tabular}
 
@@ -429,7 +430,7 @@ In addition, building on the results from WP-4.1 we will further investigate cor
  Estimated effort& 6 PMs\\
  Precondition & WP-3, WP-4.1\\
  Milestone & \begin{minipage}[t]{12.2cm}
-\textit{Correlations between features from medical ans smartphone sensors and a classifier for sentiment from these sensors}\vspace{.2cm}
+\textit{Classifier for sentiment over extended period of time}\vspace{.2cm}
              \end{minipage}
 \end{tabular}
 
@@ -478,6 +479,7 @@ In this workpackage we will analyze the sensor data and evaluate their redundanc
 \textit{A document describing the potential of sentiment analysis of long sensor traces}\vspace{.2cm}
              \end{minipage}
 \end{tabular}
+
 \noindent
 We will analyze long sequences of sensor-input and sentimental-state. Our goal is to find long-correlations between the state of the sentiment across in various time scales (minutes, hours, days). Based on these results we will develop models to predict sentiment based on both current sensor data and previous (or historical) sentiment, either predicted (or also given via interface). 
 
@@ -496,14 +498,14 @@ We will develop few feedback methods to users about current and future predicted
 
 
 \subsection*{Type and extent of the cooperation and division of tasks between the partners}
-Goettingen's expertise lie in sensor (please add), and 
+Goettingen's expertise lie in mobile pervasive sensing systems, distributed, networked systems and compressive sensing.  
 Technion's expertise lie in the design of new methods for data analysis, building predictive models, and devise highly efficient methods. We envision a relation in which Goettingen take the lead on sensor deployment and analysis, and Technion on analysis and building prediction models. We plan to close the loop, and use the models and analysis-outcome to better improve sensor usage. Smartphones and body sensors will be deployed on both locations. We will to assign a student in each institute, and plan for them to work as a team.
 
 The researchers plan to have periodic phone meetings, and visit each other every six months. We hope that our Goettingen's students will be have long visit in Technion in vice-versa. This will not only advance the project, but will also serve, as a way to deepen their network and the connections between the two institutes. 
 
 
 \subsection*{Anticipated results}
-This project will generate an initial body of knowledge on the recognition of sentiment from various sensor types.
+This project will generate a body of knowledge on the recognition of sentiment from various sensor types.
 In particular, in the scope of the project, a prototype implementation for a mobile sentiment recognition app is developed and a corpus of sensor readings together with the associated ground truth is provided. 
 The results will provide insight into the potential of sentiment sensing and prediction from medical, smartphone and body sensors.
 
@@ -558,12 +560,12 @@ H2020 project, one of the ICT ones, need to find proper calls.
 \subsection*{Funding of the project including own contribution}
 The project teams consists of the project researchers Dr. Koby Crammer and Dr. Stephan Sigg as well as two PhD students (to be appointed for this project) and two student assistants.
 \begin{description}
-	\item[UGOE] Dr. Stephan Sigg (externally funded), 2 years
-	\item[UGOE] 1 research staff member, TV-L 13, 75\% project + 25\% external, 2 years
-	\item[UGOE] 1 student assistant, 40 hours/week, 2 years
-	\item[Technion] Dr. Koby Crammer (externally funded), 2 years 
-	\item[Technion] 1 research staff member, TV-L 13, 75\% project + 25\% external, 2 years 
-	\item[Technion] 1 student assistant, 40 hours/week, 2 years 
+	\item[UGOE] Dr. Stephan Sigg (externally funded), 3 years
+	\item[UGOE] 1 research staff member, TV-L 13, 75\% project + 25\% external, 3 years
+	\item[UGOE] 1 student assistant, 40 hours/week, 3 years
+	\item[Technion] Dr. Koby Crammer (externally funded), 3 years 
+	\item[Technion] 1 research staff member, TV-L 13, 75\% project + 25\% external, 3 years 
+	\item[Technion] 1 student assistant, 40 hours/week, 3 years 
 \end{description}
 Technion will make use of the machine learning computing cluster composed of more than 50 nodes. If there will be a need, Technion will make the proper adaptation of the cluster to the possible requirements of the project.
 
