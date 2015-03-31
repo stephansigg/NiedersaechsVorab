@@ -1,0 +1,216 @@
+\documentclass[12pt]{article}
+\usepackage{setspace}
+
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+%\usepackage{ngerman}
+\usepackage{a4wide}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{color}
+\definecolor{light}{gray}{0.85}
+\definecolor{heavy}{gray}{0.30}
+\usepackage{amsfonts}
+\usepackage{dsfont}
+\usepackage{amssymb}
+\usepackage{setspace}% used for table notes
+\usepackage{makeidx}
+\usepackage[pdftex]{graphicx}
+\usepackage{multibib}
+% \usepackage{subfigure}
+\usepackage{subfig}
+\usepackage{eurosym}
+\newcites{all,own,related}%
+         {\normalsize{References (other authors)},%
+          \normalsize{References (applicant)},
+          \normalsize{ }\vspace{-.8cm}}
+          
+\usepackage{color}
+          
+\newcommand{\todoBase}{\hfill \notiz{TODO} $\square$}
+\newcommand{\projektname}{\texttt{Sense box}}
+
+\newcommand{\notiz}[1]{\marginpar{\tiny \framebox{\begin{minipage}{2.1cm} #1 \end{minipage}}}}
+\newcommand{\niklas}[1]{\marginpar{\footnotesize\notiz{Niklas:}\\\tiny \framebox{\begin{minipage}{2.1cm} #1 \end{minipage}}}}
+\newcommand{\dawud}[1]{\marginpar{\footnotesize\notiz{Dawud:}\\\tiny \framebox{\begin{minipage}{2.1cm} #1 \end{minipage}}}}
+\newcommand{\stephan}[1]{\marginpar{\footnotesize\notiz{Stephan:}\\\tiny \framebox{\begin{minipage}{2.1cm} #1 \end{minipage}}}}
+\newcommand{\todo}{\marginpar{\todoBase}}
+
+\newcommand{\kobyc}[1]{\begin{center}\fbox{\parbox{3in}{{\textcolor{green}{K: #1}}}}\end{center}}
+\newcommand{\stephans}[1]{\begin{center}\fbox{\parbox{3in}{{\textcolor{magenta}{S: #1}}}}\end{center}}
+
+\newcommand{\nolineskips}{
+	\setlength{\parskip}{0pt}
+	\setlength{\parsep}{0pt}
+	\setlength{\topsep}{0pt}
+	\setlength{\partopsep}{0pt}
+	\setlength{\itemsep}{0pt}}
+
+
+\author{\begin{minipage}[t]{7.1cm}\centering \small \VornameAntragstellerA\ \NachnameAntragstellerA\\ \small Lehrstuhl für Kommunikationstechnik\\ \small ComTec\\ \small Universität Kassel\end{minipage}
+\begin{minipage}[t]{7.1cm}\centering \small \VornameAntragstellerB\ \NachnameAntragstellerB\\ \small Gruppe Verteilte und Ubiquitäre Systeme \\ \small Institut für Betriebssysteme und Rechnerverbund\\ \small TU Braunschweig\end{minipage}}
+
+\title{\projektname:\\\notiz{Social and sentiment sensing and assisting using on-body sensors}}
+
+\date{\small \today}
+% \usepackage[T1]{fontenc}
+% \newcommand{\changefont}[3]{
+% \fontfamily{#1} \fontseries{#2} \fontshape{#3} \selectfont}
+%\changefont{cmss}{m}{n}
+\fontfamily{cmss}
+\fontseries{m}
+\fontshape{n}
+\selectfont
+%%serifenlose Schrift:
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{helvet}
+
+%% Use header as in DFG template
+ \usepackage{fancyhdr}
+
+%% Redefine plain page style
+\fancypagestyle{plain}{
+ \fancyhf{}
+ \renewcommand{\headrulewidth}{0pt}
+ \fancyfoot[LE,RO]{\thepage}
+ }
+ \pagestyle{plain}
+% \lhead{\tiny \Name, \Strasse, \Plz\ \Ort, Germany. Phone: \Telefon, Email: \Email}
+\rhead{}
+% \rhead{\small page \arabic{page} of \pageref{maxSeitenzahl}}
+\rfoot{}
+%% Linebreak after paragraph
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+  {-3.25ex\@plus -1ex \@minus -.2ex}%
+  {1.5ex \@plus .2ex}%
+  {\normalfont\normalsize\bfseries}}
+\makeatother
+\begin{document}
+\onehalfspacing %1.5 spacing
+%% enable numbering for paragraphs also:
+\setcounter{secnumdepth}{5}
+% \maketitle
+\pagebreak
+\begin{center}
+\section*{Social and sentiment sensing and assisting using on-body sensors\\Budget}
+\begin{tabular}{cc}
+  Stephan Sigg, & Koby Crammer\\
+  University of Goettingen, Germany & Department of Electrical Engineering, Technion \\
+ stephan.sigg@cs.uni-goettingen.de & koby@ee.technion.ac.il
+\end{tabular}
+
+\end{center}
+% \begin{description}
+% 	\item[Keywords] \textit{Sentiment sensing, Mobile sensing, Machine learning, Data analysis}
+% \end{description}
+% 
+% \subsection*{Topic, objectives and justification of the project}
+% Emotional states are closely linked to Physical health~\cite{SentimentSensing_Salovey_2000}, such as anger, which increases the danger of heart disease~\cite{SentimentSensing_Smith_2004} or mood which impacts health-relevant behavior~\cite{SentimentSensing_Todaro_2003}.
+% In addition, mental health is linked to emotion regulation~\cite{SentimentSensing_Gross_1995}, whereas stress, especially when pertaining, has significant impact on brain, cognition and work performance~\cite{SentimentSensing_Lupien_2009}.
+% On the other hand, positive affect benefits the immune system~\cite{SentimentSensing_Smith_2004} while happiness and satisfaction are good indicators for work performance, health, and also success in private life~\cite{SentimentSensing_Lyubomirsky_2005}.
+% 
+% Sentiment and emotion can be detected from Physiological signals with sensors such as Electromyograms (EMG, muscle activity), Electrodermal Activity (EDA, electrical conductivity of the skin surface), Electrocardiogram (EKG or ECG, heart activity), Electrooculogram (EOG, eye movement) or Electroencephalography (EEG, brain activity)~\cite{SentimentSensing_Calvo_2010}.
+% These kind of sensors, however, are accessible only to a small share of the population and have drawbacks such as high cost, weight, non-portability, and sometimes involve invasive implantation.
+% % Furthermore, for a human utilizing these tools, they constitute additional devices to carry around.
+% 
+% Recent work shows that it is also possible to detect sentiment from gesture and pose~\cite{Emotion_DeMeijer_1989}. 
+% With the verge of the Internet of Things and increasing amount of mobile and body worn devices and sensors in everyday life, a multitude of sensors is available nowadays which has the potential to capture body movement and pose. 
+% 
+% The focus and contribution of this project is to (1) recognise emotion from medical sensors, (2) exploit the potential of cheaper smartphone and on-body IoT sensors for sentiment sensing by identifying correlations in sensor data traces with medical sensors, (3) exploit environmental signals such as RSSI or RF-signal strength for sentiment sensing, (4) predict the evolution of sentiment from the time series of past observations, (5) develop memory, time, and computation efficient methods to perform such analysis on a smartphone and, (6) develop and experiment with sentiment feedback methods.
+% 
+% The outcome of the project will be a sentiment sensing and feedback framework comprising medical, body, smartphone and environmental sensors together with a prototype implementation
+% 
+% \subsection*{Current state-of-the-art in an international perspective}
+% Emotion research or affective science investigates affect expression and detection~\cite{SentimentSensing_Calvo_2010}.
+% In this context, the recognition of emotion has been considered from facial expressions~\cite{SentimentSensing_Ekman_2003}, voice~\cite{SentimentSensing_Juslin_2005} as well as body language and posture~\cite{SentimentSensing_Mota_2003,SentimentSesing_Mello_2009}.
+% Especially the latter is of greater interest for this project and is discussed below. 
+% There is also some body of work on utilizing text mining for sentiment sensing as briefly discussed in the next section. 
+% 
+% \subsubsection*{Sensing of sentiment from textual corpus}
+% Sentiment mining is an active research topic in recent years~\cite{SentimentSensing_Kramer_2014, SentimentSensing_Cambria_2013}. 
+% Also referred to as opinion mining, it considers indirect sources and requires actual active involvement of subjects~\cite{SentimentSensing_Pang_2008, SentimentSensing_Zhai_2011}. 
+% In particular, there is an active body of work in the direction of mining textual input (via sentiment-expressing words or phrases) in online social networks with the help of natural language processing and computational linguistics~\cite{SentimentSensing_Liu_2012}.
+% We will, however, not consider the mining of text in the scope of this project but rather focus on sentiment sensing from physical sensors. Nevertheless, if necessary, we may exploit textual input to better tune the parameters of our sensor-based sentiment analyzer. 
+% 
+% \subsubsection*{Sentiment sensing from body movement and pose}
+% Emotion can be inferred from body gesture and pose~\cite{Pervasive_Jaggarwal_2012} at least as accurately as from face~\cite{Emotion_Nguyen_2012,Emotion_Castellano_2008,Emotion_Meeren_2005}.
+% The role of human body in emotion expression has received support through evidences from psychology~\cite{Emotion_Walters_1986} and nonverbal communication \cite{Emotion_Dittmann_1978}. 
+% The importance of  bodily expression has also been confirmed for emotion detection \cite{Emotion_Wallbott_1998, Emotion_VanHeijnsbergen_2007,Emotion_Atkinson_2007}. 
+% %Detection of Fear: Emotion_VanHeijnsbergen_2007
+% Walter and Walk~\cite{Emotion_Walters_1986} revealed that emotion recognition from photos of postural expression, in which faces and hands were covered, was as accurate as recognition from facial expression alone.
+% % In another study, Meeren et al.~\cite{Emotion_Meeren_2005} indicated that observers were strongly influenced by body posture when judging a facial expression. 
+% Dynamic configurations of human body even hold greater amount of information as indicated by Bull in \cite{Emotion_Bull_1987}. 
+% He proved that body positions and motions could be recognised in terms of states including interest/boredom and agreement/disagreement. 
+% Some other studies went further by looking for the contribution of separated body parts to particular emotional states~\cite{Emotion_DeMeijer_1989,Emotion_Montepare_1999}.
+% Emotion can be recognised from non-trivial scenarios, such as simple daily-life actions \cite{Emotion_Crane_2007,Emotion_Bernhardt_2007} or recognition ability of infants \cite{Emotion_Lagerlof_2009}. 
+% % In~\cite{Emotion_Crane_2007}, Crane and Gross tested the ability of  recognizing 5 emotions from gait actions. 
+% 
+% % It will be interesting to see how well RF information can be exploited in order to identify body gesture and pose and to classify this for human emotion classes.
+% 
+%  Researchers~\cite{SentimentSensing_Mota_2003,SentimentSesing_Mello_2009}, were able to detect boredom, confusion, delight and frustration utilizing pressure mats. 
+% Such mats are not portable and thus are not applicable in our setting. 
+% Instead, we aim to detect sentiment from body- or environmental sensors. 
+% 
+% % \paragraph*{Sensing attention from environmental sensors}
+% Additionally, the sensing of attention has been investigated previously. 
+% Attention is an important measure in Computer-Human interaction. 
+% It determines for an interactive system the potential to impact the actions and decisions taken by an individual~\cite{AttentionMonitoring_Xu_2012}.
+% In the literature, we find various definitions that classify attention as well as its determining characteristics~\cite{AttentionMonitoring_Wu_2007, AttentionMonitoring_Wickens_1984}.
+% While the tracking of gaze is a commonly utilized measure of attention~\cite{AttentionMonitoring_Yonezawa_2007}, also other observable features may indicate attention. 
+% In general, aspects such as saliency, effort, expectancy and value are important indicators of attention~\cite{AttentionMonitoring_Wickens_2008, AttentionMonitoring_Wickens_1984,AttentionMonitoring_Xu_2012,AttentionMonitoring_Gollan_2011}.
+% This model was later extended to put a greater stress on the effort a person takes towards an object~\cite{AttentionMonitoring_Ferscha_2012}.
+% The authors also discuss various aspects of attention and identify as most distinguishing factors changes in walking speed, direction or orientation.
+% 
+% Shi et al~\cite{Pervasive_Shi_2014} investigated how these properties, in particular location of a person, walking direction and walking speed or changes therein can be utilized for the monitoring and detection of attention from fluctuation in received signal strength. 
+% %% TODO: Add work of Kai Kunze? -> Fatigue, eye movement,...
+% 
+% \subsubsection*{Sensing activity, motion and pose from inertial and environmental sensors}
+% Activity recognition comprises the challenge to recognize human activities from the input of sensor data.
+% Traditionally, acceleration has evolved as the standard modality for activity recognition both for high diffusion and convincing recognition rates~\cite{Pervasive_Ravi_2005,Pervasive_Cao_2012}.
+% General research challenges for activity recognition regard the accurate classification of noisy data captured under real world conditions~\cite{Pervasive_Bao_2004} or the automation of recognition systems~\cite{Pervasive_Ploetz_2012}.
+% The classification accuracy is highly dependent on the accurate sensor placement.
+% The integration of sensors in clothing as well as the recent remarkable progress in the robustness to rotation or displacement have improved this situation greatly~\cite{Pevasive_Chavarriaga_2011}.
+% % However, a subject is still required to cooperate and at least wear the sensors~\cite{Pervasive_Cohn_2012}.
+% % This requirement can not be assured generally in real-world applications. 
+% % In particular, even devices as private as mobile phones, which are frequently assumed to be constantly in the same context as its owner~\cite{Pervasive_Patridge_2008, Pervasive_Varshavsky_2008, Pervasive_Lane_2010}, can not serve as a sensor platform suitable for continuous monitoring of an individual's context.   
+% % Dey et al.~\cite{Pervasive_Dey_2011} showed that users have their mobile phone within arms reach only 54\% of the time.
+% % This confirms a similar investigation of Patel et al.~\cite{Pervasive_Patel_2006} which reported a share of 58\% for the same measure.
+% 
+% We will in addition consider environmental sources, in particular signal strength information from WiFi or 2-3G systems for their ubiquitous availability. 
+% In particular, good accuracy has been achieved recently with systems exploiting fluctuation in received radio signals. 
+% Pu and others~\cite{RFsensing_Pu_2013,RFsensing_Kim_2009} showed that simultaneous detection of gestures from multiple individuals is possible by utilizing multi-antenna nodes and micro Doppler fluctuations.
+% They utilize a USRP SDR multi antenna receiver and one or more single antenna transmitters distributed in the environment to distinguish between a set of 9 gestures with an average accuracy of 0.94. 
+% Their active device-free system exploits a MIMO receiver in order to recognise gestures from different persons present at the same time. 
+% By leveraging a preamble gesture pattern, the receiver estimates the MIMO channel that maximises the reflections of the desired user.
+% 
+% A main challenge was for them that the Doppler shift from human movement is several magnitudes smaller than the bandwidth of the signal employed.
+% The authors therefore proposed to transform the received signal into several narrowband pulses which are then analysed for possible Doppler fluctuation.
+% The group recently discussed application possibilities of their system~\cite{RFSensing_Kellog_2014}.
+% 
+% In a related system, Adib and Katabi~\cite{Pervasive_Adib_2013} employ MIMO interference nulling and combine samples taken over time to achieve a similar result while compensating for the missing spatial diversity in a single-antenna receiver system.
+% In their system, they leverage standard WiFi hardware at 2.4GHz.
+% 
+% Later, this work was extended to 3D motion tracking by utilizing three or more directional receive antennas in exactly defined relative orientation~\cite{RFSensing_Adib_2014}. 
+% In particular, the system is able to track the center of a human body with an error below 21cm in any direction and can also detect movement of body parts and directions of a pointing body part, such as a hand. 
+% This localisation is possible through time-of-flight estimation and triangulation.
+% Higher accuracy of this estimation is granted by utilizing frequency modulated carrier waves (sending a signal that changes linearly in frequency with time) over a bandwidth of 1.69GHz.
+% Impact of static objects could be mitigated by subtracting successive sample means whereas noise was filtered by its speed of changes in energy over frequency bands. 
+% 
+% \subsection*{Research approach, methods and hypotheses}
+% We plan to apply a machine learning approach in which prediction and feedback tools are built based on data. Specifically, we plan to install and employ a wide range of sensors, some on-body, some are already installed on everyday smartphones, and some are located in an environment. 
+% We will collect data from these sensors and analyse it, where the goal is to find a small, cheap and efficient subset of sensors which provides a robust and stable signal for prediction. Next, we will build a prediction system of sentiment based on this signal. We will use the collected signals and true sentiment to generate a predictive model of sentiment from the signal.
+% We will test the model on signals coming from participants of our study. We will also develop a feedback algorithm that will provide user information about current sentimental state, and possibly future predicted one. Hopefully, the user will benefit from such feedback. Additional components we plan to pursue is the development of efficient prediction and feedback methods, that could be executed on a smartphone.
+% 
+% We hypothesize that we will be able to collect sensor information of users, and their true or approximated sentimental state. We also assume that it is possible to predict sentiment from signals of sensors. Both assumptions are reasonable as similar tasks were  already performed by both PIs in other contexts. 
+
+\subsection*{Personal}
+The highest request item is to support personal (about 146K Euro in Germany and 114K Euro) as we believe that the human-factor is the key component in the project. Furthermore, it will allow us to provide enough support to students giving them the opportunity to solely focus in their academic training with now worries about financial support to their families, and thus substantially improve their level of training. Two PhD students, one at each university, will be recruited from the beginning of the project. A part-post doctoral fellow will be recruited for the second half of the project to work mainly on data analysis and predictive models. These work will be performed on Technion servers, and thus we will partially fund personal for support and maintenance.  
+
+\subsection*{Equipment}
+There will be a need to expand the storage of Technion server for storage of data collected, as well to purchase smartphones and USRPs. We ask for about 9500 Euro.
+
+\subsection*{Travel}
+We ask for 2000 Euro per trip (one every six months), a total of 6000 Euro per university.
+
+\end{document}
